@@ -1,8 +1,13 @@
+@import url('https://use.typekit.net/hrx3hnu.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
+  --yellowdark: '#8f3270',
+  --yellow: '#ebd515',
+  --white2: '#F8F7F0'
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -16,7 +21,7 @@
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +29,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -31,3 +40,74 @@ body {
     text-wrap: balance;
   }
 }
+
+.icon-size-custom {
+  height: 26px;
+  width: 26px
+}
+
+.general {
+  font-family: 'ivypresto-display', serif;
+}
+
+.menca {font-family: 'menca', sans-serif;}
+
+.bounds {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+@keyframes hor-movement2 {
+  from {
+    margin-left: 80vw;
+  }
+  to {
+    margin-left: 0vw;
+  }
+}
+
+@keyframes ver-movement2 {
+  from {
+    margin-top: 70vh;
+  }
+  to {
+    margin-top: 0vh;
+  }
+}
+
+.image2 {
+  animation-name: hor-movement2, ver-movement2;
+  animation-duration: 15s, 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/* .perspective-1000{
+  perspective: 1000px;
+} */
+
+
+.cursorDesign {
+  background-color: rgb(214, 21, 21);
+
+  height: 82px;
+  width: 82px;
+  border-radius: 50%;
+  position:fixed;
+
+
+}
+
+/* {
+  cursor: none
+
+}  */
+/* fixed w-24 h-24 rounded-full ring-1 ring-white pointer-events-none z-50 text-white bg-white bg-opacity-15 */
+
+/* .hover {
+color: brown !important;
+
+} */
