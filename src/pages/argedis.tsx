@@ -41,7 +41,7 @@ const argedis = () => {
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
-        <div className="bg-lime-950 sticky top-0 z-50 ">
+        <div className=" sticky top-0 z-50 ">
           <MobileNav
             isOpen={isOpen}
             handleToggle={handleToggle}
@@ -53,7 +53,7 @@ const argedis = () => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className="bg-[url('/assets/img/header/header_argedis.png')] md:w-screen md:h-screen md:min-w-[684px] overflow-clip bg-cover w-screen bg-center">
+          <div className="bg-[url('/assets/img/header/header_argedis.png')] md:w-screen md:h-screen md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
             <div className="absolute top-10 menca text-white2 font-extralight invisible md:visible">
               <LabelHome />
               <LabelPlaylist />
@@ -67,7 +67,7 @@ const argedis = () => {
                 <h1 className="general font-thin	text-[40px] md:text-[120px] leading-[178px] md:pt-40 pt-4 ">
                   Argedis | Regionalisme
                 </h1>
-                <p className="menca lg:w-[670px] w-screen px-4 text-center pt-2  h-[152px] ">
+                <p className="menca lg:w-[670px] w-screen px-4 text-center pt-2  h-[172px] ">
                   Vivamus eu metus enim. Cras feugiat mi id lacus semper
                   tristique. Sed ut faucibus massa. Aenean eu mauris
                   ullamcorper, malesuada nisl id, porta arcu. Pellentesque vitae
@@ -76,10 +76,10 @@ const argedis = () => {
                   aliquam id magna vitae, tincidunt dignissim purus. Praesent
                   interdum tempus orci non varius.
                 </p>
-                <section className="flex flex-col gap-y-4 items-center pt-12 invisible md:visible h-[60px]">
-                  <div className=" flex flex-row">
+                <section className="flex flex-col gap-y-0.2 items-center pt-12 md:pb-20 invisible md:visible h-[60px]">
+                  <div className=" flex flex-row ">
                     <Labels label={"( DATE TIME )"} />
-                    .......................................................................................................................
+                    ......................................................................................................................
                     <Labels label={"2024"} />
                   </div>
                   <div className="flex flex-row">
@@ -89,19 +89,19 @@ const argedis = () => {
                   </div>
                   <div className="flex flex-row">
                     <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    ..................................
+                    .......................................................
                     <Labels
                       label={"DIRECTION ARTISTIQUE | UI | MOTION DESIGN "}
                     />
                   </div>
                   <div className="flex flex-row pb-8 md:pb-0">
                     <Labels label={"( AGENCE )"} />{" "}
-                    .......................................................................................
+                    ..............................................................................................
                     <Labels label={"STUDIO ARTEFACT 3000"} />
                   </div>
                 </section>
 
-                <section className="flex flex-col gap-y-4 items-center pt-12 md:hidden visible text-[13px]">
+                <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20">
                   <div className=" flex flex-row">
                     <Labels label={"( DATE TIME )"} />
                     ......................................................................
@@ -113,21 +113,22 @@ const argedis = () => {
                     <Labels label={"ARGEDIS"} />
                   </div>
                   <div className="flex flex-row">
-                    <Labels label={"( TYPE DE PROJET )"} /> ...
+                    <Labels label={"( TYPE DE PROJET )"} />
+                    .......
                     <Labels
                       label={"DIRECTION ARTISTIQUE | UI | MOTION DESIGN "}
                     />
                   </div>
                   <div className="flex flex-row pb-8 md:pb-0">
                     <Labels label={"( AGENCE )"} />{" "}
-                    ............................................
+                    ..............................................
                     <Labels label={"STUDIO ARTEFACT 3000"} />
                   </div>
                 </section>
               </div>
             </div>
           </div>
-          <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950">
+          <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950 pt-[600px] md:pt-0">
             <div className="md:h-[209px] md:w-[672px] py-16 bg-white2 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
               malesuada magna, in maximus dui. Ut rutrum pharetra neque lobortis
@@ -148,7 +149,7 @@ const argedis = () => {
           <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip space-y-8">
             <div className="bg-[url('/assets/img/regionalisme/combinaison_de_couleurs.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
             <div className="bg-[url('/assets/img/regionalisme/presentation_argedis.png')] w-screen md:h-[400px] h-[200px]  md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
-            {/* <video
+            <video
               autoPlay
               loop
               muted
@@ -158,7 +159,7 @@ const argedis = () => {
                 src="/assets/img/regionalisme/demo.mp4"
                 type="video/mp4"
               />
-            </video> */}
+            </video>
           </div>
           <Link href={"/vertavin"}>
             <div
@@ -168,21 +169,36 @@ const argedis = () => {
             >
               <div className="md:pt-48 pt-20 bg-white2 min-w-[684px] "></div>
 
-              <div className="bg-[url('/assets/img/header/header_vav.png')] md:min-w-[684px]  w-screen h-[600px] md:h-screen md:w-screen bg-cover bg-center relative overflow-clip bg-white2">
+              <div className="bg-[url('/assets/img/header/header_vav.png')] md:min-w-[684px] w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2">
                 <div className="flex flex-col items-center text-white2">
-                  <h1 className="general font-thin	text-[32px] md:text-[120px] leading-[178px] pt-40 ">
+                  <h1 className="general font-thin	text-[56px] md:text-[120px] leading-[178px] pt-24 md:pt-32">
                     Vert à Vin
                   </h1>
-                  <p className="menca lg:w-[670px] px-4 text-center pt-2">
-                    Vivamus eu metus enim. Cras feugiat mi id lacus semper
-                    tristique. Sed ut faucibus massa. Aenean eu mauris
-                    ullamcorper, malesuada nisl id, porta arcu. Pellentesque
-                    vitae rutrum sapien. Nunc nec tincidunt nunc. Vestibulum ac
-                    eros non velit luctus laoreet id eu urna. Suspendisse tortor
-                    ex, aliquam id magna vitae, tincidunt dignissim purus.
-                    Praesent interdum tempus orci non varius.
-                  </p>
-                  <section className="flex flex-col gap-y-4 items-center pt-28 w-screen invisible md:visible">
+
+                  <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white">
+                    <div className=" flex flex-row">
+                      <Labels label={"( DATE TIME )"} />
+                      ......................................................
+                      <Labels label={"2023"} />
+                    </div>
+                    <div className="flex flex-row">
+                      <Labels label={"( CLIENT )"} />{" "}
+                      ................................................
+                      <Labels label={"VERRE A VIN"} />
+                    </div>
+                    <div className="flex flex-row">
+                      <Labels label={"( TYPE DE PROJET )"} />{" "}
+                      .....................................
+                      <Labels label={"BRANDING"} />
+                    </div>
+                    <div className="flex flex-row">
+                      <Labels label={"( AGENCE )"} />{" "}
+                      ...............................................
+                      <Labels label={"FREELANCE"} />
+                    </div>
+                  </section>
+
+                  <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
                     <div className=" flex flex-row">
                       <Labels label={"( DATE TIME )"} />
                       ........................................................................................................................
@@ -190,17 +206,17 @@ const argedis = () => {
                     </div>
                     <div className="flex flex-row">
                       <Labels label={"( CLIENT )"} />{" "}
-                      ................................................................................................................
+                      ..................................................................................................................
                       <Labels label={"VERRE A VIN"} />
                     </div>
                     <div className="flex flex-row">
                       <Labels label={"( TYPE DE PROJET )"} />{" "}
-                      ..................................................................................................
+                      .......................................................................................................
                       <Labels label={"BRANDING"} />
                     </div>
                     <div className="flex flex-row">
                       <Labels label={"( AGENCE )"} />{" "}
-                      ...............................................................................................................
+                      .................................................................................................................
                       <Labels label={"FREELANCE"} />
                     </div>
                   </section>

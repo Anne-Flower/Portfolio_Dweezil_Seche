@@ -7,7 +7,7 @@ import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const engrenage = () => {
+export const engrenage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -77,7 +77,7 @@ const engrenage = () => {
                 <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20">
                   <div className=" flex flex-row">
                     <Labels label={"( DATE TIME )"} />
-                    ..................................................................
+                    .....................................................
                     <Labels label={"2024"} />
                   </div>
                   <div className="flex flex-row">
@@ -87,12 +87,12 @@ const engrenage = () => {
                   </div>
                   <div className="flex flex-row">
                     <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    ..................................................
+                    ...........................................
                     <Labels label={"BRANDING"} />
                   </div>
                   <div className="flex flex-row pb-8 md:pb-0">
                     <Labels label={"( AGENCE )"} />{" "}
-                    ...........................................................
+                    .................................
                     <Labels label={"FREELANCE"} />
                   </div>
                 </section>
@@ -139,12 +139,12 @@ const engrenage = () => {
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             </div>
           </section>
-          <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip ">
-            <div className="bg-[url('/assets/img/engrenages/2.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center "></div>
-            <div className="bg-[url('/assets/img/engrenages/3.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center  "></div>
-            <div className="bg-[url('/assets/img/engrenages/4.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center  "></div>
-            <div className="bg-[url('/assets/img/engrenages/8.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat	bg-center  "></div>
-            <div className="bg-[url('/assets/img/engrenages/9.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center  "></div>
+          <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip px-6 md:px-0">
+            <div className="bg-[url('/assets/img/engrenages/2.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16  "></div>
+            <div className="bg-[url('/assets/img/engrenages/3.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 "></div>
+            <div className="bg-[url('/assets/img/engrenages/4.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 "></div>
+            <div className="bg-[url('/assets/img/engrenages/8.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat	bg-center pb-16 "></div>
+            <div className="bg-[url('/assets/img/engrenages/9.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 "></div>
           </div>
 
           <Link href={"/naturia"}>
@@ -155,32 +155,11 @@ const engrenage = () => {
             >
               <div className="md:pt-48 pt-20 bg-white2"></div>
 
-              <div className="bg-[url('/assets/img/header/header_naturIA.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[600px] bg-cover bg-center relative overflow-clip w-screen">
+              <div className="bg-[url('/assets/img/header/header_naturIA.png')] min-w-[684px] md:w-screen h-[510px] md:h-[600px] md:-screen bg-cover bg-center relative overflow-clip ">
                 <div className="flex flex-col items-center text-white2  ">
-                  <h1 className="general font-thin	text-[56px] md:text-[120px] leading-[178px] pt-24 md:pt-32">
+                  <h1 className="general font-thin	text-[56px] md:text-[120px] leading-[178px] pt-40 md:pt-32">
                     NaturIA
                   </h1>
-
-                  <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white">
-                    <div className=" flex flex-row">
-                      <Labels label={"( DATE TIME )"} />
-                      .........................................
-                      <Labels label={"2024"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( CLIENT )"} />{" "}
-                      .......................................
-                      <Labels label={"NATUR.IA"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( TYPE DE PROJET )"} /> .......
-                      <Labels label={"PROMPT | MIDJOURNEY"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( AGENCE )"} /> .................
-                      <Labels label={"STUDIO ARTEFACT 3000"} />
-                    </div>
-                  </section>
 
                   <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
                     <div className=" flex flex-row">
@@ -213,5 +192,3 @@ const engrenage = () => {
     </>
   );
 };
-
-export default engrenage;

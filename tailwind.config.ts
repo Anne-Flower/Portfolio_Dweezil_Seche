@@ -19,6 +19,8 @@ const config: Config = {
         yellowdark: '#8f3270',
         yellow: '#ebd515',
         white2: '#F8F7F0',
+        greyRingCursor: '#D9D9D9',
+        greyLink: '#C5C5C5'
       },
    
        backgroundImage: {

@@ -13,4 +13,10 @@ pnpm dev
 # or
 bun dev
 ```
+
 # Portfolio_Dweezil_Seche
+
+Project Explanations:
+
+Portfolio realized for the designer D Sèche in NextJS, React, Tailwind, Typescript, Framer Motion.
+Add: ContentFull to modify the text.

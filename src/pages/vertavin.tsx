@@ -38,11 +38,11 @@ const verreavin = () => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  bg-lime-950 min-h-screen overflow-clip  ${
-          isOpen ? "overflow-hidden " : "overflow-clip "
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col   min-h-screen overflow-clip  ${
+          isOpen ? "overflow-hidden " : "overflow-clip"
         } `}
       >
-        <div className="bg-lime-950 sticky top-0 z-50 ">
+        <div className=" sticky top-0 z-50 ">
           <MobileNav
             isOpen={isOpen}
             handleToggle={handleToggle}
@@ -54,7 +54,7 @@ const verreavin = () => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className="bg-[url('/assets/img/header/header_vav.png')] md:w-screen md:h-screen md:min-w-[684px] overflow-clip bg-cover w-screen bg-center">
+          <div className="bg-[url('/assets/img/header/header_vav.png')] md:w-screen  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
             <div className="absolute top-10 menca text-white2 font-extralight invisible md:visible">
               <LabelHome />
               <LabelPlaylist />
@@ -77,7 +77,7 @@ const verreavin = () => {
                   aliquam id magna vitae, tincidunt dignissim purus. Praesent
                   interdum tempus orci non varius.
                 </p>
-                <section className="flex flex-col gap-y-4 items-center pt-16 md:pt-24 invisible md:visible h-[60px]">
+                <section className="flex flex-col gap-y-0.2 items-center pt-16 md:pt-24 invisible md:visible h-[60px] ">
                   <div className=" flex flex-row">
                     <Labels label={"( DATE TIME )"} />
                     ......................................................................................................................
@@ -85,22 +85,22 @@ const verreavin = () => {
                   </div>
                   <div className="flex flex-row">
                     <Labels label={"( CLIENT )"} />{" "}
-                    ...............................................................................................................
+                    ................................................................................................................
                     <Labels label={"VERRE A VIN"} />
                   </div>
                   <div className="flex flex-row">
                     <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    ...................................................................................................
+                    .....................................................................................................
                     <Labels label={"BRANDING"} />
                   </div>
                   <div className="flex flex-row pb-8 md:pb-0">
                     <Labels label={"( AGENCE )"} />{" "}
-                    ..............................................................................................................
+                    ...............................................................................................................
                     <Labels label={"FREELANCE"} />
                   </div>
                 </section>
 
-                <section className="flex flex-col gap-y-4 items-center  md:hidden visible text-[13px]">
+                <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20">
                   <div className=" flex flex-row">
                     <Labels label={"( DATE TIME )"} />
                     ...................................................................
@@ -113,19 +113,19 @@ const verreavin = () => {
                   </div>
                   <div className="flex flex-row">
                     <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    .................................................
+                    ...................................................
                     <Labels label={"BRANDING"} />
                   </div>
                   <div className="flex flex-row pb-8 md:pb-0">
                     <Labels label={"( AGENCE )"} />{" "}
-                    ...........................................................
+                    ............................................................
                     <Labels label={"FREELANCE"} />
                   </div>
                 </section>
               </div>
             </div>
           </div>
-          <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950">
+          <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950  pt-[600px] md:pt-0">
             <div className="md:h-[209px] md:w-[672px] py-16 bg-white2 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
               malesuada magna, in maximus dui. Ut rutrum pharetra neque lobortis
@@ -144,10 +144,10 @@ const verreavin = () => {
             </div>
           </section>
           <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip space-y-8">
-            <div className="bg-[url('/assets/img/vertAvin/planche.png')] w-full md:w-screen w-screen md:h-[400px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-            <div className="bg-[url('/assets/img/vertAvin/propales_logos.png')] md:w-screen w-screen md:h-[400px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-            <div className="bg-[url('/assets/img/vertAvin/tablier.png')] w-full md:w-screen  w-screen md:h-[400px] h-[210px]  bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
-            <div className="bg-[url('/assets/img/vertAvin/hangar.png')] w-full md:w-screen  w-screen md:h-[400px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
+            <div className="bg-[url('/assets/img/vertAvin/planche.png')] w-full md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
+            <div className="bg-[url('/assets/img/vertAvin/propales_logos.png')] md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
+            <div className="bg-[url('/assets/img/vertAvin/tablier.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px]  bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
+            <div className="bg-[url('/assets/img/vertAvin/hangar.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
           </div>
           <Link href={"/we"}>
             <div
@@ -156,20 +156,36 @@ const verreavin = () => {
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
               <div className="md:pt-48 pt-20 bg-white2"></div>
-              <div className="bg-[url('/assets/img/header/header_wesh.png')] md:min-w-[684px]  w-screen h-[600px] md:h-screen md:w-screen bg-cover bg-center relative overflow-clip bg-white2">
+              <div className="bg-[url('/assets/img/header/header_wesh.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2">
                 <div className="flex flex-col items-center text-white2  ">
-                  <h1 className="general font-thin	text-[32px] md:text-[120px] leading-[178px] pt-40 ">
+                  <h1 className="general font-thin	text-[56px] md:text-[120px] leading-[178px] pt-24 md:pt-32">
                     WE.SH.IV
                   </h1>
-                  <p className="menca lg:w-[670px] px-4 text-center pt-2">
-                    WE.SH est un petit festival organisé chaque année depuis 4
-                    ans par un petit groupe d'amis et de volontaires : We Are
-                    Shinny. Chaque année, ce petit festival prend de l'ampleur
-                    et l'organisation est sérieuse. Cette année, j'ai eu la
-                    chance de pouvoir travailler sur la communication visuelle
-                    avec une équipe de personnes extrêmement talentueuses.
-                  </p>
-                  <section className="flex flex-col gap-y-4 items-center pt-28 w-screen invisible md:visible">
+
+                  <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white">
+                    <div className=" flex flex-row">
+                      <Labels label={"( DATE TIME )"} />
+                      .............................................
+                      <Labels label={"2023"} />
+                    </div>
+                    <div className="flex flex-row">
+                      <Labels label={"( CLIENT )"} />{" "}
+                      .......................................
+                      <Labels label={"VERRE A VIN"} />
+                    </div>
+                    <div className="flex flex-row">
+                      <Labels label={"( TYPE DE PROJET )"} />{" "}
+                      .............................
+                      <Labels label={"BRANDING"} />
+                    </div>
+                    <div className="flex flex-row">
+                      <Labels label={"( AGENCE )"} />{" "}
+                      .......................................
+                      <Labels label={"FREELANCE"} />
+                    </div>
+                  </section>
+
+                  <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
                     <div className=" flex flex-row">
                       <Labels label={"( DATE TIME )"} />
                       ......................................................................................................................
