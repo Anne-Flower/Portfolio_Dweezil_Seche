@@ -42,9 +42,12 @@ const Bonus = () => {
         } transition-opacity duration-300 `}
       >
         <div className="h-screen w-screen ">
-          <div className="lg:visible invisible w-screen lg:pt-12">
+          <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
             <LabelHome />
-            <LabelPlaylist />
+            <div className=" pr-8">
+              {" "}
+              <LabelPlaylist />
+            </div>
           </div>
           <div className="bg-lime-950 h-screen w-screen flex flex-col items-center">
             <h1 className="general font-thin text-[56px] leading-[83px] text-white2 pt-48">

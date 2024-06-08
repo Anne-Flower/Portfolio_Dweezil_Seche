@@ -24,15 +24,7 @@
   }
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
@@ -48,6 +40,8 @@ body {
   height: 26px;
   width: 26px
 }
+
+/* fonts */
 
 .general {
   font-family: 'ivypresto-display', serif;
@@ -88,10 +82,8 @@ body {
   animation-timing-function: linear;
 }
 
-/* .perspective-1000{
-  perspective: 1000px;
-} */
 
+/* testCursor */
 
 .cursorDesign {
   background-color: rgb(214, 21, 21);
@@ -104,13 +96,121 @@ body {
 
 }
 
-/* {
-  cursor: none
 
-}  */
-/* fixed w-24 h-24 rounded-full ring-1 ring-white pointer-events-none z-50 text-white bg-white bg-opacity-15 */
 
-/* .hover {
-color: brown !important;
 
-} */
+.blurred {
+  filter: blur(1.8px);
+  transition: filter 0.1s;
+}
+
+
+
+/* labels animated */
+
+.link {
+  height: 30px;
+  align-items: center;
+  color: #F8F7F0;
+  text-decoration: none;
+  display: flex;
+  width: 100px;
+}
+
+.mask {
+  /* position: relative; */
+  padding: 0;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.link-container {
+  transition: transform 0.4s ease;
+}
+
+.title {
+  display: block;
+  font-size: 0.9rem;
+  transition: transform 0.4s ease;
+}
+
+.link-title1 {
+  transform-origin: right center;
+}
+
+.link-title2 {
+  transform-origin: left center;
+  transform: rotate(20deg) translateY(18px);
+}
+
+.link:hover .link-title1 {
+  transform: rotate(20deg) translateY(-18px);
+}
+
+.link:hover .link-title2 {
+  transform: rotate(0);
+}
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-right span, .top-right span{
+  right: 0;
+}
+
+
+.fond {
+  background: radial-gradient(50.32% 59.73% at 29.17% 30.6%, #3E553A 0%, #2B312A 100%);
+  background-size: 200% 200%;
+  animation: gradient-anim 15s ease infinite;
+}
+
+@keyframes gradient-anim {
+  0% {
+    background-position: 10% 10%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  60% {
+    background-position: 60% 20%;
+  }
+  75% {
+    background-position: 76% 50%;
+  }
+  84% {
+    background-position: 86% 26%;
+  }
+  75% {
+    background-position: 76% 76%;
+  }
+  60% {
+    background-position: 60% 60%;
+  }
+  50% {
+    background-position: 20% 50%;
+  }
+  25% {
+    background-position: 60% 40%;
+  }
+
+
+}

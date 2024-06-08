@@ -1,11 +1,12 @@
 import CustomCursor from "@/components/Atomes/Cursor/CustomCursor";
 import CustomCursorHome from "@/components/Atomes/Cursor/CustomCursorHome";
 import LabelHome from "@/components/Atomes/Label/LabelHome";
+import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Labels from "@/components/Atomes/Label/Labels";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import { log } from "console";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 
@@ -29,6 +30,20 @@ const Naturia = ({}) => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const cardVariants: Variants = {
+    offscreen: {
+      y: 300,
+    },
+    onscreen: {
+      y: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1,
+      },
+    },
+  };
+
   return (
     <>
       {visibleCursor && (
@@ -39,7 +54,7 @@ const Naturia = ({}) => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  bg-lime-950 min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col bg-lime-950 min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -56,9 +71,12 @@ const Naturia = ({}) => {
           } transition-opacity duration-300 `}
         >
           <div className="bg-[url('/assets/img/header/header_naturIA.png')] md:w-screen  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
-            <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight">
+            <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
               <LabelHome />
-              <LabelPlaylist />
+              <div className=" pr-8">
+                {" "}
+                <LabelMenu />
+              </div>
             </div>
             <div
               className="cursor-none"
@@ -126,6 +144,7 @@ const Naturia = ({}) => {
               </div>
             </div>
           </div>
+
           <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950  pt-[600px] md:pt-0">
             <div className="md:h-[209px] md:w-[672px] py-16 bg-white2 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
@@ -145,7 +164,13 @@ const Naturia = ({}) => {
             </div>
           </section>
           <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip text-white2 ">
-            <div className="bg-[url('/assets/img/naturia/broccolis.png')]  w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            <motion.div
+              className="bg-[url('/assets/img/naturia/broccolis.png')]  w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -164,8 +189,14 @@ const Naturia = ({}) => {
                 dynamic scene. Real photograph made by a professional. --ar 16:9
                 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/bechamel.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/bechamel.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine &nbsp;
@@ -184,8 +215,14 @@ const Naturia = ({}) => {
                 visually appealing and dynamic scene. Real photograph made by a
                 professional --ar 16:9 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/berries.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/berries.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -205,8 +242,14 @@ const Naturia = ({}) => {
                 dynamic scene. Real photograph made by a professional. --ar 16:9
                 --v 6.0 --no blueberries
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/brebis.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/brebis.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -226,8 +269,14 @@ const Naturia = ({}) => {
                 intricate, and creating a visually appealing and dynamic scene.
                 Real photograph made by a professional --ar 16:9 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/brownies.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/brownies.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -246,8 +295,14 @@ const Naturia = ({}) => {
                 Real photograph made by a professional. --ar 16:9 --v 6.0 --no
                 blur
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/bubble_gum.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/bubble_gum.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -260,8 +315,14 @@ const Naturia = ({}) => {
                 appealing and dynamic scene. Real photograph made by a
                 professional. --ar 16:9 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/caipi.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/caipi.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -280,8 +341,14 @@ const Naturia = ({}) => {
                 dynamic scene. Real photograph made by a professional. --ar 16:9
                 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/donuts.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/donuts.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -300,8 +367,14 @@ const Naturia = ({}) => {
                 dynamic scene. Real photograph made by a professional --ar 16:9
                 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/cactus.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/cactus.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine
@@ -326,8 +399,14 @@ const Naturia = ({}) => {
                 intricate, and creating a visually appealing and dynamic scene.
                 Real photograph made by a professional. --ar 16:9 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/caneles.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/caneles.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-4 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine &nbsp;
@@ -346,8 +425,14 @@ const Naturia = ({}) => {
                 dynamic scene. Real photograph made by a professional. --ar 16:9
                 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/cire_abeille.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/cire_abeille.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine &nbsp;
@@ -365,8 +450,14 @@ const Naturia = ({}) => {
                 intricate, and creating a visually appealing and dynamic scene.
                 Real photograph made by a professional. --ar 16:9 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/chamomille.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/chamomille.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine &nbsp;
@@ -385,8 +476,14 @@ const Naturia = ({}) => {
                 dynamic scene. Real photograph made by a professional. --ar 16:9
                 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/piments.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/piments.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine &nbsp;
@@ -399,8 +496,14 @@ const Naturia = ({}) => {
                 dynamic scene. Real photograph made by a professional. --ar 16:9
                 --v 6.0
               </p>
-            </div>
-            <div className="bg-[url('/assets/img/naturia/ciboulette.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative ">
+            </motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/naturia/ciboulette.png')] w-full md:w-screen h-[400px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16 relative "
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
               <p className="lg:w-[672px] lg:h-[171px] lg:py-8 lg:px-11 absolute md:bottom-3 lg:bottom-8 bottom-6 px-6 w-[300px]">
                 <span className="general text-white font-semibold text-base leading-5">
                   /imagine &nbsp;
@@ -418,7 +521,7 @@ const Naturia = ({}) => {
                 intricate, and creating a visually appealing and dynamic scene.
                 Real photograph made by a professional. --ar 16:9 --v 6.0
               </p>
-            </div>
+            </motion.div>
           </div>
           <Link href={"/argedis"}>
             <div
@@ -426,9 +529,18 @@ const Naturia = ({}) => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="md:pt-48 pt-20 bg-white2  md:min-w-[684px] "></div>
-              <div className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2">
-                <div className="flex flex-col items-center text-white2">
+              <div className=" bg-white2  md:min-w-[684px] z-60 h-[200px]"></div>
+              <motion.div
+                className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2 "
+                initial={{ opacity: 2 }}
+                whileInView={{ opacity: 0.2 }}
+                transition={{ duration: 1.3 }}
+              >
+                <motion.div
+                  className="flex flex-col items-center text-white2"
+                  whileHover={{ scale: 1.25 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <h1 className="general font-thin	text-[36px] md:text-[120px] leading-[178px] md:pt-40 pt-32">
                     Argedis | Regionalisme
                   </h1>
@@ -482,8 +594,8 @@ const Naturia = ({}) => {
                       <Labels label={"STUDIO ARTEFACT 3000"} />
                     </div>
                   </section>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </Link>
         </div>

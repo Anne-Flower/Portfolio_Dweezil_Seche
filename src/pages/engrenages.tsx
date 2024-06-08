@@ -1,9 +1,11 @@
 import CustomCursor from "@/components/Atomes/Cursor/CustomCursor";
 import CustomCursorHome from "@/components/Atomes/Cursor/CustomCursorHome";
 import LabelHome from "@/components/Atomes/Label/LabelHome";
+import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Labels from "@/components/Atomes/Label/Labels";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -53,9 +55,12 @@ const engrenage = () => {
           } transition-opacity duration-300 `}
         >
           <div className="bg-[url('/assets/img/header/header_engrenages.png')] md:w-screen  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
-            <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight">
+            <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
               <LabelHome />
-              <LabelPlaylist />
+              <div className=" pr-8">
+                {" "}
+                <LabelMenu />
+              </div>
             </div>
             <div
               className="cursor-none"
@@ -155,57 +160,68 @@ const engrenage = () => {
             >
               <div className="md:pt-48 pt-20 bg-white2"></div>
 
-              <div className="bg-[url('/assets/img/header/header_naturIA.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[600px] bg-cover bg-center relative overflow-clip w-screen">
-                <div className="flex flex-col items-center text-white2  ">
-                  <h1 className="general font-thin	text-[56px] md:text-[120px] leading-[178px] pt-24 md:pt-32">
-                    NaturIA
-                  </h1>
+              <motion.div
+                className="bg-[url('/assets/img/header/header_naturIA.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[600px] bg-cover bg-center relative overflow-clip w-screen"
+                initial={{ opacity: 2 }}
+                whileInView={{ opacity: 0.2 }}
+                transition={{ duration: 1.3 }}
+              >
+                <motion.div
+                  className="flex flex-col items-center text-white2"
+                  whileHover={{ scale: 1.25 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="flex flex-col items-center text-white2  ">
+                    <h1 className="general font-thin	text-[56px] md:text-[120px] leading-[178px] pt-24 md:pt-32">
+                      NaturIA
+                    </h1>
 
-                  <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white">
-                    <div className=" flex flex-row">
-                      <Labels label={"( DATE TIME )"} />
-                      .........................................
-                      <Labels label={"2024"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( CLIENT )"} />{" "}
-                      .......................................
-                      <Labels label={"NATUR.IA"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( TYPE DE PROJET )"} /> .......
-                      <Labels label={"PROMPT | MIDJOURNEY"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( AGENCE )"} /> .................
-                      <Labels label={"STUDIO ARTEFACT 3000"} />
-                    </div>
-                  </section>
+                    <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white">
+                      <div className=" flex flex-row">
+                        <Labels label={"( DATE TIME )"} />
+                        .........................................
+                        <Labels label={"2024"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( CLIENT )"} />{" "}
+                        .......................................
+                        <Labels label={"NATUR.IA"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( TYPE DE PROJET )"} /> .......
+                        <Labels label={"PROMPT | MIDJOURNEY"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( AGENCE )"} /> .................
+                        <Labels label={"STUDIO ARTEFACT 3000"} />
+                      </div>
+                    </section>
 
-                  <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
-                    <div className=" flex flex-row">
-                      <Labels label={"( DATE TIME )"} />
-                      ......................................................................................................................
-                      <Labels label={"2024"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( CLIENT )"} />{" "}
-                      ....................................................................................................................
-                      <Labels label={"NATUR.IA"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( TYPE DE PROJET )"} />{" "}
-                      .....................................................................................
-                      <Labels label={"PROMPT | MIDJOURNEY"} />
-                    </div>
-                    <div className="flex flex-row">
-                      <Labels label={"( AGENCE )"} />{" "}
-                      ..............................................................................................
-                      <Labels label={"STUDIO ARTEFACT 3000"} />
-                    </div>
-                  </section>
-                </div>
-              </div>
+                    <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
+                      <div className=" flex flex-row">
+                        <Labels label={"( DATE TIME )"} />
+                        ......................................................................................................................
+                        <Labels label={"2024"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( CLIENT )"} />{" "}
+                        ....................................................................................................................
+                        <Labels label={"NATUR.IA"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( TYPE DE PROJET )"} />{" "}
+                        .....................................................................................
+                        <Labels label={"PROMPT | MIDJOURNEY"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( AGENCE )"} />{" "}
+                        ..............................................................................................
+                        <Labels label={"STUDIO ARTEFACT 3000"} />
+                      </div>
+                    </section>
+                  </div>
+                </motion.div>
+              </motion.div>
             </div>
           </Link>
         </div>

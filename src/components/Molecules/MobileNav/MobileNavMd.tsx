@@ -46,11 +46,11 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
           variants={MenuVariants}
           initial="hidden"
           animate={isOpen ? "show" : "hidden"}
-          className="shadow-2xl w-full absolute top-0 right-0 max-w-sm h-screen"
+          className="shadow-2xl w-full absolute top-0 max-w-sm h-screen"
         >
           <div
             onClick={handleToggle}
-            className="text-4xl right-4 top-2 text-2 absolute"
+            className="text-4xl left-4 top-2 text-2 absolute"
           >
             <FontAwesomeIcon icon={faXmark} className="icon-size-custom" />
           </div>

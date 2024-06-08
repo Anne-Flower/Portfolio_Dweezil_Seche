@@ -39,7 +39,7 @@ export default function Home() {
         <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
       )}
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  bg-lime-950 min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -56,9 +56,12 @@ export default function Home() {
           } transition-opacity duration-300 `}
         >
           <div className="h-screen w-screen ">
-            <div className="lg:visible invisible w-screen lg:pt-12">
+            <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
               <LabelAbout />
-              <LabelPlaylist />
+              <div className=" pr-8">
+                {" "}
+                <LabelPlaylist />
+              </div>
             </div>
 
             <div
