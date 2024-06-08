@@ -33,10 +33,10 @@ const CustomCursorHome: FC<CursorHomeProps> = ({ x, y }) => {
       // style={{ transform: `translate(${x - 40}px, ${y - 40}px)` }}
     >
       <p className="menca font-medium	 leading-[16.8px] text-sm	 flex justify-center items-center ">
-        SCROLL
+        Scroll
       </p>
       <p className="menca font-medium	 leading-[16.8px] text-sm	 flex justify-center items-center ">
-        DOWN
+        down
       </p>
     </div>
   );

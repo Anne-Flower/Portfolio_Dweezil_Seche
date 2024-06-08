@@ -5,9 +5,8 @@
 
 
 :root {
-
-  --greyLink: "#C5C5C5"
-  --greyRingCursor: "#D9D9D9"
+  --greyLink: "#C5C5C5",
+  --greyRingCursor: "#D9D9D9",
   --yellowdark: '#8f3270',
   --yellow: '#ebd515',
   --white2: '#F8F7F0'
@@ -176,6 +175,11 @@ body {
   right: 0;
 }
 
+.fond2 {
+  background: radial-gradient(50.32% 59.73% at 29.17% 30.6%, #3E553A 0%, #2B312A 100%);
+  background-size: 200% 200%;
+  animation: gradient-anim 10s ease infinite;
+}
 
 .fond {
   background: radial-gradient(50.32% 59.73% at 29.17% 30.6%, #3E553A 0%, #2B312A 100%);
@@ -191,16 +195,16 @@ body {
     background-position: 30% 30%;
   }
   50% {
-    background-position: 50% 40%;
+    background-position: 15% 45%;
   }
   60% {
-    background-position: 60% 20%;
+    background-position: 50% 20%;
   }
   75% {
     background-position: 76% 50%;
   }
   84% {
-    background-position: 86% 26%;
+    background-position: 96% 26%;
   }
   75% {
     background-position: 76% 76%;
@@ -212,7 +216,7 @@ body {
     background-position: 50% 10%;
   }
   25% {
-    background-position: 65% 40%;
+    background-position: 85% 40%;
   }
   10% {
     background-position: 45% 25%;

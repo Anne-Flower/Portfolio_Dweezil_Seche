@@ -25,7 +25,7 @@ const Bonus = () => {
   };
   return (
     <main
-      className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  bg-lime-950 min-h-screen overflow-clip  ${
+      className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  fond2 min-h-screen overflow-clip  ${
         isOpen ? "overflow-hidden " : "overflow-clip "
       } `}
     >
@@ -49,7 +49,7 @@ const Bonus = () => {
               <LabelPlaylist />
             </div>
           </div>
-          <div className="bg-lime-950 h-screen w-screen flex flex-col items-center">
+          <div className="fond h-screen w-screen flex flex-col items-center">
             <h1 className="general font-thin text-[56px] leading-[83px] text-white2 pt-48">
               Bonus
             </h1>

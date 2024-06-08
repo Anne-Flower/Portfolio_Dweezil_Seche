@@ -13,7 +13,7 @@ const BarNaturia: FC<BarNaturiaProps> = ({ label }) => {
   return (
     <Link href={"/naturia"}>
       <motion.div
-        className={`md:flex md:flex-row items-center border-t-[1px]  border-lime-950  bg-lime-950 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950 `}
+        className={`md:flex md:flex-row items-center border-t-[1px]  border-lime-950 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950 `}
         whileHover={{
           backgroundPosition: "0% 0%",
           transition: { duration: 0.2 },

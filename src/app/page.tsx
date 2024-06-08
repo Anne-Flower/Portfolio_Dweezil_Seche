@@ -120,7 +120,7 @@ export default function Home() {
             <BarVerreavin label={"Vert à Vin"} />
             <BarWE label={"WE.SH IV"} />
           </div>
-          <p className="menca flex justify-center bg-lime-950 md:pt-[250px] pb-4 md:pb-8 pt-16 w-screen">
+          <p className="menca flex justify-center bg-fond2 md:pt-[250px] pb-4 md:pb-8 pt-16 w-screen">
             @Copyright | dweezilseche.fr
           </p>
         </div>

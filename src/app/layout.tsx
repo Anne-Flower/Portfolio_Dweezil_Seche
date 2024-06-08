@@ -18,15 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div
-          className=" general  h-screen w-screen bg-lime-950 "
-          // style={{
-          //   background:
-          //     "linear-gradient(90deg, rgba(43,49,42,1) 56%, rgba(62,85,58,1) 100%)",
-          // }}
-        >
-          {/* <Blur /> */}
-
+        <div className=" general  h-screen w-screen fond">
           <main className="">{children}</main>
           <Footer />
         </div>

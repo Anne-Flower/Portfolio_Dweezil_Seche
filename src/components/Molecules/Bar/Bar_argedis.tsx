@@ -14,7 +14,7 @@ const BarArgedis: FC<BarArgedisProps> = ({ label }) => {
   return (
     <Link href={"/argedis"}>
       <motion.div
-        className="md:flex md:flex-row items-center border-t-[1px] border-white2  bg-lime-950  w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] text-lime-950"
+        className="md:flex md:flex-row items-center border-t-[1px] border-white2  w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] text-lime-950"
         whileHover={{
           backgroundPosition: "0% 0%",
           transition: { duration: 0.2 },
@@ -28,7 +28,7 @@ const BarArgedis: FC<BarArgedisProps> = ({ label }) => {
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
-        <h3 className="menca md:pl-[40px]  pl-6 pr-4 lg:pr-0 font-bold lg:text-base  text-sm leading-[17.6px] md:w-52 lg:w-[2400px] pt-4 pb-2 text-white2 md:hover:text-lime-950  md:h-[110px] flex items-center z-40 pt-4 pb-2 md:pt-0 md:pb-0">
+        <h3 className="menca md:pl-[40px]  pl-6 pr-4 lg:pr-0 font-bold lg:text-base  text-sm leading-[17.6px] md:w-52 lg:w-[2400px] pt-4 pb-2 text-white2 md:hover:text-lime-950  md:h-[110px] flex items-center z-40 pt-4 pb-2 md:pt-0 md:pb-0 ">
           {label}
         </h3>
         <div className="flex flex-row items-center w-screen md:w-fit h-12">
@@ -62,7 +62,7 @@ const BarArgedis: FC<BarArgedisProps> = ({ label }) => {
             ></Pill>
           </div>
 
-          <div className="md:pl-[410px] md:pr-[30px] md:pl-6 md:pr-6 pr-8 pb-10 md:pb-0">
+          <div className="md:pl-[410px] md:pr-[30px] md:pl-6 md:pr-6 pr-8 pb-10 md:pb-0 ">
             <ArrowTopRight></ArrowTopRight>
           </div>
         </div>
