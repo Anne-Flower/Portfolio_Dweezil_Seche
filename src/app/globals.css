@@ -180,15 +180,18 @@ body {
 .fond {
   background: radial-gradient(50.32% 59.73% at 29.17% 30.6%, #3E553A 0%, #2B312A 100%);
   background-size: 200% 200%;
-  animation: gradient-anim 15s ease infinite;
+  animation: gradient-anim 10s ease infinite;
 }
 
 @keyframes gradient-anim {
-  0% {
-    background-position: 10% 10%;
+  5% {
+    background-position: 40% 20%;
+  }
+  25% {
+    background-position: 30% 30%;
   }
   50% {
-    background-position: 50% 50%;
+    background-position: 50% 40%;
   }
   60% {
     background-position: 60% 20%;
@@ -206,10 +209,13 @@ body {
     background-position: 60% 60%;
   }
   50% {
-    background-position: 20% 50%;
+    background-position: 50% 10%;
   }
   25% {
-    background-position: 60% 40%;
+    background-position: 65% 40%;
+  }
+  10% {
+    background-position: 45% 25%;
   }
 
 
