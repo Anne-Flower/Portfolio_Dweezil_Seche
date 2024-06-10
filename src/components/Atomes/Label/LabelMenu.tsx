@@ -10,14 +10,14 @@ const LabelMenu: FC<LabelMenuProps> = ({}) => {
   return (
     <>
       <Link href={"/menu"}>
-        <div className="link top-left  relative">
+        <div className="link top-right relative">
           <div>
             <span className="mask h-[20px] absolute ">
               <div className="link-container ">
-                <span className="link-title1 title h-2 absolute left-8 font-medium text-sm leading-4	menca">
+                <span className="link-title1 title h-2 absolute right-0 font-medium text-sm leading-4	menca">
                   ( MENU )
                 </span>
-                <span className="link-title2 title h-2 absolute left-8 font-medium text-sm leading-4	menca">
+                <span className="link-title2 title h-2 absolute right-0 font-medium text-sm leading-4	menca">
                   ( MENU )
                 </span>
               </div>

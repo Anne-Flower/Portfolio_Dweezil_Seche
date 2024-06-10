@@ -32,15 +32,11 @@ const AboutPage = () => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className=" md:relative top-10 pt-0 h-[1200px] md:h-screen">
-            <div className="absolute invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
+          <div className=" md:relative top-[32px] pt-0 h-[1200px] md:h-screen">
+            <div className="absolute invisible md:visible menca text-white2 font-extralight flex justify-between w-screen md:px-[42px]">
               <LabelHome />
-              <div className="pr-8">
-                <LabelMenu
-                  handleToggle2={function (): void {
-                    throw new Error("Function not implemented.");
-                  }}
-                />
+              <div className="">
+                <LabelMenu />
               </div>
             </div>
             <div className="w-full h-screen text-white lg:pt-10">

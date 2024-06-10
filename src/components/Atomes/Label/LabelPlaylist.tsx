@@ -16,10 +16,10 @@ const LabelPlaylist = () => {
         <div>
           <span className="mask h-[20px] absolute menu-button ">
             <div className="link-container ">
-              <span className="link-title1 title h-2 absolute font-medium text-sm leading-4	menca  top-right ">
+              <span className="link-title1 title h-2 absolute font-medium text-sm leading-4	menca  top-0 right-0 ">
                 ( MA PLAYLIST )
               </span>
-              <span className="link-title2 title h-2 absolute  font-medium text-sm leading-4	menca  top-right ">
+              <span className="link-title2 title h-2 absolute  font-medium text-sm leading-4	menca  top-0 right-0 ">
                 ( MA PLAYLIST )
               </span>
             </div>

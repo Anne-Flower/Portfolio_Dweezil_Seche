@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className=" w-full pl-8">
+    <div className=" w-full ">
       <h2 className="general font-light	text-2xl leading-[35.59px] text-white2 pb-2 ">
         Parlons-en !
       </h2>
