@@ -52,7 +52,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className=" text-white2 lg:hidden flex justify-center pb-16 pt-8 ">
+      <div className=" text-white2 lg:hidden flex justify-center pb-16 pt-8 pl-6 md:pl-0">
         <Contact />
       </div>
     </div>
