@@ -56,7 +56,7 @@ export default function Home() {
           } transition-opacity duration-300 `}
         >
           <div className="h-screen w-screen ">
-            <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
+            <div className="absolute top-6 invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
               <LabelAbout />
               <div className=" pr-8">
                 {" "}
@@ -69,7 +69,7 @@ export default function Home() {
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="md:py-[128px] md:pt-[366px] lg:px-6 pt-[290px] w-screen">
+              <div className="md:py-[128px] md:pt-[432px] lg:px-6 pt-[290px] w-screen">
                 <div className="lg:flex flex-row justify-end leading-[84.64px] font-thin">
                   <h1 className="general text-4xl flex justify-end pr-4 lg:text-[80px]">
                     Je m’appelle
@@ -95,7 +95,7 @@ export default function Home() {
                   PORTFOLIO 2024 | 100% fait main (au Mexique)...
                 </p>
               </div>
-              <div className="lg:w-[300px] pb-40 absolute top-[540px]">
+              <div className="lg:w-[300px] pb-40 absolute top-[590px]">
                 <div className="lg:w-[300px] invisible lg:visible lg:pt-12">
                   <Contact />
                 </div>

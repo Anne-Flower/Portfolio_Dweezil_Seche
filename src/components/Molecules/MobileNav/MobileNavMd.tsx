@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 import Contact from "@/components/Atomes/Contact/Contact";
 import Labels from "@/components/Atomes/Label/Labels";
+import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 
 type MobileNavMdProps = {
   isOpen: boolean;
@@ -37,11 +38,7 @@ const MobileNavMd: FC<MobileNavMdProps> = ({
             isOpen ? "hidden" : "show"
           }`}
         >
-          <FontAwesomeIcon
-            icon={faBars}
-            className="icon-size-custom cursor-pointer text-white2 h-[50px] w-[50px]"
-            onClick={handleToggle}
-          />
+          <LabelMenu></LabelMenu>
         </div>
       </div>
       <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond" : ""}`}>
