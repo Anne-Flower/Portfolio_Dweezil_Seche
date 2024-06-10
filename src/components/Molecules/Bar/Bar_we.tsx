@@ -15,6 +15,13 @@ const BarWE: FC<BarWEProps> = ({ label }) => {
     <Link href={"/we"}>
       <motion.div
         className="md:flex md:flex-row items-center border-t-[1px] border-b-[1px] border-white2 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950 fond3fix"
+        style={{
+          opacity: "10px",
+          backgroundImage: "url('/assets/img/grain.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
         whileHover={{
           background:
             "linear-gradient(to top, #F8F7F0 0%, #F8F7F0 50%, #1a2e05 50%, #1a2e05 100%)",
@@ -25,7 +32,7 @@ const BarWE: FC<BarWEProps> = ({ label }) => {
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
-        <h3 className="menca md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base  text-sm leading-[17.6px] md:w-52 lg:w-[2400px] pt-4 pb-2 text-white2 md:hover:text-lime-950  md:h-[110px]  flex items-center z-40 pt-4 pb-2 md:pt-0 md:pb-0">
+        <h3 className="menca md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base text-sm leading-[17.6px] md:w-52 lg:w-[2400px] pt-4 pb-2 text-white2 md:hover:text-lime-950  md:h-[110px]  flex items-center z-40 pt-4 pb-2 md:pt-0 md:pb-0">
           {label}
         </h3>
         <div className="flex flex-row items-center w-screen md:w-fit h-12">

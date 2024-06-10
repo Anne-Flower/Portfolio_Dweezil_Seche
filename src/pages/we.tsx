@@ -57,15 +57,11 @@ const we = () => {
           } transition-opacity duration-300 `}
         >
           <div className="bg-[url('/assets/img/header/header_wesh.png')] md:w-screen md:h-screen md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
-            <div className="absolute top-10 invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
+            <div className="absolute top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen px-[42px]">
               <LabelHome />
-              <div className=" pr-8">
+              <div className="">
                 {" "}
-                <LabelMenu
-                  handleToggle2={function (): void {
-                    throw new Error("Function not implemented.");
-                  }}
-                />
+                <LabelMenu />
               </div>
             </div>
             <div

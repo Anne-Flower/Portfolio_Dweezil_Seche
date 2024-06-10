@@ -175,6 +175,10 @@ body {
   right: 0;
 }
 
+
+
+/* backgrounds */
+
 .fond2 {
   background: radial-gradient(50.32% 59.73% at 59.17% 50.6%, #3E553A 0%, #2B312A 100%);
 
@@ -185,10 +189,15 @@ body {
 }
 
 .fond {
-  background: radial-gradient(50.32% 59.73% at 29.17% 30.6%, #3E553A 0%, #2B312A 100%);
+  background: radial-gradient(50.32% 59.73% at 29.17% 20.6%, #3E553A 0%, #2B312A 100%);
   background-size: 200% 200%;
   animation: gradient-anim 10s ease infinite;
+  width: 100%;
+  background-position: center;
+
 }
+
+
 
 @keyframes gradient-anim {
   5% {
@@ -219,7 +228,7 @@ body {
     background-position: 50% 10%;
   }
   25% {
-    background-position: 85% 40%;
+    background-position: 5% 40%;
   }
   10% {
     background-position: 45% 25%;

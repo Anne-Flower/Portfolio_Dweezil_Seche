@@ -15,7 +15,7 @@ const CustomCursor: FC<CursorProps> = ({ x, y }) => {
       <p className="menca font-medium leading-[16.8px] text-sm	 flex justify-center items-center">
         Projet{" "}
       </p>
-      <p className="menca font-medium leading-[16.8px] text-sm	 flex justify-center items-center ">
+      <p className="menca font-medium	 leading-[16.8px] text-sm	 flex justify-center items-center ">
         {" "}
         suivant
       </p>

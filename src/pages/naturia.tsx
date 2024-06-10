@@ -65,7 +65,7 @@ const Naturia = ({}) => {
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
-        <div className="sticky top-0 z-50 ">
+        <div className="sticky top-0 z-50  ">
           <MobileNav
             isOpen={isOpen}
             handleToggle={handleToggle}
@@ -83,12 +83,12 @@ const Naturia = ({}) => {
         <div
           className={`${
             isOpen ? "opacity-10" : "opacity-100"
-          } transition-opacity duration-300 `}
+          } transition-opacity duration-300`}
         >
-          <div className="bg-[url('/assets/img/header/header_naturIA.png')] md:w-screen  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 md:px-[42px]">
-            <div className="absolute top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen">
+          <div className="bg-[url('/assets/img/header/header_naturIA.png')]  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
+            <div className="absolute top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen md:px-[42px]">
               <LabelHome />
-              <div className=" pr-[84px]">
+              <div className=" ">
                 {" "}
                 <LabelMenu />
               </div>
@@ -98,7 +98,7 @@ const Naturia = ({}) => {
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex flex-col items-center text-white  w-screen md:w-screen">
+              <div className="flex flex-col items-center text-white  w-screen ">
                 <h1 className="general font-thin	text-[90px] md:text-[120px] leading-[178px] md:pt-40 pt-4 ">
                   NaturIA
                 </h1>
@@ -544,67 +544,79 @@ const Naturia = ({}) => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className=" bg-white2  md:min-w-[684px] z-60 h-[200px]"></div>
-              <motion.div
-                className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2 flex flex-col items-center text-white2 overflow-clip"
-                initial={{ opacity: 2 }}
-                whileInView={{ opacity: 0.2 }}
-                transition={{ duration: 1.3 }}
-                whileHover={{ scale: 1.15 }}
-              >
-                {" "}
-                <h1 className="general font-thin	text-[36px] md:text-[120px] leading-[178px] md:pt-40 pt-32">
-                  Argedis | Regionalisme
-                </h1>
-                <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white">
-                  <div className="flex flex-row">
-                    <Labels label={"( DATE TIME )"} />
-                    ..................................................................
-                    <Labels label={"2024"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( CLIENT )"} />
-                    .................................................................
-                    <Labels label={"ARGEDIS"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( TYPE DE PROJET )"} />
-                    ...
-                    <Labels
-                      label={"DIRECTION ARTISTIQUE | UI | MOTION DESIGN "}
-                    />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( AGENCE )"} />{" "}
-                    ..........................................
-                    <Labels label={"STUDIO ARTEFACT 3000"} />
-                  </div>
-                </section>
-                <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
-                  <div className="flex flex-row">
-                    <Labels label={"( DATE TIME )"} />
-                    ......................................................................................................................
-                    <Labels label={"2024"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( CLIENT )"} />
-                    .....................................................................................................................
-                    <Labels label={"ARGEDIS"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( TYPE DE PROJET )"} />
-                    .......................................................
-                    <Labels
-                      label={"DIRECTION ARTISTIQUE | UI | MOTION DESIGN "}
-                    />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( AGENCE )"} />{" "}
-                    ..............................................................................................
-                    <Labels label={"STUDIO ARTEFACT 3000"} />
-                  </div>
-                </section>
-              </motion.div>
+              <div className=" bg-white2 ">
+                <div className=" md:min-w-[684px] z-80 h-[200px] mb-24"></div>
+                <motion.div
+                  className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative flex flex-col items-center text-white2 overflow-clip 	"
+                  initial={{ filter: "blur(0px)", scale: 1 }}
+                  whileInView={{ filter: "blur(2px)" }}
+                  transition={{ duration: 1 }}
+                  whileHover={{ scale: 1.25, filter: "blur(2px)" }}
+                >
+                  {" "}
+                  <motion.div
+                    className="div flex flex-col items-center "
+                    initial={{
+                      filter: "blur(0px)",
+                      scale: 1,
+                    }}
+                    whileHover={{ scale: 0.8 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <h1 className="general font-thin	text-[36px] md:text-[120px] leading-[178px] md:pt-40 pt-32 ">
+                      Argedis | Regionalisme
+                    </h1>
+                    <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white ">
+                      <div className="flex flex-row">
+                        <Labels label={"( DATE TIME )"} />
+                        ..................................................................
+                        <Labels label={"2024"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( CLIENT )"} />
+                        .................................................................
+                        <Labels label={"ARGEDIS"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( TYPE DE PROJET )"} />
+                        ...
+                        <Labels
+                          label={"DIRECTION ARTISTIQUE | UI | MOTION DESIGN "}
+                        />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( AGENCE )"} />{" "}
+                        ..........................................
+                        <Labels label={"STUDIO ARTEFACT 3000"} />
+                      </div>
+                    </section>
+                    <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
+                      <div className="flex flex-row">
+                        <Labels label={"( DATE TIME )"} />
+                        ......................................................................................................................
+                        <Labels label={"2024"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( CLIENT )"} />
+                        .....................................................................................................................
+                        <Labels label={"ARGEDIS"} />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( TYPE DE PROJET )"} />
+                        .......................................................
+                        <Labels
+                          label={"DIRECTION ARTISTIQUE | UI | MOTION DESIGN "}
+                        />
+                      </div>
+                      <div className="flex flex-row">
+                        <Labels label={"( AGENCE )"} />{" "}
+                        ..............................................................................................
+                        <Labels label={"STUDIO ARTEFACT 3000"} />
+                      </div>
+                    </section>
+                  </motion.div>
+                </motion.div>
+              </div>{" "}
             </div>
           </Link>
         </div>

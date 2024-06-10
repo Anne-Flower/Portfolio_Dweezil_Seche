@@ -39,11 +39,19 @@ export default function Home() {
         <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
       )}
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond  min-h-screen overflow-y-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
+        style={{
+          opacity: "10px",
+          backgroundImage: "url('/assets/img/grain.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          animation: "none",
+        }}
       >
-        <div className=" sticky top-0 z-50 ">
+        <div className=" sticky top-0 z-50">
           <MobileNav
             isOpen={isOpen}
             handleToggle={handleToggle}
@@ -52,11 +60,21 @@ export default function Home() {
         </div>
         <div
           className={`${
-            isOpen ? "opacity-10" : "opacity-100"
+            isOpen ? "opacity-10 " : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className="h-screen w-screen ">
-            <div className="absolute top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen px-[42px]">
+          <div
+            className=" h-[600px] md:h-screen w-screen "
+            style={{
+              opacity: "10px",
+              backgroundImage: "url('/assets/img/grain.png')",
+              backgroundAttachment: "fixed",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              animation: "none",
+            }}
+          >
+            <div className="absolute md:top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen px-[42px]">
               <LabelAbout />
               <div className=" ">
                 {" "}
@@ -95,8 +113,8 @@ export default function Home() {
                   PORTFOLIO 2024 | 100% fait main (au Mexique)...
                 </p>
               </div>
-              <div className="lg:w-[300px] pb-40 absolute top-[578px] left-[42px]">
-                <div className="lg:w-[300px] invisible lg:visible lg:pt-12">
+              <div className="lg:w-[300px] pb-40 absolute top-[578px] left-[42px] ">
+                <div className="lg:w-[300px] invisible lg:visible lg:pt-12 ">
                   <Contact />
                 </div>
               </div>
@@ -104,9 +122,9 @@ export default function Home() {
           </div>
           <div
             id="anchor-selectedProjects"
-            className="bg-white2 w-screen text-lime-950"
+            className="bg-white2 w-screen text-lime-950 fond"
           >
-            <div className="menca flex flex-row justify-between pr-6 md:pr-8 h-[95px] w-screen bg-white2 font-bold items-center flex-row text-lime-950 md:pl-[40px] md:pr-[40px]">
+            <div className="menca flex flex-row justify-between pr-6 md:pr-8 h-[95px] w-screen bg-white2 font-bold items-center flex-row text-lime-950 md:pl-[40px] md:pr-[40px]  ">
               <h3 className="pl-4">SELECTED PROJECTS</h3>
               <Link href={"/bonus"}>
                 <div className="menca px-6 py-4 w-24 h-8 rounded-full bg-white2 text-lime-950 flex items-center flex-end justify-center ring-1 ring-lime-950 hover:bg-lime-950 hover:text-white2 hover:ring-white2 leading-4 ">
@@ -114,7 +132,7 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-            <div className="fond2">
+            <div className="">
               <BarNaturia label={"Natur.IA"} />
               <BarArgedis label={"Argedis | Regionalis"} />
               <BarEngrenages label="Engrenages" />
@@ -122,7 +140,16 @@ export default function Home() {
               <BarWE label={"WE.SH IV"} />
             </div>
           </div>
-          <p className="menca flex justify-center bg-fond2 md:pt-[250px] pb-4 md:pb-8 pt-16 w-screen">
+          <p
+            className="menca flex justify-center fond3fix md:pt-[250px] pb-4 md:pb-8 pt-16 w-screen "
+            style={{
+              opacity: "10px",
+              backgroundImage: "url('/assets/img/grain.png')",
+              backgroundAttachment: "fixed",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             @Copyright | dweezilseche.fr
           </p>
         </div>

@@ -19,6 +19,13 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
         className={` md:flex md:flex-row items-center border-t-[1px] border-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] ${
           isVisible ? "bg-white2 text-lime-950" : "fond3fix text-white2"
         }  ${isOpen ? "bg-white2" : "bg-white2"}`}
+        style={{
+          opacity: "10px",
+          backgroundImage: "url('/assets/img/grain.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
         whileHover={{
           opacity: 1,
           background:

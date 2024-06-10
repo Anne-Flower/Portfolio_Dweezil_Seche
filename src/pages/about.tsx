@@ -16,8 +16,16 @@ const AboutPage = () => {
   return (
     <>
       <div
-        className={`fond relative text-white2 flex justify-center font-extralight w-screen flex-col min-h-screen overflow-x-clip ${
-          isOpen ? "overflow-hidden " : "overflow-clip "
+        style={{
+          opacity: "10px",
+          backgroundImage: "url('/assets/img/grain.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          animation: "none",
+        }}
+        className={`fond3fix relative text-white2 flex justify-center font-extralight w-screen flex-col min-h-screen overflow-x-clip ${
+          isOpen ? "overflow-hidden  " : "overflow-clip "
         } `}
       >
         <div className="sticky top-0 z-50 ">

@@ -25,7 +25,17 @@ const MenuVariants = {
 
 const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
   return (
-    <nav className=" xl:hidden relative">
+    <nav
+      className=" xl:hidden relative bg-transparent fond"
+      style={{
+        opacity: "10px",
+        backgroundImage: "url('/assets/img/grain.png')",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        animation: "none",
+      }}
+    >
       <div className="text-3xl cursor-pointer relative md:h-0">
         <div
           className={`flex flex-row-reverse py-4 pr-4 pt-6 md:invisible ${
@@ -39,12 +49,12 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
           />
         </div>
       </div>
-      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond3fix" : ""}`}>
+      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond" : ""}`}>
         <motion.div
           variants={MenuVariants}
           initial="hidden"
           animate={isOpen ? "show" : "hidden"}
-          className="shadow-2xl w-full absolute top-0 right-0 max-w-sm h-screen"
+          className="shadow-2xl w-full absolute top-0 right-0 max-w-sm h-screen "
         >
           <div
             onClick={handleToggle}

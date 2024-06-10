@@ -29,7 +29,17 @@ const Bonus = () => {
         isOpen ? "overflow-hidden " : "overflow-clip "
       } `}
     >
-      <div className="sticky top-0 z-50 bg-transparent ">
+      <div
+        className="sticky top-0 z-50 bg-transparent "
+        style={{
+          opacity: "10px",
+          backgroundImage: "url('/assets/img/grain.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          animation: "none",
+        }}
+      >
         <MobileNav
           isOpen={isOpen}
           handleToggle={handleToggle}
@@ -49,7 +59,17 @@ const Bonus = () => {
               <LabelPlaylist />
             </div>
           </div>
-          <div className="fond h-screen w-screen flex flex-col items-center">
+          <div
+            className="fond h-screen w-screen flex flex-col items-center"
+            style={{
+              opacity: "10px",
+              backgroundImage: "url('/assets/img/grain.png')",
+              backgroundAttachment: "fixed",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              animation: "none",
+            }}
+          >
             <h1 className="general font-thin text-[56px] leading-[83px] text-white2 pt-48">
               Bonus
             </h1>
