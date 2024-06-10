@@ -78,7 +78,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
                 </Link>
               </li>
             </ul>
-            <div className="pt-72">
+            <div className="pt-72 pl-4 md:pl-0">
               <Contact />
             </div>
           </div>
