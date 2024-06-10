@@ -546,7 +546,7 @@ const Naturia = ({}) => {
             >
               <div className=" bg-white2  md:min-w-[684px] z-60 h-[200px]"></div>
               <motion.div
-                className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2 flex flex-col items-center text-white2"
+                className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2 flex flex-col items-center text-white2 overflow-clip"
                 initial={{ opacity: 2 }}
                 whileInView={{ opacity: 0.2 }}
                 transition={{ duration: 1.3 }}

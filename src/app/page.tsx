@@ -71,7 +71,7 @@ export default function Home() {
             >
               <div className="md:py-[128px] md:pt-[420px] lg:pr-[42px] pt-[290px] w-screen">
                 <div className="lg:flex flex-row justify-end leading-[84.64px] font-thin">
-                  <h1 className="general text-4xl flex justify-end lg:text-[80px] pr-4 md:pr-0">
+                  <h1 className="general text-4xl flex justify-end lg:text-[80px] pr-4 md:pr-4">
                     Je m’appelle
                   </h1>
                   <h1 className="general text-4xl flex justify-end lg:text-[80px] pr-4 md:pr-0">
@@ -79,7 +79,7 @@ export default function Home() {
                   </h1>
                 </div>
                 <div className="lg:flex lg:flex-row justify-end leading-[84.64px] font-thin">
-                  <h2 className="general text-4xl flex justify-end lg:text-[80px] lg:pt-14 pr-4 md:pr-0">
+                  <h2 className="general text-4xl flex justify-end lg:text-[80px] lg:pt-14 pr-4 md:pr-4">
                     Je suis
                   </h2>
                   <div className="flex flex-col justify-end">
