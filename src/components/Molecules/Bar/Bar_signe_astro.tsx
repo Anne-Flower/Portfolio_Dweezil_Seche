@@ -11,30 +11,30 @@ type BarImage3DProps = {
 
 const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIisOpen] = useState(false);
 
   return (
     <div className="z-40 cursor-pointer" onClick={onToggle}>
       <motion.div
-        className={`md:flex md:flex-row items-center border-t-[1px] border-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] ${
-          isVisible ? "bg-white2 text-lime-950" : "bg-lime-950 text-white2"
-        }`}
+        className={` md:flex md:flex-row items-center border-t-[1px] border-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] ${
+          isVisible ? "bg-white2 text-lime-950" : "fond3fix text-white2"
+        }  ${isOpen ? "bg-white2" : "bg-white2"}`}
         whileHover={{
-          backgroundPosition: "0% 0%",
-          transition: { duration: 0.2 },
-        }}
-        initial={{
+          opacity: 1,
           background:
-            "linear-gradient(to top, #1a2e05 0%, #1a2e05 50%,  #F8F7F0 50%,  #F8F7F0  100%)",
+            "linear-gradient(to top, #F8F7F0 0%, #F8F7F0 50%, #1a2e05 50%, #1a2e05 100%)",
           backgroundSize: "100% 200%",
           backgroundPosition: "0% 100%",
+          transition: { duration: 0.5 },
         }}
+        exit={{ opacity: 0 }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
         <h3
           className={`menca md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base text-sm leading-[17.6px] md:w-screen md:h-[80px] flex items-center z-40 pt-4 pb-2 md:pt-0 md:pb-0 hover:text-lime-950 text-white2 ${
             isHovered ? "text-lime-950" : "text-white2"
-          }`}
+          } `}
         >
           {" "}
           {label}
@@ -46,7 +46,7 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
               px={6}
               customClass={
                 isHovered
-                  ? "bg-lime-950 text-white2"
+                  ? "fond2 text-white2"
                   : isVisible
                   ? "bg-white2 text-lime-950"
                   : "bg-white2 text-lime-950"
@@ -57,7 +57,7 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
               px={4}
               customClass={
                 isHovered
-                  ? "bg-lime-950 text-white2"
+                  ? "fond2 text-white2"
                   : isVisible
                   ? "bg-white2 text-lime-950"
                   : "bg-white2 text-lime-950"

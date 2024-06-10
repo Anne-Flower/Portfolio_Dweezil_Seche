@@ -40,7 +40,7 @@ const we = () => {
       )}
 
       <div
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  bg-lime-950 min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -61,7 +61,11 @@ const we = () => {
               <LabelHome />
               <div className=" pr-8">
                 {" "}
-                <LabelMenu />
+                <LabelMenu
+                  handleToggle2={function (): void {
+                    throw new Error("Function not implemented.");
+                  }}
+                />
               </div>
             </div>
             <div
@@ -153,12 +157,36 @@ const we = () => {
 
           <div>
             <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip text-white2 space-y-4 ">
-              <div className="bg-[url('/assets/img/wesh/cover.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-              <div className="bg-[url('/assets/img/wesh/charte.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-              <div className="bg-[url('/assets/img/wesh/font.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-              <div className="bg-[url('/assets/img/wesh/icono.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-              <div className="bg-white2"></div>
-              <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950">
+              <motion.div
+                className="bg-[url('/assets/img/wesh/cover.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              ></motion.div>
+              <motion.div
+                className="bg-[url('/assets/img/wesh/charte.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              ></motion.div>
+              <motion.div
+                className="bg-[url('/assets/img/wesh/font.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              ></motion.div>
+              <motion.div
+                className="bg-[url('/assets/img/wesh/icono.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              ></motion.div>
+              <motion.div className="bg-white2"></motion.div>
+              <motion.section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950">
                 <p className="md:h-[209px] md:w-[672px] py-16 bg-white2 w-[300px] md:min-w-[684px]">
                   Une fois la charte graphique élaborée, il m'a été demandé de
                   créer les gabarits pour les présentations des DJ. L'idée était
@@ -170,11 +198,23 @@ const we = () => {
                   beaucoup plus sobre que la première, tout en essayant de
                   conserver au maximum la direction artistique.
                 </p>
-              </section>
+              </motion.section>
             </div>
             <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip text-white2 space-y-4">
-              <div className="bg-[url('/assets/img/wesh/dj-propal-1.png')]   w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16  "></div>
-              <div className="bg-[url('/assets/img/wesh/dj-propal-2.png')]   w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16  "></div>
+              <motion.div
+                className="bg-[url('/assets/img/wesh/dj-propal-1.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              ></motion.div>
+              <motion.div
+                className="bg-[url('/assets/img/wesh/dj-propal-2.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              ></motion.div>
             </div>
             <div className="bg-white2">
               <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950">
@@ -199,7 +239,13 @@ const we = () => {
               </section>
             </div>
             <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip px-6 md:px-0">
-              <div className="bg-[url('/assets/img/wesh/dessin_plan.png')] w-[330px] md:h-[500px] h-[300px] md:w-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
+              <motion.div
+                className="bg-[url('/assets/img/wesh/dessin_plan.png')] w-[330px] md:h-[500px] h-[300px] md:w-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              ></motion.div>
             </div>
             <Link href={"/engrenages"}>
               <div

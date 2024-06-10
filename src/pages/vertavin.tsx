@@ -40,7 +40,7 @@ const verreavin = () => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col   min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip ${
           isOpen ? "overflow-hidden " : "overflow-clip"
         } `}
       >
@@ -61,7 +61,11 @@ const verreavin = () => {
               <LabelHome />
               <div className=" pr-8">
                 {" "}
-                <LabelMenu />
+                <LabelMenu
+                  handleToggle2={function (): void {
+                    throw new Error("Function not implemented.");
+                  }}
+                />
               </div>
             </div>
             <div
@@ -70,7 +74,7 @@ const verreavin = () => {
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
               <div className="flex flex-col items-center text-white2  w-screen md:w-screen">
-                <h1 className="general font-thin	md:text-[90px] 	text-[40px] md:text-[120px] leading-[178px] md:pt-40 pt-4">
+                <h1 className="general font-thin md:text-[90px]	text-[40px] md:text-[120px] leading-[178px] md:pt-40 pt-4">
                   Vert à Vin
                 </h1>
                 <p className="menca lg:w-[670px] w-screen px-4 text-center pt-2 ">
@@ -149,10 +153,34 @@ const verreavin = () => {
             </div>
           </section>
           <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip space-y-8">
-            <div className="bg-[url('/assets/img/vertAvin/planche.png')] w-full md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-            <div className="bg-[url('/assets/img/vertAvin/propales_logos.png')] md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"></div>
-            <div className="bg-[url('/assets/img/vertAvin/tablier.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px]  bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
-            <div className="bg-[url('/assets/img/vertAvin/hangar.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
+            <motion.div
+              className="bg-[url('/assets/img/vertAvin/planche.png')] w-full md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/vertAvin/propales_logos.png')] md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/vertAvin/tablier.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px]  bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/vertAvin/hangar.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
           </div>
           <Link href={"/we"}>
             <div

@@ -25,11 +25,11 @@ const Bonus = () => {
   };
   return (
     <main
-      className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  fond2 min-h-screen overflow-clip  ${
+      className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
         isOpen ? "overflow-hidden " : "overflow-clip "
       } `}
     >
-      <div className="bg-lime-950 sticky top-0 z-50 ">
+      <div className="sticky top-0 z-50 bg-transparent ">
         <MobileNav
           isOpen={isOpen}
           handleToggle={handleToggle}

@@ -14,16 +14,13 @@ const BarArgedis: FC<BarArgedisProps> = ({ label }) => {
   return (
     <Link href={"/argedis"}>
       <motion.div
-        className="md:flex md:flex-row items-center border-t-[1px] border-white2  w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] text-lime-950"
+        className="md:flex md:flex-row items-center border-t-[1px] border-white2  w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] text-lime-950 fond3fix"
         whileHover={{
-          backgroundPosition: "0% 0%",
-          transition: { duration: 0.2 },
-        }}
-        initial={{
           background:
-            "linear-gradient(to top, #1a2e05 0%, #1a2e05 50%,  #F8F7F0 50%,  #F8F7F0  100%)",
+            "linear-gradient(to top, #F8F7F0 0%, #F8F7F0 50%, #1a2e05 50%, #1a2e05 100%)",
           backgroundSize: "100% 200%",
           backgroundPosition: "0% 100%",
+          transition: { duration: 0.5 },
         }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
@@ -37,27 +34,21 @@ const BarArgedis: FC<BarArgedisProps> = ({ label }) => {
               label={"DA"}
               px={6}
               customClass={
-                isHovered
-                  ? "bg-lime-950 text-white2"
-                  : "bg-white2 text-lime-950"
+                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
             <Pill
               label={"UI"}
               px={6}
               customClass={
-                isHovered
-                  ? "bg-lime-950 text-white2"
-                  : "bg-white2 text-lime-950"
+                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
             <Pill
               label={"motion"}
               px={6}
               customClass={
-                isHovered
-                  ? "bg-lime-950 text-white2"
-                  : "bg-white2 text-lime-950"
+                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
           </div>

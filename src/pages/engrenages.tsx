@@ -38,7 +38,7 @@ const engrenage = () => {
         <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
       )}
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip"
         } `}
       >
@@ -59,7 +59,11 @@ const engrenage = () => {
               <LabelHome />
               <div className=" pr-8">
                 {" "}
-                <LabelMenu />
+                <LabelMenu
+                  handleToggle2={function (): void {
+                    throw new Error("Function not implemented.");
+                  }}
+                />
               </div>
             </div>
             <div
@@ -145,11 +149,41 @@ const engrenage = () => {
             </div>
           </section>
           <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip ">
-            <div className="bg-[url('/assets/img/engrenages/2.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center "></div>
-            <div className="bg-[url('/assets/img/engrenages/3.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center  "></div>
-            <div className="bg-[url('/assets/img/engrenages/4.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center  "></div>
-            <div className="bg-[url('/assets/img/engrenages/8.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat	bg-center  "></div>
-            <div className="bg-[url('/assets/img/engrenages/9.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center  "></div>
+            <motion.div
+              className="bg-[url('/assets/img/engrenages/2.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center "
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/engrenages/3.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/engrenages/4.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/engrenages/8.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat	bg-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/engrenages/9.png')] w-full w-screen h-[280px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
           </div>
 
           <Link href={"/naturia"}>

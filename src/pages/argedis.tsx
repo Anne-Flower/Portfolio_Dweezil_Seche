@@ -39,7 +39,7 @@ const argedis = () => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  bg-lime-950 min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -60,7 +60,11 @@ const argedis = () => {
               <LabelHome />
               <div className=" pr-8">
                 {" "}
-                <LabelMenu />
+                <LabelMenu
+                  handleToggle2={function (): void {
+                    throw new Error("Function not implemented.");
+                  }}
+                />
               </div>
             </div>
             <div
@@ -152,19 +156,35 @@ const argedis = () => {
             </div>
           </section>
           <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip space-y-8">
-            <div className="bg-[url('/assets/img/regionalisme/combinaison_de_couleurs.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
-            <div className="bg-[url('/assets/img/regionalisme/presentation_argedis.png')] w-screen md:h-[400px] h-[200px]  md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16 "></div>
-            <video
+            <motion.div
+              className="bg-[url('/assets/img/regionalisme/combinaison_de_couleurs.png')] w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="bg-[url('/assets/img/regionalisme/presentation_argedis.png')] w-screen md:h-[400px] h-[200px]  md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.video
               autoPlay
               loop
               muted
               className=" z-10 w-full w-screen md:h-[400px] h-[200px] md:h-screen bg-contain md:bg-cover bg-no-repeat bg-center pb-16pb-48 bg-white2"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
             >
               <source
                 src="/assets/img/regionalisme/demo.mp4"
                 type="video/mp4"
               />
-            </video>
+            </motion.video>
           </div>
           <Link href={"/vertavin"}>
             <div

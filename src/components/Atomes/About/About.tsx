@@ -5,16 +5,16 @@ import Contact from "../Contact/Contact";
 
 const About = () => {
   return (
-    <div className="w-screen lg:flex lg:justify-end lg:pr-6  h-screen lg:relative bg-lime-950">
-      <div className="bg-lime-950 text-white2 hidden lg:flex lg:pr-[1200px] lg:pb-32 lg:items-end">
+    <div className="w-screen lg:flex lg:justify-end lg:pr-6 h-screen relative ">
+      <div className=" text-white2 hidden lg:flex lg:pr-[1200px] lg:pb-32 lg:items-end">
         <Contact />
       </div>
 
-      <div className="bg-lime-950 text-white2 px-6 lg:w-[730px] overflow-x-clip lg:absolute lg:top-[84px]">
+      <div className="text-white2 px-6 lg:w-[730px] overflow-x-clip lg:absolute lg:pt-20 pt-0">
         <h1 className="general leading-[83px] font-thin md:text-[56px] text-4xl lg:pb-14 pb-10 flex lg:pt-8 pt-6">
           A propos
         </h1>
-        <div className="menca  text-base leading-[22px] space-y-4 bg-lime-950 font-light">
+        <div className="menca text-base leading-[22px] space-y-4 font-light">
           <p className="w-full ">
             Depuis 5 ans, j'ai pu développer mes compétences dans plusieurs
             domaines : le graphisme, la programmation front-end (HTML/CSS, JS,
@@ -52,7 +52,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="bg-lime-950 text-white2 lg:hidden flex justify-center pb-16 pt-8 ">
+      <div className=" text-white2 lg:hidden flex justify-center pb-16 pt-8 ">
         <Contact />
       </div>
     </div>

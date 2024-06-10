@@ -4,8 +4,9 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import React, { FC } from "react";
 import Contact from "@/components/Atomes/Contact/Contact";
+import Labels from "@/components/Atomes/Label/Labels";
 
-type MobileNavProps = {
+type MobileNavMdProps = {
   isOpen: boolean;
   handleToggle: () => void;
   isAbout: boolean;
@@ -23,12 +24,16 @@ const MenuVariants = {
   },
 };
 
-const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
+const MobileNavMd: FC<MobileNavMdProps> = ({
+  isOpen,
+  handleToggle,
+  isAbout,
+}) => {
   return (
-    <nav className="text-white2 xl:hidden relative">
+    <nav className="text-white2 hidden relative">
       <div className="text-3xl cursor-pointer relative md:h-0">
         <div
-          className={`text-white2 flex flex-row-reverse py-4 pr-4 pt-6 md:invisible ${
+          className={`text-white2 flex flex-row-reverse py-4 pr-4 pt-6 hidden md:visible ${
             isOpen ? "hidden" : "show"
           }`}
         >
@@ -39,9 +44,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
           />
         </div>
       </div>
-      <div
-        className={`fixed top-0 left-0 right-0 ${isOpen ? "bg-lime-950" : ""}`}
-      >
+      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond" : ""}`}>
         <motion.div
           variants={MenuVariants}
           initial="hidden"
@@ -52,7 +55,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
             onClick={handleToggle}
             className="text-4xl left-4 top-2 text-2 absolute"
           >
-            <FontAwesomeIcon icon={faXmark} className="icon-size-custom" />
+            <Labels label={"Fermer"}></Labels>
           </div>
           <div>
             <ul className="general flex flex-col justify-end items-end h-full gap-y-2 text-4xl text-white2 font-extralight cursor-pointer pt-24 pr-4">
@@ -90,4 +93,4 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
   );
 };
 
-export default MobileNav;
+export default MobileNavMd;

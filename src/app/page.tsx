@@ -43,7 +43,7 @@ export default function Home() {
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
-        <div className="bg-lime-950 sticky top-0 z-50 ">
+        <div className=" sticky top-0 z-50 ">
           <MobileNav
             isOpen={isOpen}
             handleToggle={handleToggle}
@@ -96,7 +96,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:w-[300px] pb-40 absolute top-[540px]">
-                <div className="lg:w-[300px] invisible lg:visible lg:pt-20">
+                <div className="lg:w-[300px] invisible lg:visible lg:pt-12">
                   <Contact />
                 </div>
               </div>
@@ -114,11 +114,13 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-            <BarNaturia label={"Natur.IA"} />
-            <BarArgedis label={"Argedis | Regionalis"} />
-            <BarEngrenages label="Engrenages" />
-            <BarVerreavin label={"Vert à Vin"} />
-            <BarWE label={"WE.SH IV"} />
+            <div className="fond2">
+              <BarNaturia label={"Natur.IA"} />
+              <BarArgedis label={"Argedis | Regionalis"} />
+              <BarEngrenages label="Engrenages" />
+              <BarVerreavin label={"Vert à Vin"} />
+              <BarWE label={"WE.SH IV"} />
+            </div>
           </div>
           <p className="menca flex justify-center bg-fond2 md:pt-[250px] pb-4 md:pb-8 pt-16 w-screen">
             @Copyright | dweezilseche.fr

@@ -5,6 +5,7 @@ import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Labels from "@/components/Atomes/Label/Labels";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
+import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { log } from "console";
 import { Variants, motion } from "framer-motion";
 import Link from "next/link";
@@ -12,10 +13,16 @@ import React, { FC, useEffect, useState } from "react";
 
 const Naturia = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
+
+  const handleToggle2 = () => {
+    setIsOpen2((prev) => !prev);
+  };
+
   const [visibleCursor, setIsVisibleCursor] = useState(false);
   const [visibleCursorHome, setIsVisibleCursorHome] = useState(false);
 
@@ -30,7 +37,7 @@ const Naturia = ({}) => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const cardVariants: Variants = {
+  const Variants: Variants = {
     offscreen: {
       y: 300,
     },
@@ -54,7 +61,7 @@ const Naturia = ({}) => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col bg-lime-950 min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond2 min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -65,6 +72,14 @@ const Naturia = ({}) => {
             isAbout={false}
           />
         </div>
+        <div className="sticky top-0 z-50 ">
+          <MobileNavMd
+            isOpen={isOpen2}
+            handleToggle={handleToggle2}
+            isAbout={false}
+          />
+        </div>
+
         <div
           className={`${
             isOpen ? "opacity-10" : "opacity-100"
@@ -75,7 +90,11 @@ const Naturia = ({}) => {
               <LabelHome />
               <div className=" pr-8">
                 {" "}
-                <LabelMenu />
+                <LabelMenu
+                  handleToggle2={function (): void {
+                    throw new Error("Function not implemented.");
+                  }}
+                />
               </div>
             </div>
             <div

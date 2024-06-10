@@ -25,23 +25,21 @@ const MenuVariants = {
 
 const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
   return (
-    <nav className="text-white2 xl:hidden relative">
+    <nav className=" xl:hidden relative">
       <div className="text-3xl cursor-pointer relative md:h-0">
         <div
-          className={`text-white2 flex flex-row-reverse py-4 pr-4 pt-6 md:invisible ${
+          className={`flex flex-row-reverse py-4 pr-4 pt-6 md:invisible ${
             isOpen ? "hidden" : "show"
           }`}
         >
           <FontAwesomeIcon
             icon={faBars}
-            className="icon-size-custom cursor-pointer text-white2 h-[50px] w-[50px]"
+            className="icon-size-custom cursor-pointer h-[50px] w-[50px]"
             onClick={handleToggle}
           />
         </div>
       </div>
-      <div
-        className={`fixed top-0 left-0 right-0 ${isOpen ? "bg-lime-950" : ""}`}
-      >
+      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond3fix" : ""}`}>
         <motion.div
           variants={MenuVariants}
           initial="hidden"
