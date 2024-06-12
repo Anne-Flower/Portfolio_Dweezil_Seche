@@ -4,11 +4,11 @@ import React, { FC, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-type LabelMenuProps = {
+type LabelCloseProps = {
   handleToggle: () => void;
 };
 
-const LabelMenu: FC<LabelMenuProps> = ({ handleToggle }) => {
+const LabelClose: FC<LabelCloseProps> = ({ handleToggle }) => {
   return (
     <>
       <div className="link top-right relative">
@@ -16,10 +16,10 @@ const LabelMenu: FC<LabelMenuProps> = ({ handleToggle }) => {
           <span className="mask h-[20px] absolute ">
             <div className="link-container  " onClick={handleToggle}>
               <span className="link-title1 title h-2 absolute right-0 font-medium text-sm leading-4	menca">
-                ( MENU )
+                ( FERMER )
               </span>
               <span className="link-title2 title h-2 absolute right-0 font-medium text-sm leading-4	menca">
-                ( MENU )
+                ( FERMER )
               </span>
             </div>
           </span>
@@ -29,4 +29,4 @@ const LabelMenu: FC<LabelMenuProps> = ({ handleToggle }) => {
   );
 };
 
-export default LabelMenu;
+export default LabelClose;

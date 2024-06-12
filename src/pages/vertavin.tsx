@@ -5,15 +5,21 @@ import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Labels from "@/components/Atomes/Label/Labels";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
+import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const verreavin = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
+  };
+
+  const handleToggle2 = () => {
+    setIsOpen2((prev) => !prev);
   };
 
   const [visibleCursor, setIsVisibleCursor] = useState(false);
@@ -51,6 +57,13 @@ const verreavin = () => {
             isAbout={false}
           />
         </div>
+        <div className="sticky top-0 z-50 ">
+          <MobileNavMd
+            isOpen={isOpen2}
+            handleToggle={handleToggle2}
+            isAbout={false}
+          />
+        </div>
         <div
           className={`${
             isOpen ? "opacity-10" : "opacity-100"
@@ -59,9 +72,9 @@ const verreavin = () => {
           <div className="bg-[url('/assets/img/header/header_vav.png')] md:w-screen  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
             <div className="absolute top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen px-[42px]">
               <LabelHome />
-              <div className="">
+              <div className="cursor-pointer ">
                 {" "}
-                <LabelMenu />
+                <LabelMenu handleToggle={handleToggle2} />{" "}
               </div>
             </div>
             <div
@@ -187,13 +200,19 @@ const verreavin = () => {
               <div className="md:pt-48 pt-20 bg-white2"></div>
               <motion.div
                 className="bg-[url('/assets/img/header/header_wesh.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2"
-                initial={{ opacity: 2 }}
-                whileInView={{ opacity: 0.2 }}
-                transition={{ duration: 1.3 }}
+                initial={{ filter: "blur(0px)", scale: 1 }}
+                whileInView={{ filter: "blur(2px)" }}
+                transition={{ duration: 0.6 }}
+                whileHover={{ scale: 1.25, filter: "blur(2px)" }}
               >
+                {" "}
                 <motion.div
-                  className="flex flex-col items-center text-white2"
-                  whileHover={{ scale: 1.25 }}
+                  className="div flex flex-col items-center "
+                  initial={{
+                    filter: "blur(0px)",
+                    scale: 1,
+                  }}
+                  whileHover={{ scale: 0.8 }}
                   transition={{ duration: 0.6 }}
                 >
                   <div className="flex flex-col items-center text-white2  ">

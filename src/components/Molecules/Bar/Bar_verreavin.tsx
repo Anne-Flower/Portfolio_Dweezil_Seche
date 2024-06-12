@@ -40,21 +40,21 @@ const BarVerreavin: FC<BarVerreavinProps> = ({ label }) => {
               label={"logo"}
               px={6}
               customClass={
-                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
+                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
             <Pill
               label={"freelance"}
               px={4}
               customClass={
-                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
+                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
             <Pill
               label={"illustration"}
               px={4}
               customClass={
-                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
+                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
           </div>

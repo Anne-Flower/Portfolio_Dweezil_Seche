@@ -14,7 +14,7 @@ const BarWE: FC<BarWEProps> = ({ label }) => {
   return (
     <Link href={"/we"}>
       <motion.div
-        className="md:flex md:flex-row items-center border-t-[1px] border-b-[1px] border-white2 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950 fond3fix"
+        className={`md:flex md:flex-row items-center border-t-[1px] border-b-[1px] border-white2 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950 fond3fix `}
         style={{
           opacity: "10px",
           backgroundImage: "url('/assets/img/grain.png')",
@@ -24,7 +24,7 @@ const BarWE: FC<BarWEProps> = ({ label }) => {
         }}
         whileHover={{
           background:
-            "linear-gradient(to top, #F8F7F0 0%, #F8F7F0 50%, #1a2e05 50%, #1a2e05 100%)",
+            "linear-gradient(to top, #F8F7F0 0%, #F8F7F0 50%, #2B312A 50%, #2B312A 100%)",
           backgroundSize: "100% 200%",
           backgroundPosition: "0% 100%",
           transition: { duration: 0.5 },

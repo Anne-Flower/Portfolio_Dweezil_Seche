@@ -39,7 +39,7 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
         onHoverEnd={() => setIsHovered(false)}
       >
         <h3
-          className={`menca md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base text-sm leading-[17.6px] md:w-screen md:h-[80px] flex items-center z-40 pt-4 pb-2 md:pt-0 md:pb-0 hover:text-lime-950 text-white2 ${
+          className={`menca  md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base text-sm leading-[17.6px] md:w-screen md:h-[80px] flex items-center z-40 pt-4 pb-2 md:pt-0 md:pb-0 hover:text-lime-950 text-white2 ${
             isHovered ? "text-lime-950" : "text-white2"
           } `}
         >
@@ -53,7 +53,7 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
               px={6}
               customClass={
                 isHovered
-                  ? "fond2 text-white2"
+                  ? "fond text-white2"
                   : isVisible
                   ? "bg-white2 text-lime-950"
                   : "bg-white2 text-lime-950"
@@ -64,7 +64,7 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
               px={4}
               customClass={
                 isHovered
-                  ? "fond2 text-white2"
+                  ? "fond text-white2"
                   : isVisible
                   ? "bg-white2 text-lime-950"
                   : "bg-white2 text-lime-950"

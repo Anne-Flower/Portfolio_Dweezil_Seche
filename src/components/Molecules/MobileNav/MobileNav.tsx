@@ -25,21 +25,11 @@ const MenuVariants = {
 
 const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
   return (
-    <nav
-      className=" xl:hidden relative bg-transparent fond"
-      style={{
-        opacity: "10px",
-        backgroundImage: "url('/assets/img/grain.png')",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        animation: "none",
-      }}
-    >
+    <nav className=" xl:hidden relative bg-transparent ">
       <div className="text-3xl cursor-pointer relative md:h-0">
         <div
           className={`flex flex-row-reverse py-4 pr-4 pt-6 md:invisible ${
-            isOpen ? "hidden" : "show"
+            isOpen ? "hidden" : "show "
           }`}
         >
           <FontAwesomeIcon
@@ -49,12 +39,12 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
           />
         </div>
       </div>
-      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond" : ""}`}>
+      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "" : ""}`}>
         <motion.div
           variants={MenuVariants}
           initial="hidden"
           animate={isOpen ? "show" : "hidden"}
-          className="shadow-2xl w-full absolute top-0 right-0 max-w-sm h-screen "
+          className="shadow-2xl w-full absolute top-0 right-0 max-w-sm h-screen grain "
         >
           <div
             onClick={handleToggle}
@@ -63,9 +53,9 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
             <FontAwesomeIcon icon={faXmark} className="icon-size-custom" />
           </div>
           <div>
-            <ul className="general flex flex-col justify-end items-end h-full gap-y-2 text-4xl text-white2 font-extralight cursor-pointer pt-24 pr-4">
+            <ul className="general flex flex-col justify-end items-end h-full gap-y-2 text-4xl text-white2 font-extralight cursor-pointer pt-24 pr-4 ">
               <li onClick={handleToggle}>
-                <Link href="/">
+                <Link href="/#anchor-selectedProjects">
                   <div>Projets</div>
                 </Link>
               </li>
@@ -78,7 +68,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
                 </Link>
               </li>
               <li onClick={handleToggle}>
-                <Link href="/playlist">
+                <Link href="https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980">
                   <div>Ma playlist</div>
                 </Link>
               </li>

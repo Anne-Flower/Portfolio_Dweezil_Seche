@@ -41,21 +41,21 @@ const BarArgedis: FC<BarArgedisProps> = ({ label }) => {
               label={"DA"}
               px={6}
               customClass={
-                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
+                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
             <Pill
               label={"UI"}
               px={6}
               customClass={
-                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
+                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
             <Pill
               label={"motion"}
               px={6}
               customClass={
-                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
+                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
           </div>

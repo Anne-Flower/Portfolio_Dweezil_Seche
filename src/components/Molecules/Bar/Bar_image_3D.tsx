@@ -71,7 +71,7 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
                 px={6}
                 customClass={
                   isHovered
-                    ? "fond2 text-white2"
+                    ? "fond text-white2"
                     : isVisible
                     ? "bg-white2 text-lime-950"
                     : "bg-white2 text-lime-950"
@@ -82,7 +82,7 @@ const BarImage3D: FC<BarImage3DProps> = ({ label, isVisible, onToggle }) => {
                 px={4}
                 customClass={
                   isHovered
-                    ? "fond2 text-white2"
+                    ? "fond text-white2"
                     : isVisible
                     ? "bg-white2 text-lime-950"
                     : "bg-white2 text-lime-950"

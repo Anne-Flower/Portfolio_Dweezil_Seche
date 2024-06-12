@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Contact from "@/components/Atomes/Contact/Contact";
 import Labels from "@/components/Atomes/Label/Labels";
 import LabelMenu from "@/components/Atomes/Label/LabelMenu";
+import LabelClose from "@/components/Atomes/Label/LabelClose";
 
 type MobileNavMdProps = {
   isOpen: boolean;
@@ -15,12 +16,13 @@ type MobileNavMdProps = {
 
 const MenuVariants = {
   hidden: {
-    x: "100%",
+    y: "-100%",
   },
   show: {
-    x: 0,
+    y: 0,
     transition: {
-      ease: [0.6, 0.01, -2.05, 0.9],
+      ease: [0.6, 0.01, -0.05, 0.9],
+      duration: 0.6,
     },
   },
 };
@@ -30,57 +32,115 @@ const MobileNavMd: FC<MobileNavMdProps> = ({
   handleToggle,
   isAbout,
 }) => {
+  const [hasOpened, setHasOpened] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setHasOpened(true);
+    }
+  }, [isOpen]);
   return (
-    <nav className="text-white2 hidden relative">
+    <nav className="text-white2 hidden md:block relative">
       <div className="text-3xl cursor-pointer relative md:h-0">
         <div
-          className={`text-white2 flex flex-row-reverse py-4 pr-4 pt-6 hidden md:visible ${
-            isOpen ? "hidden" : "show"
+          className={`text-white2 flex flex-row-reverse py-4 pr-4 pt-6 ${
+            isOpen ? "hidden" : "block"
           }`}
-        >
-          <LabelMenu></LabelMenu>
-        </div>
+        ></div>
       </div>
-      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond" : ""}`}>
+      <div
+        className={`ease-[cubic-bezier(0.15,0.05,3.795,6.035)]	fixed top-0 left-0 right-0 ${
+          isOpen ? "fond" : ""
+        }`}
+      >
         <motion.div
           variants={MenuVariants}
           initial="hidden"
           animate={isOpen ? "show" : "hidden"}
-          className="shadow-2xl w-full absolute top-0 max-w-sm h-screen"
+          className="w-full absolute top-0 left-0 right-0 h-[1200px]"
         >
-          <div
-            onClick={handleToggle}
-            className="text-4xl left-4 top-2 text-2 absolute"
-          >
-            <Labels label={"Fermer"}></Labels>
+          <div className="text-4xl right-[32px] top-8 text-2 absolute z-50 cursor-pointer ">
+            <LabelClose handleToggle={handleToggle} />
           </div>
           <div>
-            <ul className="general flex flex-col justify-end items-end h-full gap-y-2 text-4xl text-white2 font-extralight cursor-pointer pt-24 pr-4">
+            <ul className="general flex flex-col justify-center items-center h-full gap-y-8 text-8xl	text-white2  cursor-pointer pt-16 pr-4 backdrop-blur-[12px]  font-thin	py-52">
               <li onClick={handleToggle}>
-                <Link href="/">
-                  <div>Projets</div>
+                <Link
+                  href={"/"}
+                  className={`linkMd relative mr-[178px] ${
+                    hasOpened ? "activated" : ""
+                  }`}
+                >
+                  <div>
+                    <span className="maskMd w-full absolute ">
+                      <div className="link-container ">
+                        <span className="link-title1Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          Accueil
+                        </span>
+                        <span className="link-title2Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          Accueil
+                        </span>
+                      </div>
+                    </span>
+                  </div>
                 </Link>
               </li>
               <li onClick={handleToggle}>
                 <Link
-                  href="/about"
-                  className={`${isAbout ? "hidden" : "visible"}`}
+                  href="/#anchor-selectedProjects"
+                  className="linkMd relative mr-40 "
                 >
-                  <div>A propos</div>
+                  <div>
+                    <span className="maskMd w-full absolute ">
+                      <div className="link-container ">
+                        <span className="link-title1Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          Projets
+                        </span>
+                        <span className="link-title2Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          Projets
+                        </span>
+                      </div>
+                    </span>
+                  </div>
                 </Link>
               </li>
               <li onClick={handleToggle}>
-                <Link href="/playlist">
-                  <div>Ma playlist</div>
+                <Link href="/about" className="linkMd relative mr-[264px] ">
+                  <div>
+                    <span className="maskMd w-full absolute ">
+                      <div className="link-container ">
+                        <span className="link-title1Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          A propos
+                        </span>
+                        <span className="link-title2Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          A propos
+                        </span>
+                      </div>
+                    </span>
+                  </div>
                 </Link>
               </li>
               <li onClick={handleToggle}>
-                <Link href="/" className={`${isAbout ? "visible" : "hidden"}`}>
-                  <div>Acceuil</div>
+                <Link
+                  href="https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
+                  className="linkMd relative mr-40 mt-4"
+                >
+                  <div>
+                    <span className="maskMd w-full absolute ">
+                      <div className="link-container ">
+                        <span className="link-title1Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          Playlist
+                        </span>
+                        <span className="link-title2Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                          Playlist
+                        </span>
+                      </div>
+                    </span>
+                  </div>
                 </Link>
               </li>
             </ul>
-            <div className="pt-72">
+            <div className="absolute top-[640px] left-[32px]">
               <Contact />
             </div>
           </div>

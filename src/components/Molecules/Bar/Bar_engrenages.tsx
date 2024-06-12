@@ -40,7 +40,7 @@ const BarEngrenages: FC<BarEngrenagesProps> = ({ label }) => {
               label={"branding"}
               px={6}
               customClass={
-                isHovered ? "fond2 text-white2" : "bg-white2 text-lime-950"
+                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
               }
             ></Pill>
             <Pill

@@ -11,7 +11,7 @@ const LabelPlaylist = () => {
         href={
           "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
         }
-        className="link relative   "
+        className="link relative"
       >
         <div>
           <span className="mask h-[20px] absolute menu-button ">

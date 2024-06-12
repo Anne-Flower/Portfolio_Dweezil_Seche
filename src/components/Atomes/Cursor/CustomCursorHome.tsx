@@ -27,7 +27,7 @@ const CustomCursorHome: FC<CursorHomeProps> = ({ x, y }) => {
   // }, []);
   return (
     <div
-      className="backdrop-blur-[3px] fixed w-24 h-24 rounded-full ring-[0.5px] ring-greyRingCursor pointer-events-none z-50 text-white2 bg-white2 bg-opacity-5 
+      className="backdrop-blur-[3px] fixed w-24 h-24 rounded-full ring-[0.5px] ring-greyRingCursor pointer-events-none z-50 text-white2 bg-white2 bg-opacity-[1px] 
       px-5 py-8"
       style={{ top: y - 40, left: x - 40 }}
       // style={{ transform: `translate(${x - 40}px, ${y - 40}px)` }}
