@@ -546,23 +546,23 @@ const Naturia = ({}) => {
             >
               <div className=" bg-white2 ">
                 <div className=" md:min-w-[684px] z-80 h-[200px] mb-24"></div>
-                <motion.div
+                {/* <motion.div
                   className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative flex flex-col items-center text-white2 overflow-clip 	"
                   initial={{ filter: "blur(0px)", scale: 1 }}
                   whileInView={{ filter: "blur(2px)" }}
                   transition={{ duration: 0.6 }}
                   whileHover={{ scale: 1.25, filter: "blur(2px)" }}
+                > */}{" "}
+                <motion.div
+                  className="div flex flex-col items-center "
+                  initial={{
+                    filter: "blur(0px)",
+                    scale: 1,
+                  }}
+                  whileHover={{ scale: 1, filter: "blur(8px)" }}
+                  transition={{ duration: 1.6 }}
                 >
-                  {" "}
-                  <motion.div
-                    className="div flex flex-col items-center "
-                    initial={{
-                      filter: "blur(0px)",
-                      scale: 1,
-                    }}
-                    whileHover={{ scale: 0.8 }}
-                    transition={{ duration: 0.6 }}
-                  >
+                  <div className=" bg-[url('/assets/img/header/header_argedis.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative flex flex-col items-center text-white2 overflow-clip transition-all  duration-700 ease-in-out hover:bg-cover hover:bg-[length:2200px_1400px] ">
                     <h1 className="general font-thin	text-[36px] md:text-[120px] leading-[178px] md:pt-40 pt-32 ">
                       Argedis | Regionalisme
                     </h1>
@@ -614,8 +614,9 @@ const Naturia = ({}) => {
                         <Labels label={"STUDIO ARTEFACT 3000"} />
                       </div>
                     </section>
-                  </motion.div>
+                  </div>
                 </motion.div>
+                {/* </motion.div> */}
               </div>{" "}
             </div>
           </Link>

@@ -79,31 +79,54 @@ export default function Home() {
                 onMouseEnter={() => setIsVisibleCursorHome(true)}
                 onMouseLeave={() => setIsVisibleCursorHome(false)}
               >
-                <div className="md:py-[128px] md:pt-[420px] lg:pr-[42px] pt-[290px] w-screen">
-                  <div className="lg:flex flex-row justify-end leading-[84.64px] font-thin">
-                    <h1 className="general text-4xl flex justify-end lg:text-[80px] pr-4 md:pr-4">
-                      Je m’appelle
-                    </h1>
-                    <h1 className="general text-4xl flex justify-end lg:text-[80px] pr-4 md:pr-0">
-                      Dweezil.
-                    </h1>
-                  </div>
-                  <div className="lg:flex lg:flex-row justify-end leading-[84.64px] font-thin">
-                    <h2 className="general text-4xl flex justify-end lg:text-[80px] lg:pt-14 pr-4 md:pr-4">
-                      Je suis
-                    </h2>
-                    <div className="flex flex-col justify-end">
-                      <h2 className="general text-4xl flex justify-end lg:text-[80px] lg:pt-14 pr-4 md:pr-0">
-                        directeur artistique,
-                      </h2>
-                      <h2 className="general text-4xl flex justify-end lg:text-[80px] lg:pt-14 pr-4 md:pr-0">
-                        basé à Paris.
-                      </h2>
+                <div className="md:py-[128px] md:pt-[320px] lg:pr-[42px] pt-[290px] w-screen overflow-clip">
+                  <div className="lg:flex flex-row justify-end leading-[84.64px] font-thin h-[60px] md:h-full">
+                    <div className="masky-container h-[80px] pt-[10px]">
+                      <span className="  general text-4xl flex justify-end lg:text-[80px] pr-4 md:pr-4 slide-up h-[60px] pl-16 md:pl-0">
+                        Je m’appelle
+                      </span>
+                      <div className="masky"></div>
+                    </div>
+                    <div className="masky-container h-[80px] pt-[10px]">
+                      <span className="general text-4xl flex justify-end lg:text-[80px] pr-4 md:pr-0 slide-up h-[60px]">
+                        Dweezil.
+                      </span>
+                      <div className="masky"></div>
                     </div>
                   </div>
-                  <p className="menca font-medium leading-4 text-base opacity-30 flex justify-end lg:text-lg pt-16 pr-4 md:pr-0">
-                    PORTFOLIO 2024 | 100% fait main (au Mexique)...
-                  </p>
+                  <div className="lg:flex lg:flex-row justify-end leading-[84.64px] font-thin h-[60px] md:h-full">
+                    <div className="masky-container h-[100px] ">
+                      <span className="general text-4xl flex justify-end lg:text-[80px] lg:pt-8 pr-4 md:pr-4 slide-up h-[120px]">
+                        Je suis
+                      </span>
+                      <div className="masky"></div>
+                    </div>
+
+                    <div className="flex flex-col justify-end h-[60px] md:h-full">
+                      <div className="masky-container md:h-[100px]  ">
+                        <span className="general text-4xl flex justify-end lg:text-[80px] lg:pt-8 pr-4 md:pr-0 slide-up h-[120px]">
+                          directeur artistique,
+                        </span>
+                        <div className="masky"></div>
+                      </div>
+                      <div className="flex flex-col justify-end md:pb-12 h-[30px] md:h-full">
+                        <div className="masky-container  h-[80px] pb-[100px] ">
+                          <span className="general text-4xl flex justify-end lg:text-[80px] lg:pt-8 pr-4 md:pr-0 slide-up h-[180px] ">
+                            basé à Paris.
+                          </span>
+                          <div className="masky"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-end md:pb-12">
+                    <div className="masky-container  h-[80px] pb-[100px] ">
+                      <p className="menca font-medium leading-4 text-base opacity-30 flex justify-end  lg:text-lg pt-16 pr-4 md:pr-0 slide-up h-[240px] ">
+                        PORTFOLIO 2024 | 100% fait main (au Mexique)...
+                      </p>
+                      <div className="masky"></div>
+                    </div>{" "}
+                  </div>
                 </div>
                 <div className="lg:w-[300px] pb-40 absolute top-[578px] left-[42px] ">
                   <div className="lg:w-[300px] invisible lg:visible lg:pt-12 ">
