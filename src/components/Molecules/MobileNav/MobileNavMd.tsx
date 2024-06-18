@@ -74,7 +74,7 @@ const MobileNavMd: FC<MobileNavMdProps> = ({
                   <div>
                     <span className="maskMd w-full absolute ">
                       <div className="link-container ">
-                        <span className="link-title1Md titleMobileMd h-2 absolute general text-8xl font-thin  ">
+                        <span className="link-title1Md titleMobileMd h-2 absolute general text-8xl font-thin  slide-up ">
                           Accueil
                         </span>
                         <span className="link-title2Md titleMobileMd h-2 absolute general text-8xl font-thin  ">

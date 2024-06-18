@@ -92,15 +92,58 @@ body {
   border-radius: 50%;
   position:fixed;
 
-
 }
-
-
-
 
 .blurred {
   filter: blur(1.8px);
   transition: filter 0.1s;
+}
+
+
+/* animation cursor home images */
+
+.boogieImg {
+ 
+  animation: popIn 3s forwards  ,  moveAround 8s ;
+  opacity: 0;
+  
+}
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.text-on-top {
+  position: relative;
+  z-index: 20;
+}
+
+@keyframes moveAround {
+  0% {
+    transform: translate(-80, -10);
+  }
+  /* 25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(30px, 60px);
+  } */
+  75% {
+    transform: translate(40px, 100px);
+  }
+  100% {
+    transform: translate(60px, 190px);
+  }
 }
 
 
@@ -135,7 +178,7 @@ body {
   /* position: relative; */
   padding: 0;
   height: 112px;
-  width: 350px;
+  width: 200px;
   overflow: hidden;
 }
 

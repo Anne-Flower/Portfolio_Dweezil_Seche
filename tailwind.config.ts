@@ -16,6 +16,9 @@ const config: Config = {
     // },
     extend: {
       colors: {
+        greyNew: '#B6B6B6',
+        black: '#222222',
+        beige: '#F7F4EF',
         yellowdark: '#8f3270',
         yellow: '#ebd515',
         white2: '#F8F7F0',

@@ -11,11 +11,11 @@ const LabelHome = () => {
         <div>
           <span className="mask h-[20px] absolute ">
             <div className="link-container ">
-              <span className="link-title1 title h-2 absolute left-0 font-medium text-sm leading-4	menca">
-                ( ACCUEIL )
+              <span className="link-title1 title h-2 absolute left-0 font-medium text-sm text-black leading-4	menca">
+                HOME
               </span>
-              <span className="link-title2 title h-2 absolute left-0 font-medium text-sm leading-4 menca">
-                ( ACCUEIL )
+              <span className="link-title2 title h-2 absolute left-0 font-medium text-sm text-black leading-4 menca">
+                HOME
               </span>
             </div>
           </span>

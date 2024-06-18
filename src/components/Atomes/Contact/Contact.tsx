@@ -1,15 +1,19 @@
+import Link from "next/link";
 import React from "react";
 
 const Contact = () => {
   return (
-    <div className=" w-full ">
-      <h2 className="general font-light	text-2xl leading-[35.59px] text-white2 pb-2 ">
-        Parlons-en !
-      </h2>
-      <div className="menca font-light text-base leading-[19px] text-white2 space-y-2">
-        <p>MAIL : dweezilseche@gmail.com</p>
-        <p>TEL : 06 35 37 36 15</p>
-        <p>LINKEDIN : dweezilseche</p>
+    <div className=" w-full flex flex-col ">
+      <div className="menca font-light text-base leading-[19px] text-black space-y-2  ">
+        <p>dweezilseche@gmail.com</p>
+        <p className="">
+          <Link
+            href={"https://www.linkedin.com/in/dweezilseche/"}
+            className="flex justify-end cursor-pointer"
+          >
+            linkedIn
+          </Link>
+        </p>
       </div>
     </div>
   );
