@@ -40,10 +40,10 @@ const MobileNavMd: FC<MobileNavMdProps> = ({
     }
   }, [isOpen]);
   return (
-    <nav className="text-white2 hidden md:block relative">
+    <nav className="text-black hidden md:block relative">
       <div className="text-3xl cursor-pointer relative md:h-0">
         <div
-          className={`text-white2 flex flex-row-reverse py-4 pr-4 pt-6 ${
+          className={`text-black flex flex-row-reverse py-4 pr-4  pt-8 ${
             isOpen ? "hidden" : "block"
           }`}
         ></div>
@@ -63,7 +63,7 @@ const MobileNavMd: FC<MobileNavMdProps> = ({
             <LabelClose handleToggle={handleToggle} />
           </div>
           <div>
-            <ul className="general flex flex-col justify-center items-center h-full gap-y-8 text-8xl	text-white2  cursor-pointer pt-16 pr-4 backdrop-blur-[12px]  font-thin	py-52">
+            <ul className="general flex flex-col justify-center items-center h-full gap-y-8 text-8xl	text-black  cursor-pointer pt-16 pr-4 backdrop-blur-[12px]  font-thin	py-52">
               <li onClick={handleToggle}>
                 <Link
                   href={"/"}

@@ -24,10 +24,10 @@ const LabelAbout = () => {
         <div>
           <span className="mask h-[20px] absolute ">
             <div className="link-container ">
-              <span className="link-title1 title h-2 absolute left-0 font-medium text-sm leading-4 text-black menca">
+              <span className="link-title1 title h-2 absolute left-0 font-medium text-xs leading-4 text-black menca">
                 ABOUT{" "}
               </span>
-              <span className="link-title2 title h-2 absolute left-0 font-medium text-sm leading-4 text-black menca">
+              <span className="link-title2 title h-2 absolute left-0 font-medium text-xs leading-4 text-black menca">
                 ABOUT{" "}
               </span>
             </div>

@@ -4,13 +4,10 @@ import React from "react";
 const Contact = () => {
   return (
     <div className=" w-full flex flex-col ">
-      <div className="menca font-light text-base leading-[19px] text-black space-y-2  ">
+      <div className="menca font-medium	 text-base text-black space-y-2  leading-4	">
         <p>dweezilseche@gmail.com</p>
-        <p className="">
-          <Link
-            href={"https://www.linkedin.com/in/dweezilseche/"}
-            className="flex justify-end cursor-pointer"
-          >
+        <p className="flex justify-end cursor-pointer h-full w-full">
+          <Link href="https://www.linkedin.com/in/dweezilseche/" className="">
             linkedIn
           </Link>
         </p>

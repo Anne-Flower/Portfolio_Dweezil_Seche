@@ -25,8 +25,8 @@ const config: Config = {
         greyRingCursor: '#D9D9D9',
         greyLink: '#C5C5C5'
       },
-   
-       backgroundImage: {
+
+      backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },

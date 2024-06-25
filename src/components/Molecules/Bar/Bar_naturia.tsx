@@ -1,159 +1,48 @@
 "use client";
-import ArrowTopRight from "@/components/Atomes/Arrow/ArrowTopRight";
-import Pill from "@/components/Atomes/Pill/Pill";
-import { motion } from "framer-motion";
+
+import CustomCursorHome from "@/components/Atomes/Cursor/CustomCursorHome";
 import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 type BarNaturiaProps = {
   label: string;
+  label2: string;
 };
 
-const BarNaturia: FC<BarNaturiaProps> = ({ label }) => {
+const BarNaturia: FC<BarNaturiaProps> = ({ label, label2 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  // return (
-  //   <Link href={"/naturia"} className="fond2">
-  //     <motion.div
-  //       className={`md:flex md:flex-row items-center border-t-[1px]  border-lime-950 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950`}
-  //       // style={{
-  //       //   opacity: "10px",
-  //       //   backgroundImage: "url('/assets/img/grain.png')",
-  //       //   backgroundAttachment: "fixed",
-  //       //   backgroundSize: "cover",
-  //       //   backgroundRepeat: "no-repeat",
-  //       // }}
-  //       whileHover={{
-  //         backgroundPosition: "0% 0%",
-  //         transition: { duration: 0.2 },
-  //       }}
-  //       initial={{
-  //         opacity: 1,
-  //         backgroundImage:
-  //           "url('/assets/img/grain.png'),linear-gradient(to top, #3E553A 0%, #3E553A 50%,  #ffffff  50%,  #ffffff  100%)",
-  //         backgroundAttachment: "fixed",
-  //         backgroundRepeat: "no-repeat",
-  //         backgroundSize: "100% 200% ",
-  //         backgroundPosition: "0% 100%",
-  //       }}
-  //       onHoverStart={() => setIsHovered(true)}
-  //       onHoverEnd={() => setIsHovered(false)}
-  //     >
-  //       <h3 className="menca md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base text-sm leading-[17.6px] md:w-52 lg:w-[2400px] pt-4 pb-2 text-white2 md:hover:text-lime-950 md:h-[110px] flex items-center z-40  md:pt-0 md:pb-0 ">
-  //         {label}
-  //       </h3>
-  //   return (
-  //     <Link href={"/naturia"} className="relative">
-  //       <motion.div
-  //         className="relative md:flex md:flex-row items-center border-t-[1px] border-lime-950 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950 bar-naturia "
-  //         whileHover={{
-  //           backgroundPosition: "0% 0%",
-  //           transition: { duration: 0.2 },
-  //         }}
-  //         initial={{
-  //           opacity: 1,
-  //           background:
-  //             "linear-gradient(to top, #3E553A 0%, #2B312A 50%,  #ffffff  50%,  #ffffff  100%)",
-  //           backgroundSize: "100% 200%",
-  //           backgroundPosition: "0% 100%",
-  //         }}
-  //         onHoverStart={() => setIsHovered(true)}
-  //         onHoverEnd={() => setIsHovered(false)}
-  //       >
-  //         <div className="bar-naturia-content flex flex-row items-center w-screen md:w-fit h-12">
-  //           <h3 className="bar-naturia-content  menca md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base text-sm leading-[17.6px] md:w-52 lg:w-[712px] pt-4 pb-2 text-white2 md:hover:text-lime-950 md:h-[110px] flex items-center md:pt-0 md:pb-0">
-  //             {label}
-  //           </h3>
-  //           <div className="flex flex-row items-center w-screen md:w-fit h-12">
-  //             <div className=" lg:h-[78px] w-screen md:w-fit md:flex items-center md:flex-row md:gap-4 text-base font-medium	leading-4 flex flex-row gap-1 content-center pl-2 ">
-  //               <Pill
-  //                 label={"prompt"}
-  //                 px={6}
-  //                 customClass={
-  //                   isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
-  //                 }
-  //               />
-  //               <Pill
-  //                 label={"midjourney"}
-  //                 px={6}
-  //                 customClass={
-  //                   isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
-  //                 }
-  //               ></Pill>
-  //               <Pill
-  //                 label={"IA"}
-  //                 px={6}
-  //                 customClass={
-  //                   isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
-  //                 }
-  //               ></Pill>
-  //             </div>
+  const [visibleCursorHome, setIsVisibleCursorHome] = useState(false);
 
-  //             <div className="md:pl-[356px] md:pr-[30px] md:pl-6 md:pr-6 pr-8 pb-10 md:pb-0 ">
-  //               <ArrowTopRight></ArrowTopRight>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </motion.div>
-  //     </Link>
-  //   );
-  // };
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-  // export default BarNaturia;
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setCursorPosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   return (
-    <Link href={"/naturia"} className="relative">
-      <motion.div
-        className={`border-t-[1px] border-lime-950  md:flex md:flex-row items-center border-t-[1px] border-b-white2 text-white2 w-screen pr-2 pl-2 lg:pr-0 lg:pl-0 md:h-[80px] h-[110px] hover:text-lime-950 fond3fix `}
-        whileHover={{
-          backgroundPosition: "0% 0%",
-          transition: { duration: 0.2 },
-          backgroundImage:
-            " linear-gradient(to top, #3E553A 0%, #3E553A 50%,  #F8F7F0  50%,  #F8F7F0  100%)",
-        }}
-        initial={{
-          opacity: 1,
-          backgroundSize: "100% 200%",
-          backgroundPosition: "0% 100%",
-        }}
-        style={{
-          opacity: "10px",
-          backgroundImage:
-            "url('/assets/img/grain.png'), linear-gradient(to top, #3E553A 0%, #3E553A 50%,  #F8F7F0  50%,  #F8F7F0  100%)",
-        }}
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
+    <Link href={"/naturia"} className="relative md:h-[68px] md:w-[764px]">
+      <div
+        className="general text-[64px] leading-[68px] font-thin flex justify-center relative"
+        id="cursorStyled"
       >
-        <h3 className="menca md:pl-[40px] pl-6 pr-4 lg:pr-0 font-bold lg:text-base text-sm leading-[17.6px] md:w-52 lg:w-[712px] pt-4 pb-2 text-white2 md:hover:text-lime-950 md:h-[110px] flex items-center md:pt-0 md:pb-0">
-          {label}
-        </h3>
-        <div className="flex flex-row items-center w-screen md:w-fit h-12">
-          <div className=" lg:h-[78px] w-screen md:w-fit md:flex items-center md:flex-row md:gap-4 text-base font-medium	leading-4 flex flex-row gap-1 content-center pl-2">
-            <Pill
-              label={"prompt"}
-              px={6}
-              customClass={
-                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
-              }
-            />
-            <Pill
-              label={"midjourney"}
-              px={6}
-              customClass={
-                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
-              }
-            />
-            <Pill
-              label={"IA"}
-              px={6}
-              customClass={
-                isHovered ? "fond text-white2" : "bg-white2 text-lime-950"
-              }
-            />
-          </div>
-          <div className="md:pl-[356px] md:pr-[30px] md:pl-6 md:pr-6 pr-8 pb-10 md:pb-0">
-            <ArrowTopRight />
-          </div>
+        {visibleCursorHome && (
+          <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
+        )}
+        <div
+          className="cursor-none"
+          onMouseEnter={() => setIsVisibleCursorHome(true)}
+          onMouseLeave={() => setIsVisibleCursorHome(false)}
+        >
+          Natur.IA
         </div>
-      </motion.div>
+        <div className="menca font-medium	text-sm	leading-4	absolute top-0 right-[490px]">
+          {label} {label2}
+        </div>
+      </div>
     </Link>
   );
 };
