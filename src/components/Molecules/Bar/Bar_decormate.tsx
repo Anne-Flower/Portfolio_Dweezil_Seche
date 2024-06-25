@@ -21,7 +21,7 @@ const BarDecormate: FC<BarDecormateProps> = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <Link href={"/argedis"} className="relative md:h-[68px] md:w-[764px]">
+    <Link href={"/decormate"} className="relative md:h-[68px] md:w-[764px]">
       <div className="general text-[64px] leading-[68px] font-thin flex justify-center relative">
         Decormate
       </div>

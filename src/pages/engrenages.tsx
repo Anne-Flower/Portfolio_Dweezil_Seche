@@ -62,81 +62,50 @@ const engrenage = () => {
             handleToggle={handleToggle2}
             isAbout={false}
           />
+          <div className="absolute top-[0px] invisible md:visible flex justify-between w-screen text-beige">
+            {/* <HeaderDeco /> */}
+          </div>
         </div>
         <div
           className={`${
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className="bg-[url('/assets/img/header/header_engrenages.png')] md:w-screen  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
-            <div className="absolute top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen px-[42px]">
-              <LabelHome />
-              <div className=" cursor-pointer ">
-                {" "}
-                <LabelMenu handleToggle={handleToggle2} />{" "}
-              </div>
-            </div>
+          <div className="bg-black text-beige md:w-screen overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
             <div
               className="cursor-none"
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex flex-col items-center text-white2 w-fit md:w-screen w-screen">
-                <h1 className="general font-thin	text-[30px] md:text-[120px] leading-[178px] md:pt-40 pt-4 ">
-                  Engrenages
-                </h1>
-                <p className="menca lg:w-[670px] w-screen px-4 text-center pt-2 pb-8">
-                  WE.SH est un petit festival organisé chaque année depuis 4 ans
-                  par un petit groupe d'amis et de volontaires : We Are Shinny.
-                  Chaque année, ce petit festival prend de l'ampleur et
-                  l'organisation est sérieuse. Cette année, j'ai eu la chance de
-                  pouvoir travailler sur la communication visuelle avec une
-                  équipe de personnes extrêmement talentueuses.
-                </p>
-                <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20">
-                  <div className=" flex flex-row">
-                    <Labels label={"( DATE TIME )"} />
-                    ..................................................................
-                    <Labels label={"2024"} />
+              <div className="flex text-beige  w-screen  pl-[256px]">
+                <div className="md:w-[358px] flex flex-col ">
+                  <h1 className="general font-thin	text-[72px]  leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
+                    Decormate{" "}
+                  </h1>
+                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end pt-28">
+                    <p>2024</p>
+                    <p>UI, DA, branding, prompt, midjourney</p>
+                    <p>ecv digital</p>
                   </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( CLIENT )"} />{" "}
-                    ......................................................
-                    <Labels label={"JULIEN MASLARD"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    ..................................................
-                    <Labels label={"BRANDING"} />
-                  </div>
-                  <div className="flex flex-row pb-8 md:pb-0">
-                    <Labels label={"( AGENCE )"} />{" "}
-                    ...........................................................
-                    <Labels label={"FREELANCE"} />
-                  </div>
-                </section>
-                <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
-                  <div className=" flex flex-row">
-                    <Labels label={"( DATE TIME )"} />
-                    .......................................................................................................................
-                    <Labels label={"2024"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( CLIENT )"} />{" "}
-                    ...........................................................................................................
-                    <Labels label={"JULIEN MASLARD"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    .......................................................................................................
-                    <Labels label={"BRANDING"} />
-                  </div>
-                  <div className="flex flex-row pb-8 md:pb-0">
-                    <Labels label={"( AGENCE )"} />{" "}
-                    ................................................................................................................
-                    <Labels label={"FREELANCE"} />
-                  </div>
-                </section>
+                </div>
+                <div className="flex flex-col h-[245px] w-[415px] ml-32 ">
+                  <p className="menca md:w-[415px]   md:pt-52 pt-4  font-medium	text-base	leading-5	">
+                    Decormate is my end-of-study project, which I carried out
+                    during my second year at ECV Digital. It's an augmented
+                    reality application designed to simplify interior design and
+                    furnishing, for both individuals and professionals.
+                  </p>
+                  <p className="menca md:w-[415px] pt-4  font-medium	text-base	leading-5	">
+                    It works in such a way that, after scanning the room you
+                    wish to decorate/furnish, the application suggests a whole
+                    selection of furnishings to suit the dimensions of the room
+                    and the tastes of the user. To achieve this, I put a lot of
+                    work into the ergonomics and the whole customization process
+                    of the application. All this work was rendered in the form
+                    of a twenty-page dossier, supported by all the research
+                    carried out upstream.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

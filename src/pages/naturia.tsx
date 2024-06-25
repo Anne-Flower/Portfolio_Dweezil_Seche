@@ -4,7 +4,13 @@ import LabelHome from "@/components/Atomes/Label/LabelHome";
 import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Labels from "@/components/Atomes/Label/Labels";
-import Header from "@/components/Molecules/Header";
+import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
+import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
+import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
+import BarVerreavin from "@/components/Molecules/Bar/Bar_verreavin";
+import BarWE from "@/components/Molecules/Bar/Bar_we";
+import Footer from "@/components/Molecules/Footer/Footer";
+import Header from "@/components/Molecules/Header/Header";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { log } from "console";
@@ -308,6 +314,9 @@ const Naturia = ({}) => {
             handleToggle={handleToggle2}
             isAbout={false}
           />
+          <div className="absolute top-[0px] invisible md:visible flex justify-between w-screen ">
+            <Header />
+          </div>
         </div>
 
         <div
@@ -315,27 +324,24 @@ const Naturia = ({}) => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300`}
         >
-          <div className="bg-beige text-black  overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
-            <div className="absolute top-[0px] invisible md:visible flex justify-between w-screen ">
-              <Header />
-            </div>
+          <div className="bg-beige text-black overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
             <div
               className="cursor-none"
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex text-black  w-screen justify-center ">
-                <div className="md:w-[218px] flex flex-col ">
-                  <h1 className="general font-thin	text-[72px]  leading-[76px] md:pt-52 pt-4 ">
+              <div className="flex text-black w-screen space-x-32 pl-[400px]">
+                <div className="md:w-[218px] flex flex-col  ">
+                  <h1 className="general font-thin text-[72px] leading-[76px] md:pt-52 pt-4 ">
                     NaturIA
                   </h1>
-                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end pt-28">
+                  <div className="menca font-medium text-sm	leading-4	flex flex-col items-end pt-28">
                     <p>2024</p>
                     <p>prompt, midjourney</p>
                     <p>studio artefact 3000</p>
                   </div>
                 </div>
-                <p className="menca md:w-[415px] md:h-[240px]  md:pt-52 pt-4  font-medium	text-base	leading-5	ml-40">
+                <p className="menca md:w-[415px] md:h-[240px]  md:pt-52 pt-4  font-medium	text-base	leading-5	">
                   Natur.IA is a project I worked on during my work-study year at
                   Studio Artefact 3000. The studio had developed a dashboard for
                   this client, enabling them to create fragrances from over 900
@@ -368,7 +374,29 @@ const Naturia = ({}) => {
           <div className="general font-thin	text-[40px] leading-[60px] text-black bg-beige flex justify-end pr-10 pt-10">
             and 800 more...
           </div>
+          <div className="pb-[64px] bg-beige text-black pt-40">
+            <BarArgedis label={"( UI )"} label2={"( motion )"} />
+          </div>
+          <div className="pb-[64px] bg-beige text-black">
+            <BarDecormate
+              label={"( UI )"}
+              label2={"( DA )"}
+              label3={"( branding )"}
+              label4={"( prompt )"}
+              label5={" ( midjourney )"}
+            />
+          </div>
+          <div className="pb-[64px] bg-beige text-black">
+            <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
+          </div>
+          <div className="pb-[64px] bg-beige text-black">
+            <BarWE label={"( DA )"} />
+          </div>
+          <div className="pb-[64px] bg-beige text-black">
+            <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
+          </div>
         </div>
+        <Footer />
       </main>
     </>
   );

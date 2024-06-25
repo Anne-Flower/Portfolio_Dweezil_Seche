@@ -7,6 +7,7 @@ import Labels from "@/components/Atomes/Label/Labels";
 import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
 import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
+import BarNaturia from "@/components/Molecules/Bar/Bar_naturia";
 import BarVerreavin from "@/components/Molecules/Bar/Bar_verreavin";
 import BarWE from "@/components/Molecules/Bar/Bar_we";
 import Footer from "@/components/Molecules/Footer/Footer";
@@ -17,7 +18,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const argedis = () => {
+const decormate = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -45,19 +46,34 @@ const argedis = () => {
 
   const images_regionalisme = [
     {
-      src: "/assets/imagesV2/argedis/design system element.png",
+      src: "/assets/imagesV2/decormate/desktop/logo.png",
     },
     {
-      src: "/assets/imagesV2/argedis/map librairy.png",
+      src: "/assets/imagesV2/decormate/desktop/couleurs.png",
     },
     {
-      src: "/assets/imagesV2/argedis/UX.png",
+      src: "/assets/imagesV2/decormate/desktop/typo.png",
     },
     {
-      src: "/assets/imagesV2/argedis/presentation_argedis.png",
+      src: "/assets/imagesV2/decormate/desktop/userflow.png",
     },
     {
-      src: "/assets/imagesV2/argedis/regions.png",
+      src: "/assets/imagesV2/decormate/desktop/iconographie.png",
+    },
+    {
+      src: "/assets/imagesV2/decormate/desktop/wireframes.png",
+    },
+    {
+      src: "/assets/imagesV2/decormate/desktop/maquettes.png",
+    },
+    {
+      src: "/assets/imagesV2/decormate/desktop/mockup-decormate_1.png",
+    },
+    {
+      src: "/assets/imagesV2/decormate/desktop/maquettes.png",
+    },
+    {
+      src: "/assets/imagesV2/decormate/desktop/projet_pfe.png",
     },
   ];
 
@@ -106,39 +122,42 @@ const argedis = () => {
               <div className="flex text-black  w-screen  pl-[256px]">
                 <div className="md:w-[358px] flex flex-col ">
                   <h1 className="general font-thin	text-[72px]  leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
-                    Regionalisme
+                    Decormate{" "}
                   </h1>
                   <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end pt-28">
                     <p>2024</p>
-                    <p>UI, motion</p>
-                    <p>studio artefact 3000</p>
+                    <p>UI, DA, branding, prompt, midjourney</p>
+                    <p>ecv digital</p>
                   </div>
                 </div>
                 <div className="flex flex-col h-[245px] w-[415px] ml-32 ">
                   <p className="menca md:w-[415px]   md:pt-52 pt-4  font-medium	text-base	leading-5	">
-                    Regionalisme is an application designed for use on
-                    interactive kiosks at petrol stations all over France. It's
-                    a project I carried out during my work-study year at Studio
-                    Artefact 3000. The aim of this application is to promote
-                    local producers who supply service stations with their
-                    regional products, and to encourage customers to buy local
-                    products rather than Lays chips.
+                    Decormate is my end-of-study project, which I carried out
+                    during my second year at ECV Digital. It's an augmented
+                    reality application designed to simplify interior design and
+                    furnishing, for both individuals and professionals.
                   </p>
                   <p className="menca md:w-[415px] pt-4  font-medium	text-base	leading-5	">
-                    My role on this project was to adapt existing prints
-                    displayed in service stations to a digital format. We worked
-                    on nearly a hundred service stations, each with its own
-                    color code and specific producers. We then animated all the
-                    little illustrations decorating the maps.
+                    It works in such a way that, after scanning the room you
+                    wish to decorate/furnish, the application suggests a whole
+                    selection of furnishings to suit the dimensions of the room
+                    and the tastes of the user. To achieve this, I put a lot of
+                    work into the ergonomics and the whole customization process
+                    of the application. All this work was rendered in the form
+                    of a twenty-page dossier, supported by all the research
+                    carried out upstream.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" h-[900px] bg-beige">
-            <img src="/assets/imagesV2/argedis/img_argedis.png" alt="" />
+          <div className=" h-[971px] bg-beige ">
+            <img
+              src="/assets/imagesV2/decormate/desktop/img_decormate.png"
+              alt="image decormate"
+            />
           </div>
-          <div id="img_regiolnalisme" className="bg-beige">
+          <div id="img_regiolnalisme" className="bg-beige pt-10">
             {images_regionalisme.map((img, index) => (
               <img
                 key={index}
@@ -148,28 +167,8 @@ const argedis = () => {
               />
             ))}
           </div>
-          <div className="bg-beige w-full h-[727px] px-10 pt-5">
-            <video autoPlay muted loop height="100%" width="100% ">
-              <source
-                src="/assets/img/regionalisme/demo.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
 
           <div className="pb-[64px] bg-beige text-black pt-[340px]">
-            <BarArgedis label={"( UI )"} label2={"( motion )"} />
-          </div>
-          <div className="pb-[64px] bg-beige text-black">
-            <BarDecormate
-              label={"( UI )"}
-              label2={"( DA )"}
-              label3={"( branding )"}
-              label4={"( prompt )"}
-              label5={" ( midjourney )"}
-            />
-          </div>
-          <div className="pb-[64px] bg-beige text-black">
             <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
           </div>
           <div className="pb-[64px] bg-beige text-black">
@@ -179,10 +178,16 @@ const argedis = () => {
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
           </div>
         </div>
+        <div className="pb-[64px] bg-beige text-black">
+          <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
+        </div>
+        <div className="pb-[64px] bg-beige text-black ">
+          <BarArgedis label={"( UI )"} label2={"( motion )"} />
+        </div>
         <Footer />
       </main>
     </>
   );
 };
 
-export default argedis;
+export default decormate;

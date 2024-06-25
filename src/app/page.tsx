@@ -15,10 +15,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import LabelPlayground from "@/components/Atomes/Label/LabelPlayground";
 import LabelProjects from "@/components/Atomes/Label/LabelProjets";
-import Header from "@/components/Molecules/Header";
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
-// import { Player } from "lottie-react";
-// import lottieSound from "/assets/lottieSound.json";
+import Footer from "@/components/Molecules/Footer/Footer";
+import Lottie from "lottie-react";
+import lottieSound from "@/app/assets/lottieSound.json";
+import Header from "@/components/Molecules/Header/Header";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,6 +47,9 @@ export default function Home() {
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
+        <div className="hidden md:visible menca text-white2 font-extralight w-screen md:flex md:flew-row items-center h-full">
+          <Header />
+        </div>
         <div className=" sticky top-0 z-50 ">
           <MobileNav
             isOpen={isOpen}
@@ -59,13 +63,9 @@ export default function Home() {
             isOpen ? "opacity-10 " : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className=" h-[600px] md:h-screen w-screen ">
-            <div className="invisible md:visible menca text-white2 font-extralight w-screen md:flex md:flew-row items-center h-[40px]">
-              <Header />
-            </div>
-
+          <div className=" h-[500px] md:h-screen w-screen ">
             <div className=" pt-[290px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
-              <div className="md:flex flex-col self-center items-center absolute top-[220px] left-[432px]">
+              <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px]">
                 {visibleCursorHome && (
                   <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
                 )}
@@ -78,7 +78,7 @@ export default function Home() {
                     <div className="masky-container h-[80px] pt-[20px]">
                       <span
                         id="cursorStyled"
-                        className=" general text-4xl flex justify-center lg:text-[72px] pr-4 md:pr-0 slide-up h-[60px] pl-16 md:pl-0 text-on-top "
+                        className=" general text-4xl flex justify-center lg:text-[72px] pr-4 md:pr-0 slide-up h-[60px] pl-16 md:pl-0 text-on-top ease-in-out duration-1000"
                       >
                         Hi ! I am a french artistic
                       </span>
@@ -89,7 +89,7 @@ export default function Home() {
                   <div className="flex flex-col justify-center h-[60px] md:h-full">
                     <div className="masky-container md:h-[100px]  ">
                       <span
-                        className="general text-4xl flex justify-center lg:text-[72px] lg:pt-10 pr-4 md:pr-0 slide-up h-[120px] text-on-top "
+                        className="general text-4xl flex justify-center lg:text-[72px] lg:pt-10 pr-4 md:pr-0 slide-up h-[120px] text-on-top ease-in-out duration-1000"
                         id="cursorStyled"
                       >
                         director based in Paris.
@@ -100,7 +100,7 @@ export default function Home() {
                       <div className="masky-container h-[80px] pb-[100px] ">
                         <span
                           id="cursorStyled"
-                          className="general text-4xl flex justify-center lg:text-[72px] lg:pt-8 pr-4 md:pr-0 slide-up h-[180px] "
+                          className="general text-4xl flex justify-center lg:text-[72px] lg:pt-8 pr-4 md:pr-0 slide-up h-[180px] ease-in-out duration-1000"
                         >
                           I am available to work.{" "}
                         </span>
@@ -110,14 +110,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div
-                id="anchor-selectedProjects"
-                className="bg-beige w-screen h-fit menca absolute bottom-20 left-10 text-sm flex flex-row font-medium	leading-4"
-              >
+              <div className="bg-beige w-screen h-fit menca absolute bottom-28 left-10 text-sm flex flex-row font-medium	leading-4">
                 <div className="text-greyNew pr-8 space-y-2">
                   <div className="">Selected projets</div>
                   {/* <p>2020 -- 2024 </p> */}
-                  <div className="flex flex-inline">
+                  <div className="flex flex-inline ">
                     <div className="">2020</div>
                     <div className=" border flex flex-row"></div>
                     <div>2024</div>
@@ -127,19 +124,26 @@ export default function Home() {
                   <p className="">Dweezil Sèche</p>
                   <p>Artistic Direction \ UI \ Motion \ Prompt</p>
                 </div>
-                {/* <div className="w-24 h-24 text-black ">
-                  <Player
-                    autoplay
-                    loop
-                    src={lottieSound}
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                </div> */}
+                <Link
+                  target="_blank"
+                  href={
+                    "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
+                  }
+                >
+                  <div className="w-[18px] h-[13px] text-black absolute right-20">
+                    <Lottie
+                      autoplay
+                      loop
+                      animationData={lottieSound}
+                      renderer="svg"
+                    />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
-          <div id="bar_projects" className="	">
-            <div className="pb-[64px] pt-[64px]">
+          <div className="	">
+            <div className="pb-[64px] pt-[64px]" id="anchor-selectedProjects">
               <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
             </div>
             <div className="pb-[64px]">
@@ -164,6 +168,7 @@ export default function Home() {
               <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
             </div>
           </div>
+          <Footer />
         </div>
       </main>
     </>

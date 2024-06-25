@@ -14,9 +14,9 @@ const BarWE: FC<BarWEProps> = ({ label }) => {
   return (
     <Link href={"/we"} className="relative md:h-[68px] md:w-[764px]">
       <div className="general text-[64px] leading-[68px] font-thin flex justify-center relative">
-        WE
+        WE.SH. IV{" "}
       </div>
-      <div className="menca font-medium	text-sm	leading-4 absolute top-0 right-[640px]">
+      <div className="menca font-medium	text-sm	leading-4 absolute top-0 right-[564px]">
         {label}
       </div>
     </Link>

@@ -20,14 +20,17 @@ const LabelProjects = () => {
 
   return (
     <>
-      <Link href={"/projects"} className="link top-left  relative">
+      <Link
+        href={"/#anchor-selectedProjects"}
+        className="link top-left  relative"
+      >
         <div>
           <span className="mask h-[20px] absolute ">
             <div className="link-container ">
-              <span className="link-title1 title h-2 absolute left-0 font-medium text-sm leading-4 text-black menca">
+              <span className="link-title1 title h-2 absolute left-0 font-medium text-sm leading-4 text-black menca ease-in-out duration-800">
                 PROJECTS
               </span>
-              <span className="link-title2 title h-2 absolute left-0 font-medium text-sm leading-4 text-black menca">
+              <span className="link-title2 title h-2 absolute left-0 font-medium text-sm leading-4 text-black menca ease-in-out duration-800">
                 PROJECTS
               </span>
             </div>
