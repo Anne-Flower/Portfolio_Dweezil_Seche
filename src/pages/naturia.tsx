@@ -18,9 +18,7 @@ import { Variants, motion } from "framer-motion";
 import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 
-type naturiaProps = {
-  
-}
+type naturiaProps = {};
 
 const Naturia: React.FC<naturiaProps> = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -328,13 +326,13 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300`}
         >
-          <div className="bg-beige text-black overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
+          <div className="bg-beige text-blacky overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
             <div
               className="cursor-none"
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex text-black w-screen space-x-32 pl-[380px]">
+              <div className="flex text-blacky w-screen space-x-32 pl-[380px]">
                 <div className="md:w-[218px] flex flex-col  ">
                   <h1 className="general font-thin text-[72px] leading-[76px] md:pt-52 pt-4 ">
                     Natur.IA
@@ -375,13 +373,13 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
               />
             ))}
           </div>
-          <div className="general font-thin	text-[40px] leading-[60px] text-black bg-beige flex justify-end pr-10 pt-10">
+          <div className="general font-thin	text-[40px] leading-[60px] text-blacky bg-beige flex justify-end pr-10 pt-10">
             and 800 more...
           </div>
-          <div className="pb-[64px] bg-beige text-black pt-40">
+          <div className="pb-[64px] bg-beige text-blacky pt-40">
             <BarArgedis label={"( UI )"} label2={"( motion )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarDecormate
               label={"( UI )"}
               label2={"( DA )"}
@@ -390,13 +388,13 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
               label5={" ( midjourney )"}
             />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarWE label={"( DA )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky pb-56">
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
           </div>
         </div>

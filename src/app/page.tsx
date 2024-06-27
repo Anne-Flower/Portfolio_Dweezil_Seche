@@ -43,11 +43,11 @@ export default function Home() {
   return (
     <>
       <main
-        className={`relative text-black flex justify-center font-extralight w-screen flex-col bg-beige min-h-screen overflow-clip ${
+        className={`relative text-blacky flex justify-center font-extralight w-screen flex-col bg-beige min-h-screen overflow-clip ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
-        <div className="hidden md:visible menca text-black font-extralight w-screen md:flex md:flew-row items-center h-full">
+        <div className="hidden md:visible menca text-blacky font-extralight w-screen md:flex md:flew-row items-center h-full">
           <Header />
         </div>
         <div className=" sticky top-0 z-50 ">
@@ -65,7 +65,7 @@ export default function Home() {
         >
           <div className=" h-[500px] md:h-screen w-screen ">
             <div className=" pt-[290px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
-              <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px]">
+              <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px] hidden md:visible">
                 {visibleCursorHome && (
                   <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
                 )}
@@ -110,7 +110,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-beige w-screen h-fit menca absolute bottom-28 left-10 text-sm flex flex-row font-medium	leading-4">
+              <div className="bg-beige w-screen h-fit menca absolute bottom-28 left-10 text-sm flex flex-row font-medium leading-4">
                 <div className="text-greyNew pr-8 space-y-2">
                   <div className="">Selected projets</div>
                   {/* <p>2020 -- 2024 </p> */}
@@ -120,7 +120,7 @@ export default function Home() {
                     <div>2024</div>
                   </div>
                 </div>
-                <div className="text-black space-y-2">
+                <div className="text-blacky space-y-2">
                   <p className="">Dweezil Sèche</p>
                   <p>Artistic Direction \ UI \ Motion \ Prompt</p>
                 </div>
@@ -130,7 +130,7 @@ export default function Home() {
                     "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
                   }
                 >
-                  <div className="w-[18px] h-[13px] text-black absolute right-20">
+                  <div className="w-[18px] h-[13px] text-blacky absolute right-20">
                     <Lottie
                       autoplay
                       loop

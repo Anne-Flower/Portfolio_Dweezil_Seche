@@ -143,7 +143,7 @@ const engrenage = () => {
               alt="image engrenages"
             />
           </div>
-          <div id="img_regiolnalisme" className="bg-black pt-10">
+          <div id="img_engrenages" className="bg-black pt-10">
             {images_engrenages.map((img, index) => (
               <img
                 key={index}

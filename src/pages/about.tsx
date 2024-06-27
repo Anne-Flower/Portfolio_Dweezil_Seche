@@ -3,7 +3,7 @@ import Label from "@/components/Atomes/Label/LabelAbout";
 import LabelHome from "@/components/Atomes/Label/LabelHome";
 import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
-import Header from "@/components/Molecules/Header";
+import Header from "@/components/Molecules/Header/headerHome";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import React, { useState } from "react";

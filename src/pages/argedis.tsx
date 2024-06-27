@@ -7,6 +7,7 @@ import Labels from "@/components/Atomes/Label/Labels";
 import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
 import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
+import BarNaturia from "@/components/Molecules/Bar/Bar_naturia";
 import BarVerreavin from "@/components/Molecules/Bar/Bar_verreavin";
 import BarWE from "@/components/Molecules/Bar/Bar_we";
 import Footer from "@/components/Molecules/Footer/Footer";
@@ -135,9 +136,15 @@ const argedis = () => {
               </div>
             </div>
           </div>
-          <div className=" h-[900px] bg-beige">
+          <motion.div
+            className=" h-[900px] bg-beige"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+          >
             <img src="/assets/imagesV2/argedis/img_argedis.png" alt="" />
-          </div>
+          </motion.div>
           <div id="img_regiolnalisme" className="bg-beige">
             {images_regionalisme.map((img, index) => (
               <img
@@ -157,10 +164,7 @@ const argedis = () => {
             </video>
           </div>
 
-          <div className="pb-[64px] bg-beige text-black pt-[340px]">
-            <BarArgedis label={"( UI )"} label2={"( motion )"} />
-          </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky pt-[340px]">
             <BarDecormate
               label={"( UI )"}
               label2={"( DA )"}
@@ -169,14 +173,17 @@ const argedis = () => {
               label5={" ( midjourney )"}
             />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarWE label={"( DA )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
+          </div>
+          <div className="pb-[64px] bg-beige text-blacky pb-56">
+            <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
           </div>
         </div>
         <Footer />

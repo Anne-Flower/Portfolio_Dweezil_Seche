@@ -4,6 +4,13 @@ import LabelHome from "@/components/Atomes/Label/LabelHome";
 import LabelMenu from "@/components/Atomes/Label/LabelMenu";
 import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Labels from "@/components/Atomes/Label/Labels";
+import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
+import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
+import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
+import BarNaturia from "@/components/Molecules/Bar/Bar_naturia";
+import BarWE from "@/components/Molecules/Bar/Bar_we";
+import Footer from "@/components/Molecules/Footer/Footer";
+import HeaderProjects from "@/components/Molecules/Header/HeaderProjets";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
@@ -36,6 +43,18 @@ const verreavin = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const images_vertavin = [
+    {
+      src: "/assets/imagesV2/vert_a_vin/propales_logos.png",
+    },
+    {
+      src: "/assets/imagesV2/vert_a_vin/tablier.png",
+    },
+    {
+      src: "/assets/imagesV2/vert_a_vin/hangar.png",
+    },
+  ];
+
   return (
     <>
       {visibleCursor && (
@@ -63,214 +82,107 @@ const verreavin = () => {
             handleToggle={handleToggle2}
             isAbout={false}
           />
+          <div className="absolute top-[0px] invisible md:visible flex justify-between w-screen ">
+            <HeaderProjects />
+          </div>
         </div>
         <div
           className={`${
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className="bg-[url('/assets/img/header/header_vav.png')] md:w-screen  overflow-clip bg-cover w-screen h-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
-            <div className="absolute top-[32px] invisible md:visible menca text-white2 font-extralight flex justify-between w-screen px-[42px]">
-              <LabelHome />
-              <div className="cursor-pointer ">
-                {" "}
-                <LabelMenu handleToggle={handleToggle2} />{" "}
-              </div>
-            </div>
-            <div
-              className="cursor-none"
-              onMouseEnter={() => setIsVisibleCursorHome(true)}
-              onMouseLeave={() => setIsVisibleCursorHome(false)}
-            >
-              <div className="flex flex-col items-center text-white2  w-screen md:w-screen">
-                <h1 className="general font-thin md:text-[90px]	text-[40px] md:text-[120px] leading-[178px] md:pt-40 pt-4">
-                  Vert à Vin
-                </h1>
-                <p className="menca lg:w-[670px] w-screen px-4 text-center pt-2 ">
-                  Vivamus eu metus enim. Cras feugiat mi id lacus semper
-                  tristique. Sed ut faucibus massa. Aenean eu mauris
-                  ullamcorper, malesuada nisl id, porta arcu. Pellentesque vitae
-                  rutrum sapien. Nunc nec tincidunt nunc. Vestibulum ac eros non
-                  velit luctus laoreet id eu urna. Suspendisse tortor ex,
-                  aliquam id magna vitae, tincidunt dignissim purus. Praesent
-                  interdum tempus orci non varius.
-                </p>
-                <section className="flex flex-col gap-y-0.2 items-center pt-16 md:pt-24 invisible md:visible h-[60px] ">
-                  <div className=" flex flex-row">
-                    <Labels label={"( DATE TIME )"} />
-                    ......................................................................................................................
-                    <Labels label={"2023"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( CLIENT )"} />{" "}
-                    ................................................................................................................
-                    <Labels label={"VERRE A VIN"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    .....................................................................................................
-                    <Labels label={"BRANDING"} />
-                  </div>
-                  <div className="flex flex-row pb-8 md:pb-0">
-                    <Labels label={"( AGENCE )"} />{" "}
-                    ...............................................................................................................
-                    <Labels label={"FREELANCE"} />
-                  </div>
-                </section>
-
-                <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20">
-                  <div className=" flex flex-row">
-                    <Labels label={"( DATE TIME )"} />
-                    ...................................................................
-                    <Labels label={"2023"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( CLIENT )"} />{" "}
-                    .............................................................
-                    <Labels label={"VERRE A VIN"} />
-                  </div>
-                  <div className="flex flex-row">
-                    <Labels label={"( TYPE DE PROJET )"} />{" "}
-                    ...................................................
-                    <Labels label={"BRANDING"} />
-                  </div>
-                  <div className="flex flex-row pb-8 md:pb-0">
-                    <Labels label={"( AGENCE )"} />{" "}
-                    ............................................................
-                    <Labels label={"FREELANCE"} />
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-          <section className="md:h-[400px] bg-white2 md:pl-20 px-10 md:min-w-[684px] text-lime-950  pt-[600px] md:pt-0">
-            <div className="md:h-[209px] md:w-[672px] py-16 bg-white2 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
-              malesuada magna, in maximus dui. Ut rutrum pharetra neque lobortis
-              maximus. Vivamus eu malesuada velit. Duis fermentum iaculis
-              bibendum. Integer vel ipsum metus. Praesent dui libero, tempor ac
-              sodales ut, maximus ut massa. Vestibulum iaculis, nisi sit amet
-              interdum rhoncus, nisi nulla eleifend elit, sed interdum risus
-              odio et felis. In faucibus arcu vel nisl congue, nec aliquam
-              lectus porttitor. Morbi in lacus blandit magna fringilla
-              venenatis. Sed volutpat ante a massa laoreet, vel sagittis ex
-              viverra. Curabitur scelerisque fermentum justo, eget euismod risus
-              pellentesque id. Phasellus ut egestas magna, vitae hendrerit
-              sapien. Vestibulum aliquam, augue quis tempor aliquet, leo mauris
-              aliquet nisi, ac volutpat sem sapien quis est. Orci varius natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </div>
-          </section>
-          <div className="md:space-y-20 bg-auto bg-center min-w-[684px] bg-white2 overflow-clip space-y-8">
-            <motion.div
-              className="bg-[url('/assets/img/vertAvin/planche.png')] w-full md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="bg-[url('/assets/img/vertAvin/propales_logos.png')] md:w-screen w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="bg-[url('/assets/img/vertAvin/tablier.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px]  bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="bg-[url('/assets/img/vertAvin/hangar.png')] w-full md:w-screen  w-screen md:h-[600px] h-[210px] bg-contain md:bg-cover bg-no-repeat bg-center md:pb-16"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: false }}
-            ></motion.div>
-          </div>
-          <Link href={"/we"}>
-            <div
-              className="cursor-none"
-              onMouseEnter={() => setIsVisibleCursor(true)}
-              onMouseLeave={() => setIsVisibleCursor(false)}
-            >
-              <div className="md:pt-48 pt-20 bg-white2"></div>
-              <motion.div
-                className="bg-[url('/assets/img/header/header_wesh.png')] md:min-w-[684px] md:w-screen h-[510px] md:h-[610px] md:w-screen bg-cover bg-center relative overflow-clip bg-white2"
-                initial={{ filter: "blur(0px)", scale: 1 }}
-                whileInView={{ filter: "blur(2px)" }}
-                transition={{ duration: 0.6 }}
-                whileHover={{ scale: 1.25, filter: "blur(2px)" }}
+          <div className="bg-beige md:w-screen md:h-[620px] md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
+            <div className="bg-beige md:w-screen md:h-[620px] md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0">
+              <div
+                className="cursor-none"
+                onMouseEnter={() => setIsVisibleCursorHome(true)}
+                onMouseLeave={() => setIsVisibleCursorHome(false)}
               >
-                {" "}
-                <motion.div
-                  className="div flex flex-col items-center "
-                  initial={{
-                    filter: "blur(0px)",
-                    scale: 1,
-                  }}
-                  whileHover={{ scale: 0.8 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div className="flex flex-col items-center text-white2  ">
-                    <h1 className="general font-thin	text-[56px] md:text-[120px] leading-[178px] pt-24 md:pt-32">
-                      WE.SH.IV
+                <div className="flex text-black w-screen pl-[256px]">
+                  <div className="md:w-[358px] flex flex-col ">
+                    <h1 className="general font-thin text-[72px] leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
+                      Vert à Vin
                     </h1>
-
-                    <section className="flex flex-col gap-y-0.2 items-center md:hidden visible text-[13px] mb-20 text-white">
-                      <div className=" flex flex-row">
-                        <Labels label={"( DATE TIME )"} />
-                        .............................................
-                        <Labels label={"2023"} />
-                      </div>
-                      <div className="flex flex-row">
-                        <Labels label={"( CLIENT )"} />{" "}
-                        .......................................
-                        <Labels label={"VERRE A VIN"} />
-                      </div>
-                      <div className="flex flex-row">
-                        <Labels label={"( TYPE DE PROJET )"} />{" "}
-                        .............................
-                        <Labels label={"BRANDING"} />
-                      </div>
-                      <div className="flex flex-row">
-                        <Labels label={"( AGENCE )"} />{" "}
-                        .......................................
-                        <Labels label={"FREELANCE"} />
-                      </div>
-                    </section>
-
-                    <section className="flex flex-col gap-y-0.2 items-center pt-28 md:pt-12 w-screen invisible md:visible">
-                      <div className=" flex flex-row">
-                        <Labels label={"( DATE TIME )"} />
-                        ......................................................................................................................
-                        <Labels label={"2023"} />
-                      </div>
-                      <div className="flex flex-row">
-                        <Labels label={"( CLIENT )"} />{" "}
-                        ................................................................................................................
-                        <Labels label={"VERRE A VIN"} />
-                      </div>
-                      <div className="flex flex-row">
-                        <Labels label={"( TYPE DE PROJET )"} />{" "}
-                        .....................................................................................................
-                        <Labels label={"BRANDING"} />
-                      </div>
-                      <div className="flex flex-row">
-                        <Labels label={"( AGENCE )"} />{" "}
-                        ...............................................................................................................
-                        <Labels label={"FREELANCE"} />
-                      </div>
-                    </section>
+                    <div className="menca font-medium text-sm leading-4 flex flex-col items-end md:pt-24 md:h-[60px] space-y-1.5">
+                      <p>2023</p>
+                      <p>DA, BRANDING</p>
+                      <p>HUGO LOUBY</p>
+                    </div>
                   </div>
-                </motion.div>
-              </motion.div>
+                  <div className="flex flex-col h-[245px] w-[415px] ml-32">
+                    <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5	">
+                      Natur.IA is a project I worked on during my work-study
+                      year at Studio Artefact 3000. The studio had developed a
+                      dashboard for this client, enabling them to create
+                      fragrances from over 900 different aromas. So we had to
+                      find a solution to illustrate them. To do this, we decided
+                      to use artificial intelligence. We first chose an artistic
+                      direction for the visuals. This enabled me to create a
+                      prompt which I then used in Midjourney. The prompt was
+                      created so that I could change only the word that
+                      corresponded to the aroma I wanted to represent. When the
+                      AI didn't understand what I wanted to have, I gave it a
+                      reference image at the beginning of the prompt.It taught
+                      me a lot about how to use AI, and how to create precise
+                      prompts.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </Link>
+          </div>
+
+          <motion.div
+            className=" h-[900px] w-screen bg-beige "
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+          >
+            <img
+              src="/assets/imagesV2/vert_a_vin/img_vavin.png"
+              alt="image wesh"
+              className="w-screen "
+            />
+          </motion.div>
+          <img
+            src="/assets/imagesV2/vert_a_vin/planche.png"
+            alt=""
+            className="h-[680px] bg-beige px-10 w-full pt-16"
+          />
+          <div id="img_wesh" className="bg-beige pt-4">
+            {images_vertavin.map((img, index) => (
+              <img
+                key={index}
+                src={img.src}
+                alt={`Wesh ${index}`}
+                className="w-full h-[850px] px-10 py-5"
+              />
+            ))}
+          </div>
         </div>
+        <div className="pb-[64px] bg-beige text-blacky pt-[340px]">
+          <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
+        </div>
+        <div className="pb-[64px] bg-beige text-blacky">
+          <BarArgedis label={"( UI )"} label2={"( motion )"} />
+        </div>
+        <div className="pb-[64px] bg-beige text-blacky">
+          <BarDecormate
+            label={"( UI )"}
+            label2={"( DA )"}
+            label3={"( branding )"}
+            label4={"( prompt )"}
+            label5={"( midjourney )"}
+          />
+        </div>
+        <div className="pb-[64px] bg-beige text-blacky">
+          <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
+        </div>
+        <div className="pb-[64px] bg-beige text-blacky pb-56">
+          <BarWE label={"( DA )"} />
+        </div>
+        <Footer />
       </main>
     </>
   );

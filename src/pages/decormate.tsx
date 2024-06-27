@@ -119,7 +119,7 @@ const decormate = () => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-black  w-screen  pl-[256px]">
+              <div className="flex text-blacky  w-screen  pl-[256px]">
                 <div className="md:w-[358px] flex flex-col ">
                   <h1 className="general font-thin	text-[72px]  leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
                     Decormate{" "}
@@ -131,13 +131,13 @@ const decormate = () => {
                   </div>
                 </div>
                 <div className="flex flex-col h-[245px] w-[415px] ml-32 ">
-                  <p className="menca md:w-[415px]   md:pt-52 pt-4  font-medium	text-base	leading-5	">
+                  <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5	">
                     Decormate is my end-of-study project, which I carried out
                     during my second year at ECV Digital. It's an augmented
                     reality application designed to simplify interior design and
                     furnishing, for both individuals and professionals.
                   </p>
-                  <p className="menca md:w-[415px] pt-4  font-medium	text-base	leading-5	">
+                  <p className="menca md:w-[415px] pt-4 font-medium text-base leading-5	">
                     It works in such a way that, after scanning the room you
                     wish to decorate/furnish, the application suggests a whole
                     selection of furnishings to suit the dimensions of the room
@@ -151,18 +151,24 @@ const decormate = () => {
               </div>
             </div>
           </div>
-          <div className=" h-[971px] bg-beige ">
+          <motion.div
+            className=" h-[971px] bg-beige "
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+          >
             <img
               src="/assets/imagesV2/decormate/desktop/img_decormate.png"
               alt="image decormate"
             />
-          </div>
-          <div id="img_regiolnalisme" className="bg-beige pt-10">
+          </motion.div>
+          <div id="img_decormate" className="bg-beige pt-10">
             {images_decormate.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
-                alt={`Regionalisme ${index}`}
+                alt={`Decormate ${index}`}
                 className="w-full h-[727px] px-10 py-5"
               />
             ))}
