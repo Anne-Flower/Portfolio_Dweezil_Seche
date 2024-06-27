@@ -64,6 +64,23 @@ export default function Home() {
           } transition-opacity duration-300 `}
         >
           <div className=" h-[500px] md:h-screen w-screen ">
+            <div className="w-screen h-[168px] px-[24px] pt-20 visible md:hidden">
+              <div className="general font-thin	text-[40px] leading-10">
+                Hi ! I am a french{" "}
+              </div>
+              <div className="general font-thin	text-[40px] leading-10">
+                artistic director based
+              </div>
+              <div className="general font-thin	text-[40px] leading-10">
+                in Paris.
+              </div>
+              <div className="general font-thin	text-[40px] leading-10">
+                I am available to work.
+              </div>
+            </div>
+            <div className="visible md:hidden w-screen h-[359px] pt-40">
+              <img src="/assets/imagesV2/acceueil/naturia_apercu.png" alt="" />
+            </div>
             <div className=" pt-[290px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
               <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px] hidden md:visible">
                 {visibleCursorHome && (
@@ -110,7 +127,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-beige w-screen h-fit menca absolute bottom-28 left-10 text-sm flex flex-row font-medium leading-4">
+              <div className="bg-beige w-screen h-fit menca absolute bottom-52 md:bottom-28 left-4 md:left-10 text-sm flex flex-row font-medium leading-4">
                 <div className="text-greyNew pr-8 space-y-2">
                   <div className="">Selected projets</div>
                   {/* <p>2020 -- 2024 </p> */}
@@ -130,7 +147,7 @@ export default function Home() {
                     "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
                   }
                 >
-                  <div className="w-[18px] h-[13px] text-blacky absolute right-20">
+                  <div className="w-[18px] h-[13px] text-blacky absolute right-20 invisible md:visible">
                     <Lottie
                       autoplay
                       loop
@@ -142,14 +159,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="	">
-            <div className="pb-[64px] pt-[64px]" id="anchor-selectedProjects">
+          <div className="">
+            <div
+              className="md:pb-[64px] pb-10 md:pt-[64px] pt-[210px]"
+              id="anchor-selectedProjects"
+            >
               <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
             </div>
-            <div className="pb-[64px]">
+            <div className="md:pb-[64px] pb-10">
               <BarArgedis label={"( UI )"} label2={"( motion )"} />
             </div>
-            <div className="pb-[64px]">
+            <div className="md:pb-[64px] pb-10">
               <BarDecormate
                 label={"( UI )"}
                 label2={"( DA )"}
@@ -158,13 +178,13 @@ export default function Home() {
                 label5={" ( midjourney )"}
               />
             </div>
-            <div className="pb-[64px]">
+            <div className="md:pb-[64px] pb-10">
               <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
             </div>
-            <div className="pb-[64px]">
+            <div className="md:pb-[64px] pb-10">
               <BarWE label={"( DA )"} />
             </div>
-            <div className="pb-[64px]">
+            <div className="md:pb-[64px] pb-10">
               <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
             </div>
           </div>

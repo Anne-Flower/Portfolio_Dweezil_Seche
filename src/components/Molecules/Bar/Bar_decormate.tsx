@@ -22,10 +22,10 @@ const BarDecormate: FC<BarDecormateProps> = ({
 
   return (
     <Link href={"/decormate"} className="relative md:h-[68px] md:w-[764px]">
-      <div className="general text-[64px] leading-[68px] font-thin flex justify-center relative">
+      <div className="general text-[40px] md:text-[64px] leading-[68px] font-thin flex justify-center relative">
         Decormate
       </div>
-      <div className="menca font-medium	text-sm	leading-4 absolute top-0 right-[310px]">
+      <div className="menca font-medium	text-sm	leading-4 absolute md:top-0 md:right-[310px] right-14">
         {label} {label2} {label3} {label4} {label5}
       </div>
     </Link>

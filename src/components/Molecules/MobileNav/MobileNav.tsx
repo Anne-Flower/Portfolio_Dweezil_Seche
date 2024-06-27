@@ -90,14 +90,14 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
               <Contact />
             </div> */}
 
-            <div id="footer_mobileNav" className="h-full w-screen ">
+            <div id="footer_mobileNav" className="h-full w-screen">
               <Link
                 target="_blank"
                 href={
                   "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
                 }
               >
-                <div className="w-[18px] h-[13px] text-blacky ">
+                <div className="w-[18px] h-[13px] text-blacky">
                   <Lottie
                     autoplay
                     loop
@@ -106,6 +106,10 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
                   />
                 </div>
               </Link>
+              <div className="menca  text-black px-10  h-fit w-screen flex   justify-between	font-medium	text-sm	leading-4	pb-10	">
+                <div>Designed by Dweezil Sèche</div>
+                <div>Coded by Anne-Flore Bernard</div>
+              </div>
             </div>
           </div>
         </motion.div>

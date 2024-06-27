@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="menca bg-beige text-black px-10 invisible md:visible h-full w-screen flex justify-between	font-medium	text-sm	leading-4	pb-10	">
+    <div className="menca bg-beige text-blacky md:px-10 h-full w-screen flex md:justify-between items-center flex-col md:flex-row font-medium	text-sm	leading-4	pb-10	pt-20 md:pt-0 space-y-2 md:space-x-0">
       <div>Designed by Dweezil Sèche</div>
       <div>Coded by Anne-Flore Bernard</div>
     </div>
