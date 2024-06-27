@@ -10,7 +10,7 @@ import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
 import BarVerreavin from "@/components/Molecules/Bar/Bar_verreavin";
 import BarWE from "@/components/Molecules/Bar/Bar_we";
 import Footer from "@/components/Molecules/Footer/Footer";
-import Header from "@/components/Molecules/Header/Header";
+import HeaderProjects from "@/components/Molecules/Header/HeaderProjets";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { log } from "console";
@@ -18,7 +18,11 @@ import { Variants, motion } from "framer-motion";
 import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 
-const Naturia = ({}) => {
+type naturiaProps = {
+  
+}
+
+const Naturia: React.FC<naturiaProps> = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -315,7 +319,7 @@ const Naturia = ({}) => {
             isAbout={false}
           />
           <div className="absolute top-[0px] invisible md:visible flex justify-between w-screen ">
-            <Header />
+            <HeaderProjects />
           </div>
         </div>
 
@@ -330,18 +334,18 @@ const Naturia = ({}) => {
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex text-black w-screen space-x-32 pl-[400px]">
+              <div className="flex text-black w-screen space-x-32 pl-[380px]">
                 <div className="md:w-[218px] flex flex-col  ">
                   <h1 className="general font-thin text-[72px] leading-[76px] md:pt-52 pt-4 ">
-                    NaturIA
+                    Natur.IA
                   </h1>
-                  <div className="menca font-medium text-sm	leading-4	flex flex-col items-end pt-28">
+                  <div className="menca font-medium text-sm	leading-4	flex flex-col items-end md:pt-[102px] space-y-1.5">
                     <p>2024</p>
-                    <p>prompt, midjourney</p>
-                    <p>studio artefact 3000</p>
+                    <p>PROMPT, MIDJOURNEY</p>
+                    <p>STUDIO ARTEFACT 3000</p>
                   </div>
                 </div>
-                <p className="menca md:w-[415px] md:h-[240px]  md:pt-52 pt-4  font-medium	text-base	leading-5	">
+                <p className="menca md:w-[415px] md:h-[240px] md:pt-52 pt-4 font-medium	text-base	leading-5	md:pl-6">
                   Natur.IA is a project I worked on during my work-study year at
                   Studio Artefact 3000. The studio had developed a dashboard for
                   this client, enabling them to create fragrances from over 900

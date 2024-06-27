@@ -10,7 +10,7 @@ import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
 import BarVerreavin from "@/components/Molecules/Bar/Bar_verreavin";
 import BarWE from "@/components/Molecules/Bar/Bar_we";
 import Footer from "@/components/Molecules/Footer/Footer";
-import Header from "@/components/Molecules/Header/Header";
+import HeaderProjects from "@/components/Molecules/Header/HeaderProjets";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
@@ -89,7 +89,7 @@ const argedis = () => {
             isAbout={false}
           />
           <div className="absolute top-[0px] invisible md:visible flex justify-between w-screen ">
-            <Header />
+            <HeaderProjects />
           </div>
         </div>
         <div
@@ -103,18 +103,18 @@ const argedis = () => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-black  w-screen  pl-[256px]">
+              <div className="flex text-black  w-screen  pl-[233px]">
                 <div className="md:w-[358px] flex flex-col ">
-                  <h1 className="general font-thin	text-[72px]  leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
+                  <h1 className="general font-thin	text-[72px] leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
                     Regionalisme
                   </h1>
-                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end pt-28">
+                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end md:pt-[96px] md:h-[60px] space-y-1.5">
                     <p>2024</p>
-                    <p>UI, motion</p>
-                    <p>studio artefact 3000</p>
+                    <p>UI, MOTION</p>
+                    <p>STUDIO ARTEFACT 3000</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[245px] w-[415px] ml-32 ">
+                <div className="flex flex-col h-[245px] w-[415px] ml-40 ">
                   <p className="menca md:w-[415px]   md:pt-52 pt-4  font-medium	text-base	leading-5	">
                     Regionalisme is an application designed for use on
                     interactive kiosks at petrol stations all over France. It's

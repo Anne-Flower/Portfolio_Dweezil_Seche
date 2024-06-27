@@ -19,7 +19,7 @@ import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
 import Footer from "@/components/Molecules/Footer/Footer";
 import Lottie from "lottie-react";
 import lottieSound from "@/app/assets/lottieSound.json";
-import Header from "@/components/Molecules/Header/Header";
+import Header from "@/components/Molecules/Header/headerHome";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,7 @@ export default function Home() {
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
-        <div className="hidden md:visible menca text-white2 font-extralight w-screen md:flex md:flew-row items-center h-full">
+        <div className="hidden md:visible menca text-black font-extralight w-screen md:flex md:flew-row items-center h-full">
           <Header />
         </div>
         <div className=" sticky top-0 z-50 ">

@@ -18,6 +18,11 @@ const LabelAbout = () => {
     }
   };
 
+  const [isBlack, setIsBlack] = useState(false);
+  const handleColor = () => {
+    setIsBlack(!isBlack);
+  };
+
   return (
     <>
       <Link
@@ -27,10 +32,18 @@ const LabelAbout = () => {
         <div>
           <span className="mask h-[20px] absolute ">
             <div className="link-container ">
-              <span className="link-title1 title h-2 absolute left-0 font-medium text-xs leading-4 text-black menca ease-in-out duration-800">
+              <span
+                className={`link-title1 title h-2 absolute left-0 font-medium text-xs leading-4  menca ease-in-out duration-800 ${
+                  isBlack ? "text-beige" : "text-black"
+                }`}
+              >
                 ABOUT{" "}
               </span>
-              <span className="link-title2 title h-2 absolute left-0 font-medium text-xs leading-4 text-black menca ease-in-out duration-800">
+              <span
+                className={`link-title2 title h-2 absolute left-0 font-medium text-xs leading-4  menca ease-in-out duration-800 ${
+                  isBlack ? "text-beige" : "text-black"
+                }`}
+              >
                 ABOUT{" "}
               </span>
             </div>

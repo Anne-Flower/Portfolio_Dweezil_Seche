@@ -11,7 +11,7 @@ import BarNaturia from "@/components/Molecules/Bar/Bar_naturia";
 import BarVerreavin from "@/components/Molecules/Bar/Bar_verreavin";
 import BarWE from "@/components/Molecules/Bar/Bar_we";
 import Footer from "@/components/Molecules/Footer/Footer";
-import Header from "@/components/Molecules/Header/Header";
+import HeaderProjects from "@/components/Molecules/Header/HeaderProjets";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
@@ -44,7 +44,7 @@ const decormate = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const images_regionalisme = [
+  const images_decormate = [
     {
       src: "/assets/imagesV2/decormate/desktop/logo.png",
     },
@@ -105,7 +105,7 @@ const decormate = () => {
             isAbout={false}
           />
           <div className="absolute top-[0px] invisible md:visible flex justify-between w-screen ">
-            <Header />
+            <HeaderProjects />
           </div>
         </div>
         <div
@@ -113,7 +113,7 @@ const decormate = () => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className="bg-beige text-black md:w-screen md:h-[600px] md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
+          <div className="bg-beige text-blacky md:w-screen md:h-[600px] md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
             <div
               className="cursor-none"
               onMouseEnter={() => setIsVisibleCursor(true)}
@@ -124,10 +124,10 @@ const decormate = () => {
                   <h1 className="general font-thin	text-[72px]  leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
                     Decormate{" "}
                   </h1>
-                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end pt-28">
+                  <div className="menca font-medium text-sm leading-4 flex flex-col items-end md:pt-24 md:h-[60px] space-y-1.5">
                     <p>2024</p>
-                    <p>UI, DA, branding, prompt, midjourney</p>
-                    <p>ecv digital</p>
+                    <p>UI, DA, BRANDING, PROMPT, MIDJOURNEY</p>
+                    <p>ECV DIGITAL</p>
                   </div>
                 </div>
                 <div className="flex flex-col h-[245px] w-[415px] ml-32 ">
@@ -158,7 +158,7 @@ const decormate = () => {
             />
           </div>
           <div id="img_regiolnalisme" className="bg-beige pt-10">
-            {images_regionalisme.map((img, index) => (
+            {images_decormate.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
@@ -168,20 +168,20 @@ const decormate = () => {
             ))}
           </div>
 
-          <div className="pb-[64px] bg-beige text-black pt-[340px]">
+          <div className="pb-[64px] bg-beige text-blacky pt-[340px]">
             <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarWE label={"( DA )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-black">
+          <div className="pb-[64px] bg-beige text-blacky">
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
           </div>
         </div>
-        <div className="pb-[64px] bg-beige text-black">
+        <div className="pb-[64px] bg-beige text-blacky">
           <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
         </div>
-        <div className="pb-[64px] bg-beige text-black ">
+        <div className="pb-[64px] bg-beige text-blacky ">
           <BarArgedis label={"( UI )"} label2={"( motion )"} />
         </div>
         <Footer />

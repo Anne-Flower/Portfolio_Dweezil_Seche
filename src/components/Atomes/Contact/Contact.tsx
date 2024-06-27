@@ -4,7 +4,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className=" w-full flex flex-col ">
-      <div className="menca font-medium	 text-base text-black space-y-2  leading-4	">
+      <div className="menca font-medium	 text-base space-y-2  leading-4	">
         <p>dweezilseche@gmail.com</p>
         <p className="flex justify-end cursor-pointer h-full w-full ">
           <Link
