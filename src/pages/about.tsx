@@ -1,8 +1,8 @@
 import About from "@/components/Atomes/About/About";
-import Label from "@/components/Atomes/Label/LabelAbout";
-import LabelHome from "@/components/Atomes/Label/LabelHome";
-import LabelMenu from "@/components/Atomes/Label/LabelMenu";
-import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
+// import Label from "@/components/Atomes/Label/LabelAbout";
+// import LabelHome from "@/components/Atomes/Label/LabelHome";
+// import LabelMenu from "@/components/Atomes/Label/LabelMenu";
+// import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Header from "@/components/Molecules/Header/headerHome";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
@@ -24,10 +24,10 @@ const AboutPage = () => {
     <>
       <div
         className={`relative text-black flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip bg-beige ${
-          isOpen ? "overflow-hidden   " : "overflow-clip "
+          isOpen ? "overflow-hidden" : "overflow-clip"
         } `}
       >
-        <div className=" md:relative top-0 pt-0 h-[1200px] md:h-screen ">
+        <div className=" relative top-0 pt-0 h-[1200px] md:h-screen">
           <div className="absolute invisible md:visible menca text-black font-extralight flex justify-between w-screen ">
             <Header />
           </div>

@@ -87,7 +87,7 @@ const decormate = () => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -119,18 +119,18 @@ const decormate = () => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-blacky  w-screen  pl-[256px]">
-                <div className="md:w-[358px] flex flex-col ">
-                  <h1 className="general font-thin	text-[72px]  leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
+              <div className="flex text-blacky w-screen md:pl-[256px] px-8">
+                <div className="md:w-[358px] flex flex-col h-fit">
+                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-10 md:leading-[76px] md:pt-52 pt-24 md:flex md:justify-end ">
                     Decormate{" "}
                   </h1>
-                  <div className="menca font-medium text-sm leading-4 flex flex-col items-end md:pt-24 md:h-[60px] space-y-1.5">
+                  <div className="menca font-medium text-sm leading-4 flex flex-col items-start md:items-end md:pt-24 md:h-[60px] space-y-1.5 w-screen md:w-[360px] pt-10">
                     <p>2024</p>
                     <p>UI, DA, BRANDING, PROMPT, MIDJOURNEY</p>
                     <p>ECV DIGITAL</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[245px] w-[415px] ml-32 ">
+                <div className="flex flex-col md:h-[245px] md:w-[415px] md:ml-32 invisible md:visible ">
                   <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5	">
                     Decormate is my end-of-study project, which I carried out
                     during my second year at ECV Digital. It's an augmented
@@ -151,18 +151,22 @@ const decormate = () => {
               </div>
             </div>
           </div>
-          <motion.div
-            className=" h-[971px] bg-beige "
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
-          >
-            <img
-              src="/assets/imagesV2/decormate/desktop/img_decormate.png"
-              alt="image decormate"
-            />
-          </motion.div>
+          <div>
+            <motion.div
+              className=" "
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
+              <img
+                src="/assets/imagesV2/decormate/desktop/img_decormate.png"
+                alt="image decormate"
+                className="md:h-[971px] h-[265px] bg-beige pt-40 md:pt-0 md:visible invisible  w-screen"
+              />
+            </motion.div>
+          </div>
+
           <div id="img_decormate" className="bg-beige pt-10">
             {images_decormate.map((img, index) => (
               <img

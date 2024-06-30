@@ -6,11 +6,11 @@ import FooterAbout from "@/components/Molecules/Footer/FooterAbout";
 
 const About = () => {
   return (
-    <div className="w-screen lg:flex  lg:pr-6 h-screen relative">
+    <div className="w-screen lg:flex lg:pr-6 h-screen relative">
       <img
         src="/assets/imagesV2/photo_perso.png"
         alt="photo Dweezil Sèche "
-        className="w-[331px] h-[331px] absolute top-40 left-10"
+        className="w-[331px] h-[331px] absolute top-[770px] md:top-40 left-5 md:left-10"
       />
       <div className="menca font-medium	text-sm	leading-4	text-black ">
         <div className="absolute top-[520px] left-10 ">Dweezil Sèche</div>
@@ -19,7 +19,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text-black px-6 lg:w-[672px] md:h-[440px] overflow-x-clip lg:absolute lg:right-56 lg:pt-20  pt-0 md:flex md:flex-col md:items-start ">
+      <div className="text-black px-6 lg:w-[672px] md:h-[440px] overflow-x-clip lg:absolute lg:right-56 lg:pt-20 pt-0 md:flex md:flex-col md:items-start ">
         <h1 className="general leading-[83px] font-thin md:text-[56px] text-4xl lg:pb-14 pb-10 flex lg:pt-8 pt-6">
           About
         </h1>
@@ -52,7 +52,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-10">
+      <div className="absolute md:bottom-10 bottom-5">
         {" "}
         <FooterAbout />
       </div>

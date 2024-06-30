@@ -6,6 +6,7 @@ import React, { FC } from "react";
 import Contact from "@/components/Atomes/Contact/Contact";
 import Lottie from "lottie-react";
 import lottieSound from "@/app/assets/lottieSound.json";
+import ContactMobileNav from "@/components/Atomes/Contact/ContactMobileNav";
 
 type MobileNavProps = {
   isOpen: boolean;
@@ -28,7 +29,7 @@ const MenuVariants = {
 const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
   return (
     <nav className=" xl:hidden relative bg-transparent ">
-      <div className="text-3xl cursor-pointer relative md:h-0 ">
+      <div className="text-3xl cursor-pointer relative md:h-0 flex h-10 items-center ">
         <div
           className={`flex flex-row-reverse py-4 pr-4 pt-6 md:invisible justify-between ${
             isOpen ? "hidden" : "show "
@@ -36,10 +37,10 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
         >
           <FontAwesomeIcon
             icon={faBars}
-            className="icon-size-custom cursor-pointer h-[50px] w-[50px]"
+            className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 "
             onClick={handleToggle}
           />
-          <div className="text-blacky general md:pt-6 pl-6 flex items-start font-medium text-xl h-20">
+          <div className="text-blacky general md:pt-6 pl-6 flex items-start font-medium text-xl h-0 md:h-20 pr-[270px] md:pr-0">
             <Link href={"/"}>Dweez</Link>
           </div>
         </div>
@@ -61,7 +62,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
             </div>
           </div>
           <div>
-            <ul className="menca flex flex-col items-start h-full gap-y-[20px] text-2xl text-blacky font-medium leading-6 cursor-pointer pt-56 pl-6 ">
+            <ul className="menca flex flex-col items-start h-full gap-y-[20px] text-2xl text-blacky font-medium leading-6 cursor-pointer pt-48 pl-6 ">
               <li onClick={handleToggle}>
                 <Link href="/">
                   <div>HOME</div>
@@ -91,22 +92,33 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
             </div> */}
 
             <div id="footer_mobileNav" className="h-full w-screen">
-              <Link
-                target="_blank"
-                href={
-                  "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
-                }
-              >
-                <div className="w-[18px] h-[13px] text-blacky">
-                  <Lottie
-                    autoplay
-                    loop
-                    animationData={lottieSound}
-                    renderer="svg"
-                  />
-                </div>
-              </Link>
-              <div className="menca  text-black px-10  h-fit w-screen flex   justify-between	font-medium	text-sm	leading-4	pb-10	">
+              <div className="pl-6 pt-12">
+                <ContactMobileNav />
+              </div>
+              <div className="pt-28 flex justify-center">
+                {" "}
+                <Link
+                  target="_blank"
+                  href={
+                    "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
+                  }
+                >
+                  <div className="w-[18px] h-[13px] text-blacky">
+                    <Lottie
+                      autoplay
+                      loop
+                      animationData={lottieSound}
+                      renderer="svg"
+                    />
+                  </div>
+                </Link>
+              </div>
+              <div className="menca text-black px-6 h-fit w-screen flex flex-col items-center font-medium text-sm leading-4 pb-8 visible md:hidden pt-10">
+                <div>Designed by Dweezil Sèche</div>
+                <div>Coded by Anne-Flore Bernard</div>
+              </div>
+
+              <div className="menca text-black px-10 h-fit w-screen flex justify-between font-medium text-sm leading-4 pb-10 hidden md:visible">
                 <div>Designed by Dweezil Sèche</div>
                 <div>Coded by Anne-Flore Bernard</div>
               </div>

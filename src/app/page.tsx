@@ -40,6 +40,12 @@ export default function Home() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const img = [
+    {
+      src: "",
+    },
+  ];
+
   return (
     <>
       <main
@@ -65,23 +71,23 @@ export default function Home() {
         >
           <div className=" h-[500px] md:h-screen w-screen ">
             <div className="w-screen h-[168px] px-[24px] pt-20 visible md:hidden">
-              <div className="general font-thin	text-[40px] leading-10">
+              <div className="general font-thin	text-[36px] leading-10">
                 Hi ! I am a french{" "}
               </div>
-              <div className="general font-thin	text-[40px] leading-10">
+              <div className="general font-thin	text-[36px] leading-10">
                 artistic director based
               </div>
-              <div className="general font-thin	text-[40px] leading-10">
+              <div className="general font-thin	text-[36px] leading-10">
                 in Paris.
               </div>
-              <div className="general font-thin	text-[40px] leading-10">
+              <div className="general font-thin	text-[36px] leading-10">
                 I am available to work.
               </div>
             </div>
-            <div className="visible md:hidden w-screen h-[359px] pt-40">
+            <div className="visible md:hidden w-screen h-[329px] pt-24">
               <img src="/assets/imagesV2/acceueil/naturia_apercu.png" alt="" />
             </div>
-            <div className=" pt-[290px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
+            <div className=" pt-[299px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
               <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px] hidden md:visible">
                 {visibleCursorHome && (
                   <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
@@ -127,7 +133,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-beige w-screen h-fit menca absolute bottom-52 md:bottom-28 left-4 md:left-10 text-sm flex flex-row font-medium leading-4">
+              <div className="bg-beige w-screen h-fit menca absolute bottom-64 md:bottom-28 left-4 md:left-10 text-sm flex flex-row font-medium leading-4">
                 <div className="text-greyNew pr-8 space-y-2">
                   <div className="">Selected projets</div>
                   {/* <p>2020 -- 2024 </p> */}
@@ -161,7 +167,7 @@ export default function Home() {
           </div>
           <div className="">
             <div
-              className="md:pb-[64px] pb-10 md:pt-[64px] pt-[210px]"
+              className="md:pb-[64px] pb-10 md:pt-[64px] pt-[130px]"
               id="anchor-selectedProjects"
             >
               <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
