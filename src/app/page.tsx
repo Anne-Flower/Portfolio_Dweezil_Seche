@@ -70,7 +70,7 @@ export default function Home() {
           } transition-opacity duration-300 `}
         >
           <div className=" h-[500px] md:h-screen w-screen ">
-            <div className="w-screen h-[168px] px-[24px] pt-20 visible md:hidden">
+            <div className="w-screen h-[168px] px-[24px] md:pt-20 pt-24 visible md:hidden">
               <div className="general font-thin	text-[36px] leading-10">
                 Hi ! I am a french{" "}
               </div>
@@ -84,8 +84,12 @@ export default function Home() {
                 I am available to work.
               </div>
             </div>
-            <div className="visible md:hidden w-screen h-[329px] pt-24">
-              <img src="/assets/imagesV2/acceueil/naturia_apercu.png" alt="" />
+            <div className="visible md:hidden w-screen h-[359px] cover fit-content pt-[120px]">
+              <img
+                src="/assets/imagesV2/acceueil/naturia_apercu.png"
+                alt=""
+                className=" h-[359px]"
+              />
             </div>
             <div className=" pt-[299px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
               <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px] hidden md:visible">
@@ -133,7 +137,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-beige w-screen h-fit menca absolute bottom-64 md:bottom-28 left-4 md:left-10 text-sm flex flex-row font-medium leading-4">
+              <div className="bg-beige w-screen h-fit menca absolute bottom-28 md:bottom-28 left-4 md:left-10 text-sm flex flex-row font-medium leading-4">
                 <div className="text-greyNew pr-8 space-y-2">
                   <div className="">Selected projets</div>
                   {/* <p>2020 -- 2024 </p> */}
@@ -165,7 +169,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="">
+          <div className="pt-40 md:pt-0">
             <div
               className="md:pb-[64px] pb-10 md:pt-[64px] pt-[130px]"
               id="anchor-selectedProjects"
