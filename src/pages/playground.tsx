@@ -103,15 +103,15 @@ const playground = () => {
             Playground
           </h1>
 
-          <div className="visible md:hidden w-screen h-[359px] pt-[10px] object-contain flex justify-center">
+          <div className="visible md:hidden w-screen h-[359px] w-screen pt-[10px] object-cover flex justify-center">
             <img
               src={img_playground[currentIndex].src}
               alt=""
-              className="object-contain h-[359px] flex "
+              className="h-[359px] w-screen flex object-cover"
             />
           </div>
 
-          <div className="bg-beige w-screen h-fit menca md:absolute md:bottom-10 md:left-10 text-sm flex flex-row justify-center md:justify-start font-medium leading-4 pt-16 md:pt-0">
+          <div className="bg-beige w-screen h-fit menca md:absolute md:bottom-10 md:left-10 text-sm flex flex-row justify-center md:justify-start font-medium leading-4 pt-20 md:pt-0">
             <div className="text-greyNew pr-4 md:pr-8 space-y-2">
               <div className="">Selected projets</div>
               {/* <p>2020 -- 2024 </p> */}

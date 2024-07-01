@@ -124,7 +124,11 @@ export default function Home() {
               </div>
             </div>
             <div className="visible md:hidden w-screen h-[359px] cover fit-content pt-[120px]">
-              <img src={img[currentIndex].src} alt="" className=" h-[359px]" />
+              <img
+                src={img[currentIndex].src}
+                alt=""
+                className=" h-[359px] object-cover"
+              />
             </div>
             <div className=" pt-[299px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
               <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px] hidden md:visible">

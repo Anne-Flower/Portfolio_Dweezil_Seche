@@ -119,7 +119,7 @@ const decormate = () => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-blacky w-screen md:pl-[256px] px-8">
+              <div className="flex text-blacky w-screen md:pl-[256px] px-5">
                 <div className="md:w-[358px] flex flex-col h-fit">
                   <h1 className="general font-thin text-[40px] md:text-[72px] leading-10 md:leading-[76px] md:pt-52 pt-24 md:flex md:justify-end ">
                     Decormate{" "}
@@ -150,10 +150,25 @@ const decormate = () => {
                 </div>
               </div>
             </div>
+            <div className="flex visible md:invisible mb-6 ">
+              <motion.div
+                className="h-[265px]"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
+                <img
+                  src="/assets/imagesV2/decormate/desktop/img_decormate.png"
+                  alt="image decormate"
+                  className="h-[265px] bg-beige md:pt-0 w-screen"
+                />
+              </motion.div>
+            </div>
           </div>
-          <div>
+          <div className="md:visible invisible h-fit">
             <motion.div
-              className=" "
+              className="h-[971px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -162,23 +177,23 @@ const decormate = () => {
               <img
                 src="/assets/imagesV2/decormate/desktop/img_decormate.png"
                 alt="image decormate"
-                className="md:h-[971px] h-[265px] bg-beige pt-40 md:pt-0 md:visible invisible  w-screen"
+                className="md:h-[971px] bg-beige  md:pt-0 w-screen"
               />
             </motion.div>
           </div>
 
-          <div id="img_decormate" className="bg-beige pt-10">
+          <div id="img_decormate" className="bg-beige pt-20">
             {images_decormate.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={`Decormate ${index}`}
-                className="w-full h-[727px] px-10 py-5"
+                className="w-full h-[194px] md:h-[727px] px-10 py-5"
               />
             ))}
           </div>
 
-          <div className="pb-[64px] bg-beige text-blacky pt-[340px]">
+          <div className="pb-[64px] bg-beige text-blacky pt-[40px]">
             <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
           </div>
           <div className="pb-[64px] bg-beige text-blacky">

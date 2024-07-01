@@ -106,7 +106,7 @@ const argedis = () => {
             >
               <div className="flex flex-col md:flex-row text-black w-screen md:pl-[233px] w-[345px] md:w-full">
                 <div className="md:w-[358px] flex flex-col pl-6">
-                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-4 flex md:justify-end justify-center pb-4 md:pb-0">
+                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-16 flex md:justify-end justify-start pb-4 md:pb-0">
                     Regionalisme
                   </h1>
                   <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-start md:items-end md:pt-[96px] md:h-[60px] space-y-1.5 pb-12 md:pb-0">
@@ -136,9 +136,9 @@ const argedis = () => {
               </div>
             </div>
 
-            <div className="flex visible md:invisible mb-6 ">
+            <div className="flex visible md:invisible mb-6">
               <motion.div
-                className=" h-[245px] md:h-[900px] bg-beige "
+                className="h-[245px] md:h-[900px] bg-beige "
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -152,7 +152,7 @@ const argedis = () => {
               </motion.div>
             </div>
           </div>
-          <div className="md:visible invisible ">
+          <div className="md:visible invisible">
             <motion.div
               className=" h-[245px] md:h-[900px] bg-beige "
               initial={{ opacity: 0 }}
@@ -167,7 +167,7 @@ const argedis = () => {
               />
             </motion.div>
           </div>
-          <div id="img_regiolnalisme" className="bg-beige pt-[400px] md:pt-0">
+          <div id="img_regiolnalisme" className="bg-beige pt-[500px] md:pt-0">
             {images_regionalisme.map((img, index) => (
               <img
                 key={index}
@@ -186,7 +186,7 @@ const argedis = () => {
             </video>
           </div>
 
-          <div className="md:pb-[64px] bg-beige text-blacky md:pt-[340px]">
+          <div className="md:pb-[64px] mb-14 bg-beige text-blacky md:pt-[340px]">
             <BarDecormate
               label={"( UI )"}
               label2={"( DA )"}
