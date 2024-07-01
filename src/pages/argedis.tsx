@@ -72,7 +72,7 @@ const argedis = () => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col  min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -98,25 +98,25 @@ const argedis = () => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300 `}
         >
-          <div className="bg-beige text-black md:w-screen md:h-[600px] md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
+          <div className="bg-beige text-black md:w-screen md:h-[494px] md:min-w-[684px] overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
             <div
               className="cursor-none"
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-black  w-screen  pl-[233px]">
-                <div className="md:w-[358px] flex flex-col ">
-                  <h1 className="general font-thin	text-[72px] leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
+              <div className="flex flex-col md:flex-row text-black w-screen md:pl-[233px] w-[345px] md:w-full">
+                <div className="md:w-[358px] flex flex-col pl-6">
+                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-4 flex md:justify-end justify-center pb-4 md:pb-0">
                     Regionalisme
                   </h1>
-                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end md:pt-[96px] md:h-[60px] space-y-1.5">
+                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-start md:items-end md:pt-[96px] md:h-[60px] space-y-1.5 pb-12 md:pb-0">
                     <p>2024</p>
                     <p>UI, MOTION</p>
                     <p>STUDIO ARTEFACT 3000</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[245px] w-[415px] ml-40 ">
-                  <p className="menca md:w-[415px]   md:pt-52 pt-4  font-medium	text-base	leading-5	">
+                <div className="flex flex-col h-[494px] md:h-[245px] w-[345px] md:w-[415px] ml-6 md:ml-40 ">
+                  <p className="menca md:w-[415px] md:pt-52 pt-4  font-medium	text-base	leading-5	">
                     Regionalisme is an application designed for use on
                     interactive kiosks at petrol stations all over France. It's
                     a project I carried out during my work-study year at Studio
@@ -136,22 +136,28 @@ const argedis = () => {
               </div>
             </div>
           </div>
-          <motion.div
-            className=" h-[900px] bg-beige"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
-          >
-            <img src="/assets/imagesV2/argedis/img_argedis.png" alt="" />
-          </motion.div>
-          <div id="img_regiolnalisme" className="bg-beige">
+          <div className="md:visible invisible">
+            <motion.div
+              className=" h-[245px] md:h-[900px] bg-beige "
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
+              <img
+                src="/assets/imagesV2/argedis/img_argedis.png"
+                alt=""
+                className=" h-[245px] md:h-[900px] bg-beige w-screen"
+              />
+            </motion.div>
+          </div>
+          <div id="img_regiolnalisme" className="bg-beige pt-[400px] md:pt-0">
             {images_regionalisme.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={`Regionalisme ${index}`}
-                className="w-full h-[727px] px-10 py-5"
+                className="w-full h-[245px] md:h-[727px] px-10 py-5"
               />
             ))}
           </div>

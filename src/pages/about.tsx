@@ -1,8 +1,4 @@
 import About from "@/components/Atomes/About/About";
-// import Label from "@/components/Atomes/Label/LabelAbout";
-// import LabelHome from "@/components/Atomes/Label/LabelHome";
-// import LabelMenu from "@/components/Atomes/Label/LabelMenu";
-// import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Header from "@/components/Molecules/Header/headerHome";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
@@ -27,22 +23,22 @@ const AboutPage = () => {
           isOpen ? "overflow-hidden" : "overflow-clip"
         } `}
       >
-        <div className=" relative top-0 pt-0 h-[1200px] md:h-screen">
-          <div className="absolute invisible md:visible menca text-black font-extralight flex justify-between w-screen ">
-            <Header />
-          </div>
-          <div className="w-full h-screen text-white lg:pt-10">
-            <div className="lg:pt-0">
-              <About />
-            </div>
-          </div>
-        </div>
         <div className="sticky top-0 z-50 ">
           <MobileNav
             isOpen={isOpen}
             handleToggle={handleToggle}
             isAbout={false}
           />
+        </div>
+        <div className=" relative top-0 pt-0 h-[1200px] md:h-screen">
+          <div className="absolute invisible md:visible menca text-black font-extralight flex justify-between w-screen ">
+            <Header />
+          </div>
+          <div className="w-full h-screen text-white lg:py-10">
+            <div className="lg:pt-10 h-screen">
+              <About />
+            </div>
+          </div>
         </div>
         <div className="sticky top-0 z-50 ">
           <MobileNavMd

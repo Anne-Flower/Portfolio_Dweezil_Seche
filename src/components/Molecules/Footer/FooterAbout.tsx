@@ -7,7 +7,7 @@ const FooterAbout = () => {
   return (
     <>
       <div className="flex relative">
-        <div className="menca text-black px-10 invisible md:visible h-full w-screen flex space-x-2 font-medium	text-sm	leading-4 pb-10	">
+        <div className="menca text-black px-10 h-full w-screen flex space-x-2 font-medium text-sm	leading-4 pb-10">
           <div>Designed by Dweezil Sèche</div>
           <div>Coded by Anne-Flore Bernard</div>
         </div>
@@ -17,7 +17,7 @@ const FooterAbout = () => {
             "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
           }
         >
-          <div className="w-[18px] h-[13px] text-black absolute right-10">
+          <div className="w-[18px] h-[13px] text-black absolute right-10  ">
             <Lottie
               autoplay
               loop

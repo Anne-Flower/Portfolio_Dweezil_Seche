@@ -23,6 +23,18 @@ import Header from "@/components/Molecules/Header/headerHome";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === img.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 500);
+
+    return () => clearInterval(interval);
+    // destroy
+  }, []);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
@@ -42,7 +54,34 @@ export default function Home() {
 
   const img = [
     {
-      src: "",
+      src: "/assets/imagesV2/img_caroussel/caroussel/img1.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img2.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img3.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img4.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img5.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img6.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img7.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img8.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img9.png",
+    },
+    {
+      src: "/assets/imagesV2/img_caroussel/caroussel/img10.png",
     },
   ];
 
@@ -85,11 +124,7 @@ export default function Home() {
               </div>
             </div>
             <div className="visible md:hidden w-screen h-[359px] cover fit-content pt-[120px]">
-              <img
-                src="/assets/imagesV2/acceueil/naturia_apercu.png"
-                alt=""
-                className=" h-[359px]"
-              />
+              <img src={img[currentIndex].src} alt="" className=" h-[359px]" />
             </div>
             <div className=" pt-[299px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
               <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px] hidden md:visible">

@@ -31,14 +31,15 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
     <nav className=" xl:hidden relative bg-transparent ">
       <div className="text-3xl cursor-pointer relative md:h-0 flex h-10 items-center ">
         <div
-          className={`flex flex-row-reverse py-4 pr-4 pt-6 md:invisible justify-between ${
+          className={`flex flex-row-reverse py-4 pr-4 pt-6  justify-between ${
             isOpen ? "hidden" : "show "
           }`}
         >
-          <FontAwesomeIcon
-            icon={faBars}
+          <img
+            src="/assets/imagesV2/icones/burger.svg"
             className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 "
             onClick={handleToggle}
+            alt="menu à ouvrir"
           />
           <div className="text-blacky general md:pt-6 pl-6 flex items-start font-medium text-xl h-0 md:h-20 pr-[270px] md:pr-0">
             <Link href={"/"}>Dweez</Link>
@@ -50,14 +51,14 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
           variants={MenuVariants}
           initial="hidden"
           animate={isOpen ? "show" : "hidden"}
-          className="shadow-2xl w-full absolute top-0 right-0 max-w-sm h-screen bg-beige"
+          className=" w-full absolute top-0 right-0 max-w-sm h-screen bg-beige"
         >
           <div
             onClick={handleToggle}
-            className="text-4xl top-6 text-2 absolute flex flex-row-reverse justify-between w-screen px-6"
+            className="text-4xl top-0 text-2 absolute flex flex-row-reverse justify-between w-screen px-6"
           >
-            <FontAwesomeIcon icon={faXmark} className="icon-size-custom" />
-            <div className="text-blacky general md:pt-6 flex items-start font-light text-2xl leading-5 h-20 ">
+            <img src="/assets/imagesV2/icones/croix.svg" alt="cross, close" />
+            <div className="text-blacky general md:pt-6 flex items-start font-light text-2xl leading-5 h-20 pt-8">
               <Link href={"/"}>Dweez</Link>
             </div>
           </div>
