@@ -119,7 +119,7 @@ const decormate = () => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-blacky w-screen md:pl-[256px] px-5">
+              <div className="flex text-blacky w-screen md:pl-[256px] px-5 h-[300px]">
                 <div className="md:w-[358px] flex flex-col h-fit">
                   <h1 className="general font-thin text-[40px] md:text-[72px] leading-10 md:leading-[76px] md:pt-52 pt-24 md:flex md:justify-end ">
                     Decormate{" "}
@@ -166,9 +166,9 @@ const decormate = () => {
               </motion.div>
             </div>
           </div>
-          <div className="md:visible invisible h-fit">
+          <div className="md:visible invisible ">
             <motion.div
-              className="h-[971px]"
+              className=""
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -182,7 +182,7 @@ const decormate = () => {
             </motion.div>
           </div>
 
-          <div id="img_decormate" className="bg-beige pt-20">
+          <div id="img_decormate" className="bg-beige pt-[360px]">
             {images_decormate.map((img, index) => (
               <img
                 key={index}
