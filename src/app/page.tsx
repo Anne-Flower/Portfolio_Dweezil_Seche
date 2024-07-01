@@ -119,7 +119,7 @@ export default function Home() {
               <div className="general font-thin	text-[36px] leading-10">
                 in Paris.
               </div>
-              <div className="general font-thin	text-[36px] leading-10">
+              <div className="general font-thin	text-[36px] leading-10 ">
                 I am available to work.
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function Home() {
                     "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
                   }
                 >
-                  <div className="w-[18px] h-[13px] text-blacky absolute right-20 invisible md:visible">
+                  <div className="w-[18px] h-[13px] text-blacky absolute right-20 bottom-0 invisible md:visible">
                     <Lottie
                       autoplay
                       loop

@@ -115,7 +115,7 @@ const argedis = () => {
                     <p>STUDIO ARTEFACT 3000</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[494px] md:h-[245px] w-[345px] md:w-[415px] ml-6 md:ml-40 ">
+                <div className="flex flex-col h-[394px] md:h-[245px] w-[345px] md:w-[415px] ml-6 md:ml-40 ">
                   <p className="menca md:w-[415px] md:pt-52 pt-4  font-medium	text-base	leading-5	">
                     Regionalisme is an application designed for use on
                     interactive kiosks at petrol stations all over France. It's
@@ -135,8 +135,24 @@ const argedis = () => {
                 </div>
               </div>
             </div>
+
+            <div className="flex visible md:invisible mb-6 ">
+              <motion.div
+                className=" h-[245px] md:h-[900px] bg-beige "
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
+                <img
+                  src="/assets/imagesV2/argedis/img_argedis.png"
+                  alt=""
+                  className=" h-[245px] md:h-[900px] bg-beige w-screen"
+                />
+              </motion.div>
+            </div>
           </div>
-          <div className="md:visible invisible">
+          <div className="md:visible invisible ">
             <motion.div
               className=" h-[245px] md:h-[900px] bg-beige "
               initial={{ opacity: 0 }}
@@ -157,11 +173,11 @@ const argedis = () => {
                 key={index}
                 src={img.src}
                 alt={`Regionalisme ${index}`}
-                className="w-full h-[245px] md:h-[727px] px-10 py-5"
+                className="w-full h-[184px] md:h-[727px] px-6 py-2"
               />
             ))}
           </div>
-          <div className="bg-beige w-full h-[727px] px-10 pt-5">
+          <div className="bg-beige w-full h-[310px] md:h-[727px] px-10 pt-5">
             <video autoPlay muted loop height="100%" width="100% ">
               <source
                 src="/assets/img/regionalisme/demo.mp4"
@@ -170,7 +186,7 @@ const argedis = () => {
             </video>
           </div>
 
-          <div className="pb-[64px] bg-beige text-blacky pt-[340px]">
+          <div className="md:pb-[64px] bg-beige text-blacky md:pt-[340px]">
             <BarDecormate
               label={"( UI )"}
               label2={"( DA )"}
@@ -192,6 +208,7 @@ const argedis = () => {
             <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
           </div>
         </div>
+
         <Footer />
       </main>
     </>

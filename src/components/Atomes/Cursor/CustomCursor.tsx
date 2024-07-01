@@ -9,17 +9,9 @@ type CursorProps = {
 const CustomCursor: FC<CursorProps> = ({ x, y }) => {
   return (
     <motion.div
-      className=" backdrop-blur-[2px] fixed w-24 h-24 rounded-full ring-[0.5px] ring-greyRingCursor pointer-events-none z-50 text-white2 bg-white2 bg-opacity-5 px-4 py-8"
+      className=" fixed w-[8px] h-[8px] rounded-full ring-offset-white  pointer-events-none z-50 text-black bg-black "
       style={{ top: y - 40, left: x - 40 }}
-    >
-      <p className="menca font-medium leading-[16.8px] text-sm	 flex justify-center items-center">
-        Projet{" "}
-      </p>
-      <p className="menca font-medium	 leading-[16.8px] text-sm	 flex justify-center items-center ">
-        {" "}
-        suivant
-      </p>
-    </motion.div>
+    ></motion.div>
   );
 };
 

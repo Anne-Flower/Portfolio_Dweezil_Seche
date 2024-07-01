@@ -33,34 +33,52 @@ const playground = () => {
 
   const img_playground = [
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img1.png",
+      src: "/assets/imagesV2/hover_playground/3D_1.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img2.png",
+      src: "/assets/imagesV2/hover_playground/3D_2.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img3.png",
+      src: "/assets/imagesV2/hover_playground/artefact-voeux.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img4.png",
+      src: "/assets/imagesV2/hover_playground/bluedot.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img5.png",
+      src: "/assets/imagesV2/hover_playground/chemaly1.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img6.png",
+      src: "/assets/imagesV2/hover_playground/chemaly2.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img7.png",
+      src: "/assets/imagesV2/hover_playground/dessinwesh.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img8.png",
+      src: "/assets/imagesV2/hover_playground/madj_1.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img9.png",
+      src: "/assets/imagesV2/hover_playground/meal.png",
     },
     {
-      src: "/assets/imagesV2/img_caroussel/caroussel/img10.png",
+      src: "/assets/imagesV2/hover_playground/monogram1.png",
+    },
+    {
+      src: "/assets/imagesV2/hover_playground/monogram2.png",
+    },
+    {
+      src: "/assets/imagesV2/hover_playground/monogram3.png",
+    },
+    {
+      src: "/assets/imagesV2/hover_playground/tournesol1.png",
+    },
+    {
+      src: "/assets/imagesV2/hover_playground/tournesol3.png",
+    },
+    {
+      src: "/assets/imagesV2/hover_playground/zigzag1.png",
+    },
+    {
+      src: "/assets/imagesV2/hover_playground/zigzag2.png",
     },
   ];
 
@@ -85,15 +103,15 @@ const playground = () => {
             Playground
           </h1>
 
-          <div className="visible md:hidden w-screen h-[359px] cover fit-content pt-[120px]">
+          <div className="visible md:hidden w-screen h-[359px] pt-[10px] object-contain flex justify-center">
             <img
               src={img_playground[currentIndex].src}
               alt=""
-              className=" h-[359px]"
+              className="object-contain h-[359px] flex "
             />
           </div>
 
-          <div className="bg-beige w-screen h-fit menca md:absolute md:bottom-10 md:left-10 text-sm flex flex-row justify-center md:justify-start font-medium leading-4 pt-40 md:pt-0">
+          <div className="bg-beige w-screen h-fit menca md:absolute md:bottom-10 md:left-10 text-sm flex flex-row justify-center md:justify-start font-medium leading-4 pt-16 md:pt-0">
             <div className="text-greyNew pr-4 md:pr-8 space-y-2">
               <div className="">Selected projets</div>
               {/* <p>2020 -- 2024 </p> */}
