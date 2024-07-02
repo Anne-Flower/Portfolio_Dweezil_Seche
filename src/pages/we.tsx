@@ -1,9 +1,5 @@
 import CustomCursor from "@/components/Atomes/Cursor/CustomCursor";
 import CustomCursorHome from "@/components/Atomes/Cursor/CustomCursorHome";
-import LabelHome from "@/components/Atomes/Label/LabelHome";
-import LabelMenu from "@/components/Atomes/Label/LabelMenu";
-import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
-import Labels from "@/components/Atomes/Label/Labels";
 import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
 import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
@@ -14,7 +10,6 @@ import HeaderProjects from "@/components/Molecules/Header/HeaderProjets";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const we = () => {
@@ -102,18 +97,18 @@ const we = () => {
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex text-black w-screen pl-[256px]">
+              <div className="flex text-black w-screen md:pl-[256px] flex-col md:flex-row h-[494px] md:h-full px-5">
                 <div className="md:w-[358px] flex flex-col ">
-                  <h1 className="general font-thin text-[72px] leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
+                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-20 flex md:justify-end justify-start">
                     WE.SH. IV
                   </h1>
-                  <div className="menca font-medium text-sm leading-4 flex flex-col items-end md:pt-24 md:h-[60px] space-y-1.5">
+                  <div className="menca font-medium	text-sm	leading-4	flex flex-col items-start md:items-end pt-8 md:pt-20 md:h-[60px] space-y-1.5">
                     <p>2023</p>
                     <p>DA</p>
                     <p>WE ARE SHINY</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[245px] w-[415px] ml-32">
+                <div className="flex flex-col h-[245px] w-[345px] md:w-[415px] md:ml-32 pt-16 md:pt-0">
                   <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5	">
                     WE.SH. for "Weekend Shiny" is a small festival organized by
                     friends over a weekend, every year for the past 4 years.
@@ -133,31 +128,49 @@ const we = () => {
                 </div>
               </div>
             </div>
+            <div className="flex visible md:invisible mb-6 pt-40">
+              <motion.div
+                className=" md:h-[1065px] bg-beige "
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
+                <img
+                  src="/assets/imagesV2/wesh/charte_hover_homy.png"
+                  alt="image wesh"
+                />
+              </motion.div>
+            </div>
           </div>
-          <motion.div
-            className=" h-[1065px] bg-beige "
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
-          >
-            <img
-              src="/assets/imagesV2/wesh/charte_hover_homy.png"
-              alt="image wesh"
-            />
-          </motion.div>
-          <div id="img_wesh" className="bg-beige pt-10">
+
+          <div className="md:visible invisible bg-beige">
+            <motion.div
+              className=" md:h-[1065px] bg-beige "
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+            >
+              <img
+                src="/assets/imagesV2/wesh/charte_hover_homy.png"
+                alt="image wesh"
+              />
+            </motion.div>
+          </div>
+
+          <div id="img_wesh" className="bg-beige md:pt-10 pt-[690px]">
             {images_we.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={`Wesh ${index}`}
-                className="w-full h-[727px] px-10 py-5"
+                className="w-full h-[194px] md:h-[727px] px-6 md:px-10 py-2 md:py-5"
               />
             ))}
           </div>
 
-          <div className="pb-[64px] bg-beige text-blacky pt-[340px]">
+          <div className="pb-[64px] bg-beige text-blacky pt-[110px]  md:pt-[260px]">
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
           </div>
         </div>

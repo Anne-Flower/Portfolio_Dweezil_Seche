@@ -38,7 +38,7 @@ const MobileNavEngrenages: FC<MobileNavEngrenagesProps> = ({
         >
           <img
             src="/assets/imagesV2/icones/burger.svg"
-            className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 text-beige"
+            className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 text-beige invert"
             onClick={handleToggle}
             alt="menu à ouvrir"
           />

@@ -110,7 +110,7 @@ const engrenage = () => {
                   </div>
                 </div>
                 <div className="flex flex-col h-[245px] w-[345px] md:w-[415px] md:ml-32 pt-16 md:pt-0">
-                  <p className="menca md:w-[415px]   md:pt-52 pt-4  font-medium	text-base	leading-5	">
+                  <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base	leading-5	">
                     Engrenages is a Sales podcast of around 1 hour per episode,
                     written and presented by Julien Maslard. With a different
                     guest in each episode, this freelance Sales explores topics
@@ -152,17 +152,17 @@ const engrenage = () => {
               alt="image engrenages"
             />
           </div>
-          <div id="img_engrenages" className="bg-black pt-64 md:pt-0">
+          <div id="img_engrenages" className="bg-black pt-[600px] md:pt-0">
             {images_engrenages.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={`Engrenages ${index}`}
-                className="w-full h-[194px] md:h-[727px] px-5 md:px-10 py-5"
+                className="w-full h-[194px] md:h-[727px] px-5 md:px-10 py-0 pt-4 md:pt-0 md:py-5"
               />
             ))}
           </div>
-          <div className=" h-full w-screen bg-black flex flex-col md:flex-row justify-between space-y-5 px-5 md:px-10 pt-5">
+          <div className=" h-full w-screen bg-black flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 px-5 md:px-10 pt-5">
             <img
               src="/assets/imagesV2/engrenages/mockup_bc.png"
               alt="image engrenages papier"
@@ -175,7 +175,7 @@ const engrenage = () => {
             />
           </div>
 
-          <div className="pb-[64px] bg-black text-beige pt-[100px] md:pt-[240px]">
+          <div className="pb-[64px] bg-black text-beige pt-[110px] md:pt-[260px]">
             <BarWE label={"( DA )"} />
           </div>
           <div className="pb-[64px] bg-black text-beige">

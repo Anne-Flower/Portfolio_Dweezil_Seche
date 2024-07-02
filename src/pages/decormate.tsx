@@ -169,7 +169,7 @@ const decormate = () => {
             </motion.div>
           </div>
 
-          <div id="img_decormate" className="bg-beige pt-[360px]">
+          <div id="img_decormate" className="bg-beige pt-[700px] md:pt-[20px]">
             {images_decormate.map((img, index) => (
               <img
                 key={index}
