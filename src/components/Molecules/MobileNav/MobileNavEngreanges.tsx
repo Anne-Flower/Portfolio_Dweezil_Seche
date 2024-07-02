@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 import lottieSound from "@/app/assets/lottieSound.json";
 import ContactMobileNav from "@/components/Atomes/Contact/ContactMobileNav";
 
-type MobileNavProps = {
+type MobileNavEngrenagesProps = {
   isOpen: boolean;
   handleToggle: () => void;
   isAbout: boolean;
@@ -23,7 +23,11 @@ const MenuVariants = {
   },
 };
 
-const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
+const MobileNavEngrenages: FC<MobileNavEngrenagesProps> = ({
+  isOpen,
+  handleToggle,
+  isAbout,
+}) => {
   return (
     <nav className=" xl:hidden relative bg-transparent ">
       <div className="text-3xl cursor-pointer relative md:h-0 flex h-10 items-center ">
@@ -34,11 +38,11 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
         >
           <img
             src="/assets/imagesV2/icones/burger.svg"
-            className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 "
+            className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 text-beige"
             onClick={handleToggle}
             alt="menu à ouvrir"
           />
-          <div className="text-blacky general md:pt-6 pl-6 flex items-start font-medium text-xl h-0 md:h-20 pr-[270px] md:pr-0">
+          <div className="text-beige general md:pt-6 pl-6 flex items-start font-medium text-xl h-0 md:h-20 pr-[270px] md:pr-0">
             <Link href={"/"}>Dweez</Link>
           </div>
         </div>
@@ -101,7 +105,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
                     "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
                   }
                 >
-                  <div className="w-[18px] h-[13px] text-blacky">
+                  <div className="w-[18px] h-[13px]">
                     <Lottie
                       autoplay
                       loop
@@ -111,12 +115,12 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
                   </div>
                 </Link>
               </div>
-              <div className="menca text-black px-6 h-fit w-screen flex flex-col items-center font-medium text-sm leading-4 pb-8 visible md:hidden pt-10">
+              <div className="menca text-blacky px-6 h-fit w-screen flex flex-col items-center font-medium text-sm leading-4 pb-8 visible md:hidden pt-10">
                 <div>Designed by Dweezil Sèche</div>
                 <div>Coded by Anne-Flore Bernard</div>
               </div>
 
-              <div className="menca text-black px-10 h-fit w-screen flex justify-between font-medium text-sm leading-4 pb-10 hidden md:visible">
+              <div className="menca text-blacky px-10 h-fit w-screen flex justify-between font-medium text-sm leading-4 pb-10 hidden md:visible">
                 <div>Designed by Dweezil Sèche</div>
                 <div>Coded by Anne-Flore Bernard</div>
               </div>
@@ -128,4 +132,4 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
   );
 };
 
-export default MobileNav;
+export default MobileNavEngrenages;

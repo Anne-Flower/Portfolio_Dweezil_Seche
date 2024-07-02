@@ -31,7 +31,6 @@ const decormate = () => {
   };
 
   const [visibleCursor, setIsVisibleCursor] = useState(false);
-  const [visibleCursorHome, setIsVisibleCursorHome] = useState(false);
 
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
@@ -66,24 +65,12 @@ const decormate = () => {
     {
       src: "/assets/imagesV2/decormate/desktop/maquettes.png",
     },
-    {
-      src: "/assets/imagesV2/decormate/desktop/mockup-decormate_1.png",
-    },
-    {
-      src: "/assets/imagesV2/decormate/desktop/maquettes.png",
-    },
-    {
-      src: "/assets/imagesV2/decormate/desktop/projet_pfe.png",
-    },
   ];
 
   return (
     <>
       {visibleCursor && (
         <CustomCursor x={cursorPosition.x} y={cursorPosition.y} />
-      )}
-      {visibleCursorHome && (
-        <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
       )}
 
       <main
@@ -119,9 +106,9 @@ const decormate = () => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-blacky w-screen md:pl-[256px] px-5 h-[300px]">
+              <div className="flex text-black w-screen md:pl-[256px] flex-col md:flex-row h-[494px] md:h-full px-5">
                 <div className="md:w-[358px] flex flex-col h-fit">
-                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-10 md:leading-[76px] md:pt-52 pt-24 md:flex md:justify-end ">
+                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-10 md:leading-[76px] md:pt-52 pt-24 flex md:justify-end justify-start">
                     Decormate{" "}
                   </h1>
                   <div className="menca font-medium text-sm leading-4 flex flex-col items-start md:items-end md:pt-24 md:h-[60px] space-y-1.5 w-screen md:w-[360px] pt-10">
@@ -130,7 +117,7 @@ const decormate = () => {
                     <p>ECV DIGITAL</p>
                   </div>
                 </div>
-                <div className="flex flex-col md:h-[245px] md:w-[415px] md:ml-32 invisible md:visible ">
+                <div className="flex flex-col h-[394px] md:h-[245px] w-[345px] md:w-[415px] pt-12 md:pt-0 md:ml-40 ">
                   <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5	">
                     Decormate is my end-of-study project, which I carried out
                     during my second year at ECV Digital. It's an augmented
@@ -150,7 +137,7 @@ const decormate = () => {
                 </div>
               </div>
             </div>
-            <div className="flex visible md:invisible mb-6 ">
+            <div className="flex visible md:invisible mb-6 pt-40">
               <motion.div
                 className="h-[265px]"
                 initial={{ opacity: 0 }}
@@ -188,9 +175,21 @@ const decormate = () => {
                 key={index}
                 src={img.src}
                 alt={`Decormate ${index}`}
-                className="w-full h-[194px] md:h-[727px] px-10 py-5"
+                className="w-full h-[194px] md:h-[727px] px-5 md:px-10 py-2 md:py-5"
               />
             ))}
+
+            <img
+              src="/assets/imagesV2/decormate/desktop/mockup-decormate_1.png"
+              alt=""
+              className="h-[230px] md:h-[907px] w-full w-[345px] md:w-full px-5 md:px-10 py-2 md:py-5"
+            />
+
+            <img
+              src="/assets/imagesV2/decormate/desktop/projet_pfe.png"
+              alt=""
+              className="h-[194px] md:h-[727px] px-5 md:px-10 py-2 md:py-5"
+            />
           </div>
 
           <div className="pb-[64px] bg-beige text-blacky pt-[40px]">
@@ -206,7 +205,7 @@ const decormate = () => {
         <div className="pb-[64px] bg-beige text-blacky">
           <BarNaturia label={"( prompt )"} label2={"( midjourney )"} />
         </div>
-        <div className="pb-[64px] bg-beige text-blacky ">
+        <div className="pb-[64px] bg-beige text-blacky pb-20 md:pb-60">
           <BarArgedis label={"( UI )"} label2={"( motion )"} />
         </div>
         <Footer />

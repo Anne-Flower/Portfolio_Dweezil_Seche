@@ -1,22 +1,16 @@
 import CustomCursor from "@/components/Atomes/Cursor/CustomCursor";
 import CustomCursorHome from "@/components/Atomes/Cursor/CustomCursorHome";
-import LabelHome from "@/components/Atomes/Label/LabelHome";
-import LabelMenu from "@/components/Atomes/Label/LabelMenu";
-import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
-import Labels from "@/components/Atomes/Label/Labels";
 import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
-import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
 import BarNaturia from "@/components/Molecules/Bar/Bar_naturia";
 import BarVerreavin from "@/components/Molecules/Bar/Bar_verreavin";
 import BarWE from "@/components/Molecules/Bar/Bar_we";
-import Footer from "@/components/Molecules/Footer/Footer";
 import FooterBlack from "@/components/Molecules/Footer/FooterBlack";
+import FooterBlackMobile from "@/components/Molecules/Footer/FooterBlackMobile";
 import HeaderEngrenages from "@/components/Molecules/Header/headerEngrenages";
-import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
+import MobileNavEngrenages from "@/components/Molecules/MobileNav/MobileNavEngreanges";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const engrenage = () => {
@@ -72,12 +66,12 @@ const engrenage = () => {
         <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
       )}
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
+        className={`relative text-beige flex justify-center font-extralight w-screen flex-col bg-black min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip"
         } `}
       >
-        <div className=" sticky top-0 z-50 ">
-          <MobileNav
+        <div className=" sticky top-0 z-50 t">
+          <MobileNavEngrenages
             isOpen={isOpen}
             handleToggle={handleToggle}
             isAbout={false}
@@ -104,18 +98,18 @@ const engrenage = () => {
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex text-beige w-screen pl-[256px]">
+              <div className="flex text-beige w-screen md:pl-[256px] flex-col md:flex-row h-[494px] md:h-full px-5">
                 <div className="md:w-[358px] flex flex-col ">
-                  <h1 className="general font-thin	text-[72px] leading-[76px] md:pt-52 pt-4 md:flex md:justify-end ">
+                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-10 flex md:justify-end justify-start">
                     Engrenages{" "}
                   </h1>
-                  <div className="menca font-medium	 text-sm	leading-4	flex flex-col items-end md:pt-20 md:h-[60px] space-y-1.5">
+                  <div className="menca font-medium	text-sm	leading-4	flex flex-col items-start md:items-end pt-8 md:pt-20 md:h-[60px] space-y-1.5">
                     <p>2023</p>
                     <p>BRANDING</p>
                     <p>JULIEN MASLARD</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[245px] w-[415px] ml-32 ">
+                <div className="flex flex-col h-[245px] w-[345px] md:w-[415px] md:ml-32 pt-16 md:pt-0">
                   <p className="menca md:w-[415px]   md:pt-52 pt-4  font-medium	text-base	leading-5	">
                     Engrenages is a Sales podcast of around 1 hour per episode,
                     written and presented by Julien Maslard. With a different
@@ -135,38 +129,53 @@ const engrenage = () => {
                 </div>
               </div>
             </div>
+            <div className="flex visible md:invisible mb-6 pt-20">
+              <motion.div
+                className=" h-[259px] md:h-[971px]  bg-black "
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+              >
+                <img
+                  src="/assets/imagesV2/engrenages/mockup1_engrenages.png"
+                  alt=""
+                  className="h-[259px] md:h-[971px] bg-beige w-screen"
+                />
+              </motion.div>
+            </div>
           </div>
 
-          <div className=" h-[971px] bg-black ">
+          <div className=" h-[259px] md:h-[971px] bg-black ">
             <img
               src="/assets/imagesV2/engrenages/mockup1_engrenages.png"
               alt="image engrenages"
             />
           </div>
-          <div id="img_engrenages" className="bg-black pt-10">
+          <div id="img_engrenages" className="bg-black pt-64 md:pt-0">
             {images_engrenages.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={`Engrenages ${index}`}
-                className="w-full h-[727px] px-10 py-5"
+                className="w-full h-[194px] md:h-[727px] px-5 md:px-10 py-5"
               />
             ))}
           </div>
-          <div className=" h-full w-screen bg-black flex flex-row justify-between px-10 pt-5">
+          <div className=" h-full w-screen bg-black flex flex-col md:flex-row justify-between space-y-5 px-5 md:px-10 pt-5">
             <img
               src="/assets/imagesV2/engrenages/mockup_bc.png"
               alt="image engrenages papier"
-              className="bg-black h-[755px] w-[660px] "
+              className="bg-black h-[394px] md:h-[755px] w-[345px] md:w-[660px] "
             />
             <img
               src="/assets/imagesV2/engrenages/mockup_tasse.png"
               alt="image engrenages tasse"
-              className=" bg-black h-[755px] w-[660px] "
+              className=" bg-black h-[394px] md:h-[755px] w-[345px] md:w-[660px] "
             />
           </div>
 
-          <div className="pb-[64px] bg-black text-beige pt-[340px]">
+          <div className="pb-[64px] bg-black text-beige pt-[100px] md:pt-[240px]">
             <BarWE label={"( DA )"} />
           </div>
           <div className="pb-[64px] bg-black text-beige">
@@ -179,7 +188,7 @@ const engrenage = () => {
         <div className="pb-[64px] bg-black text-beige ">
           <BarArgedis label={"( UI )"} label2={"( motion )"} />
         </div>
-        <div className="pb-[64px] bg-black text-beige ">
+        <div className="pb-[64px] bg-black text-beige pb-20 md:pb-60">
           <BarDecormate
             label={"( UI )"}
             label2={"( DA )"}
@@ -188,7 +197,10 @@ const engrenage = () => {
             label5={"( midjourney )"}
           />
         </div>
-        <div>
+        <div className="text-beige visible md:hidden">
+          <FooterBlackMobile />
+        </div>
+        <div className=" text-beige ">
           <FooterBlack />
         </div>
       </main>

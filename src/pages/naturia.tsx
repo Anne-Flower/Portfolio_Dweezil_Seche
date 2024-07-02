@@ -394,7 +394,7 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
           <div className="pb-[64px] bg-beige text-blacky">
             <BarWE label={"( DA )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-blacky pb-56">
+          <div className="bg-beige text-blacky pb-20 md:pb-60">
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
           </div>
         </div>
