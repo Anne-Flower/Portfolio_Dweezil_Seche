@@ -31,17 +31,30 @@ export const CustomCursorProvider: React.FC<CustomCursorProviderProps> = ({
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>(
     defaultCursorPosition
   );
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const updateCursorPosition = (event: MouseEvent) => {
       setCursorPosition({ x: event.clientX, y: event.clientY });
     };
 
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIfMobile();
     window.addEventListener("mousemove", updateCursorPosition);
+    window.addEventListener("resize", checkIfMobile);
+
     return () => {
       window.removeEventListener("mousemove", updateCursorPosition);
+      window.removeEventListener("resize", checkIfMobile);
     };
   }, []);
+
+  if (isMobile) {
+    return <>{children}</>;
+  }
 
   return (
     <CustomCursorContext.Provider value={cursorPosition}>

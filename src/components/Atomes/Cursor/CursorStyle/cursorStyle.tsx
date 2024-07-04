@@ -12,6 +12,7 @@ const CursorStyle: FC = () => {
   const { x, y } = useCustomCursor();
   const [randomImage, setRandomImage] = useState(getRandomImage());
   const [lastChangeTime, setLastChangeTime] = useState<number>(Date.now());
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleMouseOver = (event: MouseEvent) => {
@@ -22,11 +23,23 @@ const CursorStyle: FC = () => {
       }
     };
 
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIfMobile();
     window.addEventListener("mousemove", handleMouseOver);
+    window.addEventListener("resize", checkIfMobile);
+
     return () => {
       window.removeEventListener("mousemove", handleMouseOver);
+      window.removeEventListener("resize", checkIfMobile);
     };
   }, [lastChangeTime]);
+
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <motion.div
