@@ -48,11 +48,7 @@ const MobileNavMd: FC<MobileNavMdProps> = ({
           }`}
         ></div>
       </div>
-      <div
-        className={`ease-[cubic-bezier(0.15,0.05,3.795,6.035)]	fixed top-0 left-0 right-0 ${
-          isOpen ? "fond" : ""
-        }`}
-      >
+      <div className={`fixed top-0 left-0 right-0 ${isOpen ? "fond" : ""}`}>
         <motion.div
           variants={MenuVariants}
           initial="hidden"

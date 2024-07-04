@@ -17,11 +17,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(
-    "%c ❀ Coded by Anne-Flore Bernard with love ❀ ",
-    "color: #16125c; font-weight: bold; background: #f280df; padding: 10px;"
-  );
-
   return (
     <html lang="en">
       <body className={inter.className}>

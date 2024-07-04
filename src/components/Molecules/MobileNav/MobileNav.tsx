@@ -25,7 +25,7 @@ const MenuVariants = {
 
 const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
   return (
-    <nav className=" xl:hidden relative bg-transparent ">
+    <nav className=" xl:hidden relative bg-transparent md:hidden">
       <div className="text-3xl cursor-pointer relative md:h-0 flex h-10 items-center ">
         <div
           className={`flex flex-row-reverse py-4 pr-4 pt-6  justify-between ${
@@ -34,11 +34,11 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
         >
           <img
             src="/assets/imagesV2/icones/burger.svg"
-            className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 "
+            className="icon-size-custom cursor-pointer h-[50px] w-[50px] absolute top-5 md:invisible "
             onClick={handleToggle}
             alt="menu à ouvrir"
           />
-          <div className="text-blacky general md:pt-6 pl-6 flex items-start font-medium text-xl h-0 md:h-20 pr-[270px] md:pr-0">
+          <div className="text-black general md:invisible pl-6 flex items-start font-medium text-xl h-0 md:h-20 pr-[270px] md:pr-0">
             <Link href={"/"}>Dweez</Link>
           </div>
         </div>
@@ -55,12 +55,12 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
             className="text-4xl top-0 text-2 absolute flex flex-row-reverse justify-between w-screen px-6"
           >
             <img src="/assets/imagesV2/icones/croix.svg" alt="cross, close" />
-            <div className="text-blacky general md:pt-6 flex items-start font-light text-2xl leading-5 h-20 pt-8">
+            <div className="text-black general md:pt-6 flex items-start font-light text-2xl leading-5 h-20 pt-8">
               <Link href={"/"}>Dweez</Link>
             </div>
           </div>
           <div>
-            <ul className="menca flex flex-col items-start h-full gap-y-[20px] text-2xl text-blacky font-medium leading-6 cursor-pointer pt-48 pl-6 ">
+            <ul className="menca flex flex-col items-start h-full gap-y-[20px] text-2xl text-black font-medium leading-6 cursor-pointer pt-48 pl-6">
               <li onClick={handleToggle}>
                 <Link href="/">
                   <div>HOME</div>
@@ -93,7 +93,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
               <div className="pl-6 pt-12">
                 <ContactMobileNav />
               </div>
-              <div className="pt-28 flex justify-center">
+              <div className="pt-24 flex justify-center">
                 {" "}
                 <Link
                   target="_blank"
@@ -101,7 +101,7 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
                     "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
                   }
                 >
-                  <div className="w-[18px] h-[13px] text-blacky">
+                  <div className="w-[18px] h-[13px] ">
                     <Lottie
                       autoplay
                       loop
@@ -111,8 +111,8 @@ const MobileNav: FC<MobileNavProps> = ({ isOpen, handleToggle, isAbout }) => {
                   </div>
                 </Link>
               </div>
-              <div className="menca text-black px-6 h-fit w-screen flex flex-col items-center font-medium text-sm leading-4 pb-8 visible md:hidden pt-10">
-                <div>Designed by Dweezil Sèche</div>
+              <div className="menca text-black px-6 h-fit w-screen flex flex-col items-center font-medium text-sm leading-4  visible md:hidden pt-12 ">
+                <div className="pb-2">Designed by Dweezil Sèche</div>
                 <div>Coded by Anne-Flore Bernard</div>
               </div>
 

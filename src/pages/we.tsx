@@ -12,7 +12,7 @@ import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-const we = () => {
+const We = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -65,7 +65,7 @@ const we = () => {
       )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond min-h-screen overflow-clip  ${
+        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -97,7 +97,7 @@ const we = () => {
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex text-black w-screen md:pl-[256px] flex-col md:flex-row h-[494px] md:h-full px-5">
+              <div className="flex text-black w-screen md:pl-[160px] flex-col md:flex-row h-[494px] md:h-full px-5">
                 <div className="md:w-[358px] flex flex-col ">
                   <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-20 flex md:justify-end justify-start">
                     WE.SH. IV
@@ -108,22 +108,23 @@ const we = () => {
                     <p>WE ARE SHINY</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[245px] w-[345px] md:w-[415px] md:ml-32 pt-16 md:pt-0">
-                  <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5	">
-                    WE.SH. for "Weekend Shiny" is a small festival organized by
-                    friends over a weekend, every year for the past 4 years.
-                    Like every year, the organization is very well done, and
-                    several people are involved, including the communications
-                    team to which I belong, along with two other equally
-                    talented people: Justine Faustino and Mathilde Florance.
+                <div className="flex flex-col h-[245px] w-[345px] md:w-[415px] md:ml-52 pt-16 md:pt-0">
+                  <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5">
+                    WE.SH. for &quot;Weekend Shiny&quot; is a small festival
+                    organized by friends over a weekend, every year for the past
+                    4 years. Like every year, the organization is very well
+                    done, and several people are involved, including the
+                    communications team to which I belong, along with two other
+                    equally talented people: Justine Faustino and Mathilde
+                    Florance.
                   </p>
                   <p className="menca md:w-[415px] font-medium	text-base	leading-5	">
-                    That year, we chose a very colorful artistic direction with
+                    That year, We chose a very colorful artistic direction with
                     lots of little illustrations. Among other things, we were
-                    inspired by the famous Pete The Monkey festival. Once we'd
-                    drawn up the graphic charter, we were able to use it in a
-                    variety of ways, such as on bracelets, visuals for social
-                    networks, the timetable, DJ announcements, etc...
+                    inspired by the famous Pete The Monkey festival. Once
+                    we&apos;d drawn up the graphic charter, we were able to use
+                    it in a variety of ways, such as on bracelets, visuals for
+                    social networks, the timetable, DJ announcements, etc...
                   </p>
                 </div>
               </div>
@@ -159,18 +160,18 @@ const we = () => {
             </motion.div>
           </div>
 
-          <div id="img_wesh" className="bg-beige md:pt-10 pt-[690px]">
+          <div id="img_wesh" className="bg-beige md:pt-10 pt-[710px]">
             {images_we.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={`Wesh ${index}`}
-                className="w-full h-[194px] md:h-[727px] px-6 md:px-10 py-2 md:py-5"
+                className="w-full h-[194px] md:h-[727px] px-6 md:px-10 py-4 md:py-6"
               />
             ))}
           </div>
 
-          <div className="pb-[64px] bg-beige text-blacky pt-[110px]  md:pt-[260px]">
+          <div className="pb-[64px] bg-beige text-black pt-[110px] md:pt-[260px]">
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
           </div>
         </div>
@@ -198,4 +199,4 @@ const we = () => {
   );
 };
 
-export default we;
+export default We;

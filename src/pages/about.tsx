@@ -34,8 +34,8 @@ const AboutPage = () => {
           <div className="absolute invisible md:visible menca text-black font-extralight flex justify-between w-screen ">
             <Header />
           </div>
-          <div className="w-full h-screen text-white lg:py-10">
-            <div className="lg:pt-10 h-screen">
+          <div className="w-full md:h-screen text-white lg:py-10">
+            <div className="lg:pt-10 md:h-screen">
               <About />
             </div>
           </div>

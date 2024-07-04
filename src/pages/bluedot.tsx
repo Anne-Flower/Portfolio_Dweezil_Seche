@@ -3,7 +3,7 @@ import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
 import Labels from "@/components/Atomes/Label/Labels";
 import React from "react";
 
-const bluedot = () => {
+const Bluedot = () => {
   return (
     <main className="bg-[url('/assets/img/header/header_naturIA.png')] w-screen h-screen bg-cover	relative">
       <div className="absolute top-10 menca text-white font-extralight">
@@ -49,4 +49,4 @@ const bluedot = () => {
   );
 };
 
-export default bluedot;
+export default Bluedot;

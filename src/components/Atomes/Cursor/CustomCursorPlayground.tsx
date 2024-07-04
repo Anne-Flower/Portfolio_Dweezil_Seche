@@ -1,17 +1,17 @@
-import { imagesH1 } from "@/app/constant/constant";
+import { imagesPlayground } from "@/app/constant/constant";
 import React, { FC, useEffect, useState } from "react";
 
-type CursorHomeProps = {
+type CursorPlaygroundProps = {
   x: number;
   y: number;
 };
 
 const getRandomImage = () => {
-  const randomIndex = Math.floor(Math.random() * imagesH1.length);
-  return imagesH1[randomIndex];
+  const randomIndex = Math.floor(Math.random() * imagesPlayground.length);
+  return imagesPlayground[randomIndex];
 };
 
-const CustomCursorHome: FC<CursorHomeProps> = ({ x, y }) => {
+const CustomCursorPlayground: FC<CursorPlaygroundProps> = ({ x, y }) => {
   const [isStyled, setIsStyled] = useState(false);
   const [randomImage, setRandomImage] = useState(getRandomImage());
   const [lastChangeTime, setLastChangeTime] = useState<number>(Date.now());
@@ -22,7 +22,7 @@ const CustomCursorHome: FC<CursorHomeProps> = ({ x, y }) => {
         setIsStyled(false);
         document.body.style.cursor = "none";
         const now = Date.now();
-        if (now - lastChangeTime > 400) {
+        if (now - lastChangeTime > 500) {
           setRandomImage(getRandomImage());
           setLastChangeTime(now);
         }
@@ -42,7 +42,7 @@ const CustomCursorHome: FC<CursorHomeProps> = ({ x, y }) => {
   return (
     <>
       {isStyled ? (
-        <div className="cursor-auto text-black "></div>
+        <div className="cursor-auto text-black"></div>
       ) : (
         <div
           className="fixed z-10"
@@ -68,4 +68,4 @@ const CustomCursorHome: FC<CursorHomeProps> = ({ x, y }) => {
   );
 };
 
-export default CustomCursorHome;
+export default CustomCursorPlayground;

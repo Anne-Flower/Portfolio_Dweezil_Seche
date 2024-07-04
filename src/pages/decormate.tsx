@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const decormate = () => {
+const Decormate = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -106,7 +106,7 @@ const decormate = () => {
               onMouseEnter={() => setIsVisibleCursor(true)}
               onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-black w-screen md:pl-[256px] flex-col md:flex-row h-[494px] md:h-full px-5">
+              <div className="flex text-black w-screen md:pl-[158px] flex-col md:flex-row h-[494px] md:h-full px-5">
                 <div className="md:w-[358px] flex flex-col h-fit">
                   <h1 className="general font-thin text-[40px] md:text-[72px] leading-10 md:leading-[76px] md:pt-52 pt-24 flex md:justify-end justify-start">
                     Decormate{" "}
@@ -117,10 +117,10 @@ const decormate = () => {
                     <p>ECV DIGITAL</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[394px] md:h-[245px] w-[345px] md:w-[415px] pt-12 md:pt-0 md:ml-40 ">
+                <div className="flex flex-col h-[394px] md:h-[245px] w-[345px] md:w-[415px] pt-12 md:pt-0 md:ml-52 ">
                   <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base leading-5	">
                     Decormate is my end-of-study project, which I carried out
-                    during my second year at ECV Digital. It's an augmented
+                    during my second year at ECV Digital. It&apos;s an augmented
                     reality application designed to simplify interior design and
                     furnishing, for both individuals and professionals.
                   </p>
@@ -169,30 +169,30 @@ const decormate = () => {
             </motion.div>
           </div>
 
-          <div id="img_decormate" className="bg-beige pt-[700px] md:pt-[20px]">
+          <div id="img_decormate" className="bg-beige pt-[730px] md:pt-[30px]">
             {images_decormate.map((img, index) => (
               <img
                 key={index}
                 src={img.src}
                 alt={`Decormate ${index}`}
-                className="w-full h-[194px] md:h-[727px] px-5 md:px-10 py-2 md:py-5"
+                className="w-full h-[185px] md:h-[727px] px-5 md:px-10 py-4 md:py-5 "
               />
             ))}
 
             <img
               src="/assets/imagesV2/decormate/desktop/mockup-decormate_1.png"
               alt=""
-              className="h-[230px] md:h-[907px] w-full w-[345px] md:w-full px-5 md:px-10 py-2 md:py-5"
+              className="h-[230px] md:h-[907px] w-full w-[345px] md:w-full px-5 md:px-10 py-4 md:py-5"
             />
 
             <img
               src="/assets/imagesV2/decormate/desktop/projet_pfe.png"
               alt=""
-              className="h-[194px] md:h-[727px] px-5 md:px-10 py-2 md:py-5"
+              className="h-[194px] md:h-[727px] px-5 md:px-10 py-4 md:py-5"
             />
           </div>
 
-          <div className="pb-[64px] bg-beige text-blacky pt-[40px]">
+          <div className="pb-[64px] bg-beige text-blacky pt-[110px] md:pt-[260px]">
             <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
           </div>
           <div className="pb-[64px] bg-beige text-blacky">
@@ -214,4 +214,4 @@ const decormate = () => {
   );
 };
 
-export default decormate;
+export default Decormate;

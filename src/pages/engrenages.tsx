@@ -13,7 +13,7 @@ import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-const engrenage = () => {
+const Engrenages = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
@@ -98,7 +98,7 @@ const engrenage = () => {
               onMouseEnter={() => setIsVisibleCursorHome(true)}
               onMouseLeave={() => setIsVisibleCursorHome(false)}
             >
-              <div className="flex text-beige w-screen md:pl-[256px] flex-col md:flex-row h-[494px] md:h-full px-5">
+              <div className="flex text-beige w-screen md:pl-[236px] flex-col md:flex-row h-[494px] md:h-full px-5">
                 <div className="md:w-[358px] flex flex-col ">
                   <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-10 flex md:justify-end justify-start">
                     Engrenages{" "}
@@ -109,7 +109,7 @@ const engrenage = () => {
                     <p>JULIEN MASLARD</p>
                   </div>
                 </div>
-                <div className="flex flex-col h-[245px] w-[345px] md:w-[415px] md:ml-32 pt-16 md:pt-0">
+                <div className="flex flex-col h-[245px] w-[345px] md:w-[415px] md:ml-48 pt-16 md:pt-0">
                   <p className="menca md:w-[415px] md:pt-52 pt-4 font-medium text-base	leading-5	">
                     Engrenages is a Sales podcast of around 1 hour per episode,
                     written and presented by Julien Maslard. With a different
@@ -158,20 +158,20 @@ const engrenage = () => {
                 key={index}
                 src={img.src}
                 alt={`Engrenages ${index}`}
-                className="w-full h-[194px] md:h-[727px] px-5 md:px-10 py-0 pt-4 md:pt-0 md:py-5"
+                className="w-full h-[194px] md:h-[727px] px-5 md:px-10 pt-4 md:pt-0 mt-4 md:pt-12 "
               />
             ))}
           </div>
-          <div className=" h-full w-screen bg-black flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 px-5 md:px-10 pt-5">
+          <div className=" h-full w-screen bg-black flex flex-col md:flex-row justify-between md:space-y-0 px-5 md:px-10 pt-6">
             <img
               src="/assets/imagesV2/engrenages/mockup_bc.png"
               alt="image engrenages papier"
-              className="bg-black h-[394px] md:h-[755px] w-[345px] md:w-[660px] "
+              className="bg-black h-[394px] md:h-[755px] w-[345px] md:w-[660px] pt-2 md:pt-8"
             />
             <img
               src="/assets/imagesV2/engrenages/mockup_tasse.png"
               alt="image engrenages tasse"
-              className=" bg-black h-[394px] md:h-[755px] w-[345px] md:w-[660px] "
+              className=" bg-black h-[394px] md:h-[755px] w-[345px] md:w-[660px] pt-8 md:pt-8 "
             />
           </div>
 
@@ -200,7 +200,7 @@ const engrenage = () => {
         <div className="text-beige visible md:hidden">
           <FooterBlackMobile />
         </div>
-        <div className=" text-beige ">
+        <div className="text-beige ">
           <FooterBlack />
         </div>
       </main>
@@ -208,4 +208,4 @@ const engrenage = () => {
   );
 };
 
-export default engrenage;
+export default Engrenages;

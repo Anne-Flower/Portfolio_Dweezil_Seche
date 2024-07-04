@@ -7,7 +7,7 @@ const FooterAbout = () => {
   return (
     <>
       <div className="flex relative">
-        <div className="menca text-black px-10 h-full w-screen flex space-x-2 font-medium text-sm	leading-4 pb-10">
+        <div className="menca text-black px-10 h-full w-screen flex space-x-2 font-medium text-sm	leading-4 ">
           <div>Designed by Dweezil Sèche</div>
           <div>Coded by Anne-Flore Bernard</div>
         </div>

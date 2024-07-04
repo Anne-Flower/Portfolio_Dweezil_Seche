@@ -9,18 +9,18 @@ const HeaderProjects = () => {
   return (
     <>
       <main className="h-full w-screen ">
-        <div className="text-black general md:pt-6 md:pl-10 md:flex md:items-start font-medium text-xl	h-20 cursor-pointer	">
+        <div className="text-black general  md:pl-10 font-medium text-xl h-20 cursor-pointer absolute left-0 top-[24px]">
           <Link href={"/"}>Dweez</Link>
         </div>
-        <div className="md:flex md:items-center h-fit justify-center">
-          <div className="absolute md:top-4 left-[550px] text-xs">
+        <div className="md:flex md:items-center h-fit justify-center space-x-28 pt-[16px]">
+          <div className="flex justify-start items-start text-xs">
             {" "}
             <LabelAbout />
           </div>
-          <div className="absolute md:top-4 left-[750px] text-xs text-black">
+          <div className="flex justify-center items-center  text-xs text-black">
             <LabelHome />
           </div>
-          <div className="absolute md:top-4 left-[950px] text-xs text-black">
+          <div className="flex items-end text-xs text-black">
             <LabelPlayground />
           </div>
         </div>

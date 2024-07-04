@@ -1,10 +1,6 @@
 "use client";
-import Contact from "@/components/Atomes/Contact/Contact";
 import CustomCursorHome from "@/components/Atomes/Cursor/CustomCursorHome";
-import LabelAbout from "@/components/Atomes/Label/LabelAbout";
-import Label from "@/components/Atomes/Label/LabelAbout";
-import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
-import BarBlueDot from "@/components/Molecules/Bar/Bar_signe_astro";
+
 import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
 import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
 import BarNaturia from "@/components/Molecules/Bar/Bar_naturia";
@@ -13,13 +9,13 @@ import BarWE from "@/components/Molecules/Bar/Bar_we";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import LabelPlayground from "@/components/Atomes/Label/LabelPlayground";
-import LabelProjects from "@/components/Atomes/Label/LabelProjets";
+
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
 import Footer from "@/components/Molecules/Footer/Footer";
 import Lottie from "lottie-react";
 import lottieSound from "@/app/assets/lottieSound.json";
 import Header from "@/components/Molecules/Header/headerHome";
+import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,15 +84,22 @@ export default function Home() {
   return (
     <>
       <main
-        className={`relative text-blacky flex justify-center font-extralight w-screen flex-col bg-beige min-h-screen overflow-clip ${
+        className={`relative text-black flex justify-center font-extralight w-screen flex-col bg-beige min-h-screen overflow-clip ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
-        <div className="hidden md:visible menca text-blacky font-extralight w-screen md:flex md:flew-row items-center h-full">
+        <div className="hidden md:visible menca text-black font-extralight w-screen md:flex md:flew-row items-center h-full">
           <Header />
         </div>
-        <div className=" sticky top-0 z-50 ">
+        <div className=" sticky top-0 z-50 md:hidden">
           <MobileNav
+            isOpen={isOpen}
+            handleToggle={handleToggle}
+            isAbout={false}
+          />
+        </div>
+        <div className=" sticky top-0 z-50 ">
+          <MobileNavMd
             isOpen={isOpen}
             handleToggle={handleToggle}
             isAbout={false}
@@ -130,7 +133,7 @@ export default function Home() {
                 className=" h-[359px] object-cover"
               />
             </div>
-            <div className=" pt-[299px] md:pt-0 w-screen overflow-clip text-on-top md:h-screen">
+            <div className=" pt-[299px] md:pt-0 w-screen overflow-clip md:h-screen relative">
               <div className="md:flex flex-col self-center items-center absolute top-[200px] left-[432px] hidden md:visible">
                 {visibleCursorHome && (
                   <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
@@ -140,53 +143,54 @@ export default function Home() {
                   onMouseEnter={() => setIsVisibleCursorHome(true)}
                   onMouseLeave={() => setIsVisibleCursorHome(false)}
                 >
-                  <div className=" lg:flex flex-row justify-center leading-[76px] font-thin h-[60px] md:h-full">
-                    <div className="masky-container h-[80px] pt-[20px]">
-                      <span
-                        id="cursorStyled"
-                        className=" general text-4xl flex justify-center lg:text-[72px] pr-4 md:pr-0 slide-up h-[60px] pl-16 md:pl-0 text-on-top ease-in-out duration-1000"
-                      >
-                        Hi ! I am a french artistic
-                      </span>
-                      <div className="masky"></div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col justify-center h-[60px] md:h-full">
-                    <div className="masky-container md:h-[100px]  ">
-                      <span
-                        className="general text-4xl flex justify-center lg:text-[72px] lg:pt-10 pr-4 md:pr-0 slide-up h-[120px] text-on-top ease-in-out duration-1000"
-                        id="cursorStyled"
-                      >
-                        director based in Paris.
-                      </span>
-                      <div className="masky"></div>
-                    </div>
-                    <div className="flex flex-col justify-end md:pb-12 h-[30px] md:h-full">
-                      <div className="masky-container h-[80px] pb-[100px] ">
+                  <div id="cursorStyled" className="h-full w-full">
+                    <div className=" lg:flex flex-row justify-center leading-[76px] font-thin h-[40px] md:h-full ">
+                      <div className="masky-container h-[80px] pt-[26px]">
                         <span
+                          className=" general text-4xl flex justify-center lg:text-[72px] pr-4 md:pr-0 slide-up h-[40px] pl-16 md:pl-0 ease-in-out duration-1000 text-on-top"
                           id="cursorStyled"
-                          className="general text-4xl flex justify-center lg:text-[72px] lg:pt-8 pr-4 md:pr-0 slide-up h-[180px] ease-in-out duration-1000"
                         >
-                          I am available to work.{" "}
+                          Hi ! I am a french artistic
                         </span>
                         <div className="masky"></div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col justify-center h-[30px] md:h-full ">
+                      <div className="masky-container md:h-[100px] pt-[6px] ">
+                        <span
+                          className="general text-4xl flex justify-center lg:text-[72px] lg:pt-6 pr-4 md:pr-0 slide-up h-[80px] ease-in-out duration-1000 text-on-top"
+                          id="cursorStyled"
+                        >
+                          director based in Paris.
+                        </span>
+                        <div className="masky"></div>
+                      </div>
+                      <div className="flex flex-col justify-end md:pb-12 h-[30px] md:h-full">
+                        <div className="masky-container h-[80px] pb-[100px] pt-[4px] ">
+                          <span
+                            id="cursorStyled"
+                            className="general text-4xl flex justify-center lg:text-[72px] lg:pt-3 pr-4 md:pr-0 slide-up h-[120px] ease-in-out duration-1000 "
+                          >
+                            I am available to work.{" "}
+                          </span>
+                          <div className="masky"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-beige w-screen h-fit menca absolute bottom-28 md:bottom-28 left-4 md:left-10 text-sm flex flex-row font-medium leading-4">
+              <div className="bg-beige w-screen h-fit menca absolute bottom-28 md:bottom-20 left-4 md:left-10 text-sm flex flex-row font-medium leading-4">
                 <div className="text-greyNew pr-8 space-y-2">
                   <div className="">Selected projets</div>
-                  {/* <p>2020 -- 2024 </p> */}
                   <div className="flex flex-inline ">
-                    <div className="">2020</div>
-                    <div className=" border flex flex-row"></div>
-                    <div>2024</div>
+                    <div className="pr-2">2020</div>
+                    <div className=" border-b h-[10px] w-4 "></div>
+                    <div className="pl-2">2024</div>
                   </div>
                 </div>
-                <div className="text-blacky space-y-2">
+                <div className="text-black space-y-2">
                   <p className="">Dweezil Sèche</p>
                   <p>Artistic Direction \ UI \ Motion \ Prompt</p>
                 </div>
@@ -196,7 +200,7 @@ export default function Home() {
                     "https://open.spotify.com/playlist/4emduYAbvCpDdqDaGyFrb2?si=d60b00c9ea484980"
                   }
                 >
-                  <div className="w-[18px] h-[13px] text-blacky absolute right-20 bottom-0 invisible md:visible">
+                  <div className="w-[18px] h-[13px] text-black absolute right-20 bottom-0 invisible md:visible">
                     <Lottie
                       autoplay
                       loop

@@ -294,12 +294,9 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
       {visibleCursor && (
         <CustomCursor x={cursorPosition.x} y={cursorPosition.y} />
       )}
-      {visibleCursorHome && (
-        <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
-      )}
 
       <main
-        className={`relative text-white2 flex justify-center font-extralight w-screen flex-col fond2 min-h-screen overflow-clip  ${
+        className={`relative flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip  ${
           isOpen ? "overflow-hidden " : "overflow-clip "
         } `}
       >
@@ -326,24 +323,24 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
             isOpen ? "opacity-10" : "opacity-100"
           } transition-opacity duration-300`}
         >
-          <div className="bg-beige text-blacky overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 ">
+          <div className=" bg-beige text-black overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 h-full">
             <div
               className="cursor-none"
-              onMouseEnter={() => setIsVisibleCursorHome(true)}
-              onMouseLeave={() => setIsVisibleCursorHome(false)}
+              onMouseEnter={() => setIsVisibleCursor(true)}
+              onMouseLeave={() => setIsVisibleCursor(false)}
             >
-              <div className="flex text-blacky w-screen space-x-32 pl-[380px]">
-                <div className="md:w-[218px] flex flex-col  ">
-                  <h1 className="general font-thin text-[72px] leading-[76px] md:pt-52 pt-4 ">
+              <div className="flex text-black w-screen md:pl-[160px] flex-col md:flex-row h-[494px] md:h-full px-5">
+                <div className="md:w-[358px] flex flex-col ">
+                  <h1 className="general font-thin text-[40px] md:text-[72px] leading-[76px] md:pt-52 pt-20 flex md:justify-end justify-start ">
                     Natur.IA
                   </h1>
-                  <div className="menca font-medium text-sm	leading-4	flex flex-col items-end md:pt-[102px] space-y-1.5">
+                  <div className="menca font-medium	text-sm	leading-4	flex flex-col items-start md:items-end pt-8 md:pt-20 md:h-[60px] space-y-1.5 pb-10 md:pb-0">
                     <p>2024</p>
                     <p>PROMPT, MIDJOURNEY</p>
                     <p>STUDIO ARTEFACT 3000</p>
                   </div>
                 </div>
-                <p className="menca md:w-[415px] md:h-[240px] md:pt-52 pt-4 font-medium	text-base	leading-5	md:pl-6">
+                <p className="menca md:w-[415px] md:h-[240px] md:pt-52 pt-4  md:ml-52 font-medium	text-base	leading-5">
                   Natur.IA is a project I worked on during my work-study year at
                   Studio Artefact 3000. The studio had developed a dashboard for
                   this client, enabling them to create fragrances from over 900
@@ -353,33 +350,37 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
                   enabled me to create a prompt which I then used in Midjourney.
                   The prompt was created so that I could change only the word
                   that corresponded to the aroma I wanted to represent. When the
-                  AI didn't understand what I wanted to have, I gave it a
+                  AI didn&apos; t understand what I wanted to have, I gave it a
                   reference image at the beginning of the prompt. It taught me a
                   lot about how to use AI, and how to create precise prompts.
                 </p>
               </div>
             </div>
+
+            <div
+              id="img_naturia"
+              className="bg-beige px-2 md:px-[40px] grid grid-cols-3 gap-2 md:grid-cols-5 md:gap-4 md:pt-60 pt-[220px]"
+            >
+              {images_naturia.map((img, index) => (
+                <img
+                  key={index}
+                  src={img.src}
+                  alt={`Naturia ${index}`}
+                  className=" h-[34] md:h-[80px] w-[111px] md:w-[263px]"
+                />
+              ))}
+            </div>
+            <div className="general font-thin	text-[20px] flex justify-end pr-4 leading-[60px] text-blacky bg-beige  md:invisible visible h-12 w-screen">
+              and 800 more...
+            </div>
           </div>
-          <div
-            id="img_naturia"
-            className="bg-beige px-[40px] grid grid-cols-5 gap-4 pt-40"
-          >
-            {images_naturia.map((img, index) => (
-              <img
-                key={index}
-                src={img.src}
-                alt={`Naturia ${index}`}
-                className="w-[263px] h-[80px] "
-              />
-            ))}
-          </div>
-          <div className="general font-thin	text-[40px] leading-[60px] text-blacky bg-beige flex justify-end pr-10 pt-10">
+          <div className="general font-thin	text-[40px] leading-[60px] text-black bg-beige flex justify-end md:pr-10 pt-10 pb-[1700px] md:pb-0 h- md:h-full">
             and 800 more...
           </div>
-          <div className="pb-[64px] bg-beige text-blacky pt-40">
+          <div className="pb-[64px] bg-beige text-black pt-[110px] md:pt-[260px]">
             <BarArgedis label={"( UI )"} label2={"( motion )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-blacky">
+          <div className="pb-[64px] bg-beige text-black">
             <BarDecormate
               label={"( UI )"}
               label2={"( DA )"}
@@ -388,17 +389,22 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
               label5={" ( midjourney )"}
             />
           </div>
-          <div className="pb-[64px] bg-beige text-blacky">
+          <div className="pb-[64px] bg-beige text-black">
             <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
           </div>
-          <div className="pb-[64px] bg-beige text-blacky">
+          <div className="pb-[64px] bg-beige text-black">
             <BarWE label={"( DA )"} />
           </div>
-          <div className="bg-beige text-blacky pb-20 md:pb-60">
+          <div className="bg-beige text-black pb-20 md:pb-60">
             <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
+          </div>{" "}
+          <div className="visible w-screen text-black relative bottom-0">
+            <Footer />
           </div>
         </div>
-        <Footer />
+        <div className="hidden md:visible">
+          <Footer />
+        </div>
       </main>
     </>
   );
