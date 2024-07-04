@@ -1,10 +1,13 @@
 import { imagesH1 } from "@/app/constant/constant";
 import React, { FC, useEffect, useState } from "react";
+import { createContext, useContext } from "react";
 
 type CursorHomeProps = {
   x: number;
   y: number;
 };
+
+const CustomCursorHomeContext = createContext(false);
 
 const getRandomImage = () => {
   const randomIndex = Math.floor(Math.random() * imagesH1.length);

@@ -1,9 +1,4 @@
 import CustomCursor from "@/components/Atomes/Cursor/CustomCursor";
-import CustomCursorHome from "@/components/Atomes/Cursor/CustomCursorHome";
-import LabelHome from "@/components/Atomes/Label/LabelHome";
-import LabelMenu from "@/components/Atomes/Label/LabelMenu";
-import LabelPlaylist from "@/components/Atomes/Label/LabelPlaylist";
-import Labels from "@/components/Atomes/Label/Labels";
 import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
 import BarEngrenages from "@/components/Molecules/Bar/Bar_engrenages";
@@ -13,9 +8,7 @@ import Footer from "@/components/Molecules/Footer/Footer";
 import HeaderProjects from "@/components/Molecules/Header/HeaderProjets";
 import MobileNav from "@/components/Molecules/MobileNav/MobileNav";
 import MobileNavMd from "@/components/Molecules/MobileNav/MobileNavMd";
-import { log } from "console";
 import { Variants, motion } from "framer-motion";
-import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 
 type naturiaProps = {};
@@ -48,7 +41,7 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
 
   const Variants: Variants = {
     offscreen: {
-      y: 300,
+      y: 0,
     },
     onscreen: {
       y: 0,
@@ -355,55 +348,55 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
                   lot about how to use AI, and how to create precise prompts.
                 </p>
               </div>
-            </div>
 
-            <div
-              id="img_naturia"
-              className="bg-beige px-2 md:px-[40px] grid grid-cols-3 gap-2 md:grid-cols-5 md:gap-4 md:pt-60 pt-[220px]"
-            >
-              {images_naturia.map((img, index) => (
-                <img
-                  key={index}
-                  src={img.src}
-                  alt={`Naturia ${index}`}
-                  className=" h-[34] md:h-[80px] w-[111px] md:w-[263px]"
-                />
-              ))}
+              <div
+                id="img_naturia"
+                className="bg-beige px-2 md:px-[40px] grid grid-cols-3 gap-2 md:grid-cols-5 md:gap-4 md:pt-60 pt-[220px]"
+              >
+                {images_naturia.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img.src}
+                    alt={`Naturia ${index}`}
+                    className=" h-[34] md:h-[80px] w-[111px] md:w-[263px]"
+                  />
+                ))}
+              </div>
+              <div className="general font-thin	text-[20px] flex justify-end pr-4 leading-[60px] text-blacky bg-beige  md:invisible visible h-12 w-screen">
+                and 800 more...
+              </div>
             </div>
-            <div className="general font-thin	text-[20px] flex justify-end pr-4 leading-[60px] text-blacky bg-beige  md:invisible visible h-12 w-screen">
+            <div className="general font-thin	text-[40px] leading-[60px] text-black bg-beige flex justify-end md:pr-10 pt-10 pb-[1700px] md:pb-0 h- md:h-full">
               and 800 more...
             </div>
+            <div className="pb-[64px] bg-beige text-black pt-[110px] md:pt-[260px]">
+              <BarArgedis label={"( UI )"} label2={"( motion )"} />
+            </div>
+            <div className="pb-[64px] bg-beige text-black">
+              <BarDecormate
+                label={"( UI )"}
+                label2={"( DA )"}
+                label3={"( branding )"}
+                label4={"( prompt )"}
+                label5={" ( midjourney )"}
+              />
+            </div>
+            <div className="pb-[64px] bg-beige text-black">
+              <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
+            </div>
+            <div className="pb-[64px] bg-beige text-black">
+              <BarWE label={"( DA )"} />
+            </div>
+            <div className="bg-beige text-black pb-20 md:pb-60">
+              <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
+            </div>{" "}
+            <div className="visible w-screen text-black relative bottom-0">
+              <Footer />
+            </div>
           </div>
-          <div className="general font-thin	text-[40px] leading-[60px] text-black bg-beige flex justify-end md:pr-10 pt-10 pb-[1700px] md:pb-0 h- md:h-full">
-            and 800 more...
-          </div>
-          <div className="pb-[64px] bg-beige text-black pt-[110px] md:pt-[260px]">
-            <BarArgedis label={"( UI )"} label2={"( motion )"} />
-          </div>
-          <div className="pb-[64px] bg-beige text-black">
-            <BarDecormate
-              label={"( UI )"}
-              label2={"( DA )"}
-              label3={"( branding )"}
-              label4={"( prompt )"}
-              label5={" ( midjourney )"}
-            />
-          </div>
-          <div className="pb-[64px] bg-beige text-black">
-            <BarEngrenages label={"( DA )"} label2={" ( branding )"} />
-          </div>
-          <div className="pb-[64px] bg-beige text-black">
-            <BarWE label={"( DA )"} />
-          </div>
-          <div className="bg-beige text-black pb-20 md:pb-60">
-            <BarVerreavin label={"( DA )"} label2={" ( branding )"} />
-          </div>{" "}
-          <div className="visible w-screen text-black relative bottom-0">
+          <div className="hidden md:visible">
             <Footer />
           </div>
-        </div>
-        <div className="hidden md:visible">
-          <Footer />
         </div>
       </main>
     </>
