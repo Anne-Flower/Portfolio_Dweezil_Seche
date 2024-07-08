@@ -112,7 +112,7 @@ const Playground = () => {
 
   return (
     <div
-      className={`relative text-black flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip bg-beige ${
+      className={`relative text-black flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip-x bg-beige ${
         isOpen ? "overflow-hidden" : "overflow-clip"
       } `}
     >
