@@ -1,3 +1,5 @@
+import { useCustomCursor } from "@/app/context/customCursorContext";
+import CursorStyle from "@/components/Atomes/Cursor/CursorStyle/cursorStyle";
 import CustomCursor from "@/components/Atomes/Cursor/CustomCursor";
 import BarArgedis from "@/components/Molecules/Bar/Bar_argedis";
 import BarDecormate from "@/components/Molecules/Bar/Bar_decormate";
@@ -16,6 +18,8 @@ type naturiaProps = {};
 const Naturia: React.FC<naturiaProps> = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
+  const { setCursorStyle } = useCustomCursor();
+  const [visibleCursor, setVisibleCursor] = useState(false);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
@@ -25,18 +29,37 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
     setIsOpen2((prev) => !prev);
   };
 
-  const [visibleCursor, setIsVisibleCursor] = useState(false);
-  const [visibleCursorHome, setIsVisibleCursorHome] = useState(false);
-
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
+  // useEffect(() => {
+  //   const handleMouseMove = (event: MouseEvent) => {
+  //     setCursorPosition({ x: event.clientX, y: event.clientY });
+  //   };
+
+  //   window.addEventListener("mousemove", handleMouseMove);
+  //   return () => window.removeEventListener("mousemove", handleMouseMove);
+  // }, []);
+
   useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      setCursorPosition({ x: event.clientX, y: event.clientY });
+    const handleMouseEnter = () => {
+      setVisibleCursor(true);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    const handleMouseLeave = () => {
+      setVisibleCursor(false);
+    };
+
+    const targetElement = document.getElementById("naturia");
+    if (targetElement) {
+      targetElement.addEventListener("mouseenter", handleMouseEnter);
+      targetElement.addEventListener("mouseleave", handleMouseLeave);
+    }
+    return () => {
+      if (targetElement) {
+        targetElement.removeEventListener("mouseenter", handleMouseEnter);
+        targetElement.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
   }, []);
 
   const Variants: Variants = {
@@ -284,9 +307,7 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
 
   return (
     <>
-      {visibleCursor && (
-        <CustomCursor x={cursorPosition.x} y={cursorPosition.y} />
-      )}
+      {visibleCursor && <CursorStyle />}
 
       <main
         className={`relative flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip  ${
@@ -319,8 +340,8 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
           <div className=" bg-beige text-black overflow-clip bg-cover w-screen bg-center absolute md:relative top-0 pt-20 md:pt-0 h-full">
             <div
               className="cursor-none"
-              onMouseEnter={() => setIsVisibleCursor(true)}
-              onMouseLeave={() => setIsVisibleCursor(false)}
+              onMouseEnter={() => setVisibleCursor(true)}
+              onMouseLeave={() => setVisibleCursor(false)}
             >
               <div className="flex text-black w-screen md:pl-[160px] flex-col md:flex-row h-[494px] md:h-full px-5">
                 <div className="md:w-[358px] flex flex-col ">
@@ -333,7 +354,7 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
                     <p>STUDIO ARTEFACT 3000</p>
                   </div>
                 </div>
-                <p className="menca md:w-[415px] md:h-[240px] md:pt-52 pt-4  md:ml-52 font-medium	text-base	leading-5">
+                <p className="menca md:w-[415px] md:h-[240px] md:pt-52 pt-4  md:ml-52 font-medium	text-base	leading-5 cursor-none	">
                   Natur.IA is a project I worked on during my work-study year at
                   Studio Artefact 3000. The studio had developed a dashboard for
                   this client, enabling them to create fragrances from over 900
@@ -362,11 +383,11 @@ const Naturia: React.FC<naturiaProps> = ({}) => {
                   />
                 ))}
               </div>
-              <div className="general font-thin	text-[20px] flex justify-end pr-4 leading-[60px] text-blacky bg-beige  md:invisible visible h-12 w-screen">
+              <div className="general font-thin	text-[20px] flex justify-end pr-4 leading-[60px] text-black bg-beige md:hidden visible h-12 w-screen">
                 and 800 more...
               </div>
             </div>
-            <div className="general font-thin	text-[40px] leading-[60px] text-black bg-beige flex justify-end md:pr-10 pt-10 pb-[1700px] md:pb-0 h- md:h-full">
+            <div className="general font-thin	text-[40px] leading-[60px] text-black bg-beige flex justify-end md:pr-10 pt-10 pb-[1700px] md:pb-0 h- md:h-full invisible">
               and 800 more...
             </div>
             <div className="pb-[64px] bg-beige text-black pt-[110px] md:pt-[260px]">
