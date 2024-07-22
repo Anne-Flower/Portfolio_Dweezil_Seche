@@ -121,10 +121,12 @@ const Playground = () => {
           handleToggle={handleToggle}
           isAbout={false}
         />
-        <div className="bg-beige md:w-screen md:h-screen h-fit w-[1040px]">
+        <div className="bg-beige md:w-screen md:h-screen h-fit w-[1040px] ">
           <div>
             <Header />
           </div>
+          <div className=" sticky top-0 z-50 ">
+      
           {visibleCursorPlayground && (
             <CustomCursorPlayground x={cursorPosition.x} y={cursorPosition.y} />
           )}
@@ -148,7 +150,8 @@ const Playground = () => {
               />
             </div>
 
-            <div className="bg-beige w-screen h-fit menca md:absolute md:bottom-10 md:left-10 text-sm flex flex-row justify-center md:justify-start font-medium leading-4 pt-20 md:pt-0">
+          </div>
+            <div className="bg-beige w-screen h-fit menca md:absolute md:top-[690px] md:left-10 text-sm flex flex-row justify-center md:justify-start font-medium leading-4 pt-20 md:pt-0">
               <div className="text-greyNew pr-4 md:pr-8 space-y-2">
                 <div className="">Selected projets</div>
                 <div className="flex flex-inline ">
@@ -177,12 +180,12 @@ const Playground = () => {
                 </div>
               </Link>
             </div>
-          </div>
           <div className="visible md:hidden pt-10 md:pt-0">
             <Footer />
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
