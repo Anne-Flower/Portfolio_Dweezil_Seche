@@ -23,7 +23,6 @@ const Playground = () => {
       width: 100,
       height: 100,
     },
-    // Ajoute toutes tes images ici avec leurs dimensions
   ];
 
   useEffect(() => {
@@ -112,7 +111,7 @@ const Playground = () => {
 
   return (
     <div
-      className={`relative text-black flex justify-center font-extralight w-screen flex-col min-h-screen overflow-clip-x bg-beige ${
+      className={`relative text-black flex justify-center font-extralight w-full flex-col min-h-screen overflow-clip bg-beige ${
         isOpen ? "overflow-hidden" : "overflow-clip"
       } `}
     >
