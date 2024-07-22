@@ -129,7 +129,7 @@ export default function Home() {
             <div className="visible md:hidden w-screen h-[359px] cover fit-content pt-[120px]">
               <img
                 src={img[currentIndex].src}
-                alt=""
+                alt="images"
                 className=" h-[359px] object-cover"
               />
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
                   <CustomCursorHome x={cursorPosition.x} y={cursorPosition.y} />
                 )}
                 <div
-                  className=""
+                  className="pt-12"
                   onMouseEnter={() => setIsVisibleCursorHome(true)}
                   onMouseLeave={() => setIsVisibleCursorHome(false)}
                 >

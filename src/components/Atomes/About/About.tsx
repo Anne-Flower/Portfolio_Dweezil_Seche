@@ -57,7 +57,7 @@ const About = () => {
             />
           </div>
           <div className="">
-            <div className="visible md:invisible ">
+            <div className="visible md:invisible bg-beige">
               <FooterAboutMobile />
             </div>
           </div>
